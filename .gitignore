@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data and artifacts
+data/processed/
+data/external/
+ml/artifacts/
+backend/.venv/
+frontend/node_modules/
+frontend/dist/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/

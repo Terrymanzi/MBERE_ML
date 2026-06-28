@@ -1,0 +1,2 @@
+# Add backend dependencies here.
+# Example future stack: FastAPI, Uvicorn, SQLAlchemy, Pydantic
