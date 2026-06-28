@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+# Run pytest from the repo root: makes the top-level `ml` package importable
+# (e.g. `import ml.preprocessing`) without installing it.
+pythonpath = ["."]
+testpaths = ["ml/tests"]
+addopts = "-q"

@@ -1,0 +1,16 @@
+# mbere-ml package dependencies (Python 3.11 target; dev env currently 3.13).
+# Pinned to versions verified in the local .venv.
+
+pandas==3.0.3
+numpy==2.4.6           # pinned by shap/numba constraint (was 2.5.0 pre-shap)
+scikit-learn==1.9.0
+PyYAML==6.0.3
+
+# --- Modelling / evaluation / explainability (Phase 1B) ---
+xgboost==3.3.0
+imbalanced-learn==0.14.2
+shap==0.52.0
+matplotlib==3.11.0     # report/SHAP plots (also a shap dependency)
+
+# --- Test ---
+pytest==9.1.1
