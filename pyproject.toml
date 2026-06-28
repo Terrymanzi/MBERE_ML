@@ -2,5 +2,9 @@
 # Run pytest from the repo root: makes the top-level `ml` package importable
 # (e.g. `import ml.preprocessing`) without installing it.
 pythonpath = ["."]
-testpaths = ["ml/tests"]
+testpaths = ["ml/tests", "backend/tests"]
 addopts = "-q"
+filterwarnings = [
+    # passlib reads bcrypt's removed __about__ shim; harmless, hashing works.
+    "ignore:.*error reading bcrypt version.*:UserWarning",
+]

@@ -4,3 +4,4 @@
 - [Repo data/git hygiene](data-git-hygiene.md) — autocrlf CSV noise + stray cleaned.csv in data/raw
 - [Phase 1B modelling results](phase1b-modelling-results.md) — weak signal, RF best, accuracy is a trap here
 - [train.py entry point & reproducibility](train-entrypoint-and-repro.md) — run dirs, RF n_jobs=1 gotcha, synthetic Porto placeholder
+- [Backend inference service](backend-inference-service.md) — FastAPI loads versioned artifact, contract fail-fast, audit ERD, bcrypt 4.0.1 pin
