@@ -5,3 +5,4 @@
 - [Phase 1B modelling results](phase1b-modelling-results.md) — weak signal, RF best, accuracy is a trap here
 - [train.py entry point & reproducibility](train-entrypoint-and-repro.md) — run dirs, RF n_jobs=1 gotcha, synthetic Porto placeholder
 - [Backend inference service](backend-inference-service.md) — FastAPI loads versioned artifact, contract fail-fast, audit ERD, bcrypt 4.0.1 pin
+- [Frontend console](frontend-console.md) — React/Vite in frontend/, typed fetch client, contract-driven predict form, dashboard via risk fan-out

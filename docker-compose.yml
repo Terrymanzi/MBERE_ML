@@ -1,1 +1,36 @@
-services: {}
+# Local infrastructure for the mbere-ml backend.
+#
+# Brings up PostgreSQL 16 for the FastAPI inference service. Credentials and the
+# database name come from .env (POSTGRES_*) with dev-only defaults below -- no
+# secrets are committed. Data persists in the named volume `pgdata`.
+#
+#   docker compose up -d db          # start Postgres
+#   alembic upgrade head             # create the schema (host, reads .env)
+#   python scripts/seed.py           # load demo data
+#   uvicorn backend.app.main:app     # backend connects to localhost:5432
+#
+# Point the backend at it in .env:
+#   DATABASE_URL=postgresql+psycopg2://mbere:mbere@localhost:5432/mbere
+
+services:
+  db:
+    image: postgres:16
+    container_name: mbere-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mbere}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mbere}
+      POSTGRES_DB: ${POSTGRES_DB:-mbere}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-mbere} -d ${POSTGRES_DB:-mbere}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:
+    name: mbere-pgdata

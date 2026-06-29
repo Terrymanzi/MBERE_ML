@@ -40,7 +40,32 @@ uvicorn backend.app.main:app --reload --port 8000
 ```
 
 Default `DATABASE_URL` is SQLite (repo root); set a `postgresql+psycopg2://…`
-URL for PostgreSQL. Tables are created on startup; Alembic owns prod migrations.
+URL for PostgreSQL. On startup the app calls `create_all` (a no-op once the
+schema exists), but **Alembic owns the schema in prod** — see below.
+
+## PostgreSQL + migrations + seed
+```bash
+# 1. start Postgres 16 (named volume `mbere-pgdata`); creds from .env (POSTGRES_*)
+docker compose up -d db
+
+# 2. point the backend at it (.env)
+#    DATABASE_URL=postgresql+psycopg2://mbere:mbere@localhost:5432/mbere
+
+# 3. create the schema from the migrations (reversible)
+alembic upgrade head        # run from the repo root; reads DATABASE_URL from .env
+#   alembic downgrade base  # full teardown (migrations are reversible)
+
+# 4. load demo data: a fleet-admin user, a few drivers, and a ModelVersion row
+#    built from the CURRENT artifact's meta.json (so predictions are traceable)
+python scripts/seed.py      # admin creds via SEED_ADMIN_EMAIL/SEED_ADMIN_PASSWORD
+
+# 5. run the API; GET /drivers now returns the seeded fleet
+uvicorn backend.app.main:app --port 8000
+```
+The Alembic config (`alembic.ini` at the repo root, env in `backend/migrations/`)
+takes the database URL from `.env` via the backend `Settings` — no connection
+string or secret is hardcoded. The same migrations target SQLite (dev) or
+PostgreSQL (prod) purely from the environment.
 
 ## Tests
 ```bash
