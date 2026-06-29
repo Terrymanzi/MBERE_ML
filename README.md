@@ -1,7 +1,5 @@
 # MBERE ML
 
-Repository scaffold for the MBERE road traffic accident prediction project.
-
 ## Layout
 
 - `data/` for raw, processed, and external datasets
