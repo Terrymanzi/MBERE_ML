@@ -136,7 +136,7 @@ Random Forest beat the baseline on both macro-F1 (+0.008) and ROC-AUC (+0.036) a
 
 The hardest class is Fatal Injury (≈1.3% of records). Fatal recall on the held-out test set: Random Forest = 3.2%, XGBoost = 0.0%, Baseline = 0.0%. Even with SMOTE, all three models struggle severely with this class — the 31 Fatal test cases are simply too few and too similar in feature space to the Serious class for reliable detection. This is reported explicitly rather than obscured by the aggregate metrics.
 
-### Objective 3: Platform.
+### Objective 3: Platform
 
 The React/TypeScript dashboard and FastAPI inference API were delivered and deployed (see the live demo link above). An insurer or fleet manager can select driver records from the interface and receive, per driver, a risk band, class probabilities, and SHAP-based explanations of the prediction. The SHAP analysis confirms that driver experience, driver age band, and time of day are the top three predictive features by mean |SHAP| value across both tree models, consistent with domain expectations. The dashboard, batch predict endpoint, and SHAP explanation endpoint are working end-to-end; real-time telematics integration and a Rwandan-specific retraining pipeline are scoped out of this prototype.
 
