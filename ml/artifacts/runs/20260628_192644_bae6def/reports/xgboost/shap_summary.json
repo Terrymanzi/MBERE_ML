@@ -1,0 +1,49 @@
+{
+  "model": "xgboost",
+  "n_samples_explained": 500,
+  "n_encoded_features": 32,
+  "high_risk_case_index": 496,
+  "high_risk_positive_proba": 0.8758401870727539,
+  "top_features": [
+    {
+      "feature": "ordinal__driver_experience",
+      "mean_abs_shap": 0.5252664089202881
+    },
+    {
+      "feature": "ordinal__driver_age_band",
+      "mean_abs_shap": 0.4276048541069031
+    },
+    {
+      "feature": "ordinal__time_of_day",
+      "mean_abs_shap": 0.3561631739139557
+    },
+    {
+      "feature": "onehot__weather_Normal",
+      "mean_abs_shap": 0.2483225166797638
+    },
+    {
+      "feature": "onehot__vehicle_type_Automobile",
+      "mean_abs_shap": 0.1394665390253067
+    },
+    {
+      "feature": "onehot__light_condition_Darkness - lights lit",
+      "mean_abs_shap": 0.13667882978916168
+    },
+    {
+      "feature": "onehot__vehicle_type_Lorry",
+      "mean_abs_shap": 0.1274847686290741
+    },
+    {
+      "feature": "onehot__light_condition_Daylight",
+      "mean_abs_shap": 0.12241905927658081
+    },
+    {
+      "feature": "onehot__weather_Raining",
+      "mean_abs_shap": 0.11547829210758209
+    },
+    {
+      "feature": "onehot__vehicle_type_Public_transport",
+      "mean_abs_shap": 0.07942528277635574
+    }
+  ]
+}

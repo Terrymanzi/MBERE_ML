@@ -1,0 +1,27 @@
+{
+  "dataset": "porto_seguro",
+  "kind": "binary",
+  "random_state": 42,
+  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "created_utc": "2026-06-28T17:41:21.964391+00:00",
+  "models": {
+    "baseline": {
+      "f1_macro": 0.46029476209147313,
+      "recall_macro": 0.5542018681635974,
+      "roc_auc_ovr_macro": 0.5650088683398393,
+      "accuracy": 0.56125
+    },
+    "random_forest": {
+      "f1_macro": 0.4686150780471604,
+      "recall_macro": 0.5,
+      "roc_auc_ovr_macro": 0.5482171449570458,
+      "accuracy": 0.881875
+    },
+    "xgboost": {
+      "f1_macro": 0.46755407653910147,
+      "recall_macro": 0.49787384833451453,
+      "roc_auc_ovr_macro": 0.531849151976721,
+      "accuracy": 0.878125
+    }
+  }
+}

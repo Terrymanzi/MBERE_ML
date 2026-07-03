@@ -1,0 +1,107 @@
+{
+  "model": "random_forest",
+  "model_version": "0.1.0",
+  "created_utc": "2026-06-28T17:27:01.755484+00:00",
+  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "random_state": 42,
+  "dataset": {
+    "name": "addis",
+    "kind": "multiclass",
+    "rows": 9852,
+    "target": "Accident_severity",
+    "classes": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  },
+  "features": [
+    "driver_age_band",
+    "driver_experience",
+    "time_of_day",
+    "vehicle_type",
+    "weather",
+    "road_surface",
+    "light_condition"
+  ],
+  "cv": {
+    "scheme": "StratifiedKFold",
+    "k_folds": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "params": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 300,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "metrics_cv": {
+    "n_samples": 9852,
+    "accuracy": 0.7439098660170523,
+    "f1_macro": 0.3496509422037339,
+    "recall_macro": 0.3497815086774891,
+    "precision_macro": 0.349752534018179,
+    "roc_auc_ovr_macro": 0.5587433108714787,
+    "per_class": {
+      "Slight Injury": {
+        "precision": 0.8523028695442488,
+        "recall": 0.8485175849237787,
+        "f1": 0.8504060150375939,
+        "support": 8331,
+        "roc_auc_ovr": 0.5366629678006094
+      },
+      "Serious Injury": {
+        "precision": 0.17695473251028807,
+        "recall": 0.18507890961262555,
+        "f1": 0.18092566619915848,
+        "support": 1394,
+        "roc_auc_ovr": 0.5346158484848588
+      },
+      "Fatal Injury": {
+        "precision": 0.02,
+        "recall": 0.015748031496062992,
+        "f1": 0.01762114537444934,
+        "support": 127,
+        "roc_auc_ovr": 0.6049511163289678
+      }
+    },
+    "confusion_matrix": [
+      [
+        7069,
+        1182,
+        80
+      ],
+      [
+        1118,
+        258,
+        18
+      ],
+      [
+        107,
+        18,
+        2
+      ]
+    ],
+    "labels": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  }
+}

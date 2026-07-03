@@ -1,0 +1,30 @@
+[INFO] mbere-ml: === mbere-ml run: dataset=porto_seguro kind=binary models=all seed=42 ===
+[INFO] mbere-ml: run dir: C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_195213_bae6def
+[INFO] mbere-ml: clean: rows 8000 -> 8000 (dropped 0); cols=26
+[INFO] mbere-ml: split: train=6400 test=1600 (test_size=0.20, stratified=True)
+[INFO] mbere-ml: feature_selection (mutual_info): scores={'ps_ind_02_cat': 0.0001, 'ps_ind_04_cat': 0.0001, 'ps_ind_05_cat': 0.0036, 'ps_car_01_cat': 0.0008, 'ps_car_04_cat': 0.0006, 'ps_car_07_cat': 0.001, 'ps_ind_01': 0.0, 'ps_ind_03': 0.0, 'ps_ind_15': 0.0006, 'ps_ind_06_bin': 0.0016, 'ps_ind_07_bin': 0.0004, 'ps_ind_16_bin': 0.0059, 'ps_ind_17_bin': 0.0025, 'ps_reg_01': 0.0, 'ps_reg_02': 0.0, 'ps_reg_03': 0.0009, 'ps_car_12': 0.0011, 'ps_car_13': 0.0021, 'ps_car_15': 0.0008, 'ps_calc_01': 0.0022, 'ps_calc_02': 0.0034, 'ps_calc_15_bin': 0.0, 'ps_calc_16_bin': 0.0}
+[INFO] mbere-ml: selected 23/23 features: ['ps_ind_02_cat', 'ps_ind_04_cat', 'ps_ind_05_cat', 'ps_car_01_cat', 'ps_car_04_cat', 'ps_car_07_cat', 'ps_ind_01', 'ps_ind_03', 'ps_ind_15', 'ps_ind_06_bin', 'ps_ind_07_bin', 'ps_ind_16_bin', 'ps_ind_17_bin', 'ps_reg_01', 'ps_reg_02', 'ps_reg_03', 'ps_car_12', 'ps_car_13', 'ps_car_15', 'ps_calc_01', 'ps_calc_02', 'ps_calc_15_bin', 'ps_calc_16_bin']
+[INFO] mbere-ml: wrote: porto_seguro_train.csv, porto_seguro_test.csv, encoders.joblib, split_indices.json, feature_contract.json
+[INFO] mbere-ml: encoded feature dim: 59
+[INFO] mbere-ml: train_baseline: X=(6400, 23), class counts={np.int64(0): np.int64(5645), np.int64(1): np.int64(755)}
+[INFO] mbere-ml: train_baseline: CV f1_macro=0.4686 recall_macro=0.5654 roc_auc_ovr=0.5819
+[INFO] mbere-ml: train_baseline: wrote baseline.pkl + baseline.meta.json
+[INFO] mbere-ml: evaluate[baseline]: f1_macro=0.4603 recall_macro=0.5542 roc_auc_ovr=0.5650 -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_195213_bae6def\reports\baseline
+[INFO] mbere-ml: train_random_forest: X=(6400, 23), class counts={np.int64(0): np.int64(5645), np.int64(1): np.int64(755)}
+[INFO] mbere-ml: train_random_forest: CV f1_macro=0.4687 recall_macro=0.5000 roc_auc_ovr=0.5519
+[INFO] mbere-ml: train_random_forest: wrote random_forest.pkl + random_forest.meta.json
+[INFO] mbere-ml: evaluate[random_forest]: f1_macro=0.4686 recall_macro=0.5000 roc_auc_ovr=0.5482 -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_195213_bae6def\reports\random_forest
+[INFO] mbere-ml: shap[random_forest]: wrote summary_plot.png, waterfall_plot.png, importance.csv -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_195213_bae6def\reports\random_forest
+[INFO] mbere-ml: train_xgboost: X=(6400, 23), class counts={np.int64(0): np.int64(5645), np.int64(1): np.int64(755)}
+[INFO] mbere-ml: train_xgboost: CV f1_macro=0.4750 recall_macro=0.5011 roc_auc_ovr=0.5366
+[INFO] mbere-ml: train_xgboost: wrote xgboost.pkl + xgboost.meta.json
+[INFO] mbere-ml: evaluate[xgboost]: f1_macro=0.4676 recall_macro=0.4979 roc_auc_ovr=0.5318 -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_195213_bae6def\reports\xgboost
+[INFO] mbere-ml: shap[xgboost]: wrote summary_plot.png, waterfall_plot.png, importance.csv -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_195213_bae6def\reports\xgboost
+[INFO] mbere-ml: 
+[INFO] mbere-ml: === SUMMARY  dataset=porto_seguro  kind=binary  seed=42 ===
+[INFO] mbere-ml: model             macro-F1    recall       AUC   accuracy
+[INFO] mbere-ml: ---------------------------------------------------------
+[INFO] mbere-ml: baseline            0.4603    0.5542    0.5650     0.5613
+[INFO] mbere-ml: random_forest       0.4686    0.5000    0.5482     0.8819
+[INFO] mbere-ml: xgboost             0.4676    0.4979    0.5318     0.8781
+[INFO] mbere-ml: run complete: C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_195213_bae6def

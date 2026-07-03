@@ -1,0 +1,33 @@
+feature,mean_abs_shap
+ordinal__driver_experience,0.5311244
+ordinal__driver_age_band,0.44952866
+ordinal__time_of_day,0.38361344
+onehot__weather_Normal,0.24688815
+onehot__vehicle_type_Automobile,0.13939835
+onehot__light_condition_Darkness - lights lit,0.13231501
+onehot__vehicle_type_Lorry,0.123383865
+onehot__light_condition_Daylight,0.113929816
+onehot__weather_Raining,0.11201285
+onehot__vehicle_type_Other,0.090133294
+onehot__vehicle_type_Public_transport,0.08114512
+onehot__vehicle_type_Unknown,0.07122257
+onehot__road_surface_Asphalt roads,0.062941425
+onehot__vehicle_type_Pickup,0.043252166
+onehot__road_surface_Earth roads,0.02456567
+onehot__road_surface_Asphalt roads with some distress,0.018440096
+onehot__vehicle_type_Motorcycle,0.017042434
+onehot__weather_Unknown,0.016899727
+onehot__light_condition_Darkness - no lighting,0.01597765
+onehot__vehicle_type_Taxi,0.015239954
+onehot__road_surface_Gravel roads,0.013113376
+onehot__road_surface_Other,0.00795084
+onehot__weather_Cloudy,0.006697379
+onehot__road_surface_Unknown,0.006658247
+onehot__weather_Other,0.0047067935
+onehot__weather_Windy,0.004475693
+onehot__weather_Raining and Windy,0.0037822025
+onehot__light_condition_Darkness - lights unlit,0.003714169
+onehot__weather_Snow,0.0007573528
+onehot__vehicle_type_Bajaj,0.0005019974
+onehot__vehicle_type_Bicycle,0.00022354012
+onehot__weather_Fog or mist,8.2536666e-05

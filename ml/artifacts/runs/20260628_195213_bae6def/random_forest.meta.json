@@ -1,0 +1,107 @@
+{
+  "model": "random_forest",
+  "model_version": "0.1.0",
+  "created_utc": "2026-06-28T17:52:55.683479+00:00",
+  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "random_state": 42,
+  "dataset": {
+    "name": "porto_seguro",
+    "kind": "binary",
+    "rows": 6400,
+    "target": "target",
+    "classes": [
+      "No claim",
+      "Claim"
+    ]
+  },
+  "features": [
+    "ps_ind_02_cat",
+    "ps_ind_04_cat",
+    "ps_ind_05_cat",
+    "ps_car_01_cat",
+    "ps_car_04_cat",
+    "ps_car_07_cat",
+    "ps_ind_01",
+    "ps_ind_03",
+    "ps_ind_15",
+    "ps_ind_06_bin",
+    "ps_ind_07_bin",
+    "ps_ind_16_bin",
+    "ps_ind_17_bin",
+    "ps_reg_01",
+    "ps_reg_02",
+    "ps_reg_03",
+    "ps_car_12",
+    "ps_car_13",
+    "ps_car_15",
+    "ps_calc_01",
+    "ps_calc_02",
+    "ps_calc_15_bin",
+    "ps_calc_16_bin"
+  ],
+  "cv": {
+    "scheme": "StratifiedKFold",
+    "k_folds": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "params": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 300,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "metrics_cv": {
+    "n_samples": 6400,
+    "accuracy": 0.88203125,
+    "f1_macro": 0.46865919468659195,
+    "recall_macro": 0.5,
+    "precision_macro": 0.441015625,
+    "roc_auc_ovr_macro": 0.5518523689134732,
+    "per_class": {
+      "No claim": {
+        "precision": 0.88203125,
+        "recall": 1.0,
+        "f1": 0.9373183893731839,
+        "support": 5645,
+        "roc_auc_ovr": 0.5518524862299755
+      },
+      "Claim": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 755,
+        "roc_auc_ovr": 0.5518523689134732
+      }
+    },
+    "confusion_matrix": [
+      [
+        5645,
+        0
+      ],
+      [
+        755,
+        0
+      ]
+    ],
+    "labels": [
+      "No claim",
+      "Claim"
+    ]
+  }
+}

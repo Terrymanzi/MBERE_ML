@@ -1,0 +1,183 @@
+{
+  "dataset": "addis",
+  "kind": "multiclass",
+  "created_utc": "2026-06-28T14:26:03.603663+00:00",
+  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "random_state": 42,
+  "target": {
+    "column": "Accident_severity",
+    "classes": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  },
+  "rows": {
+    "train": 9852,
+    "test": 2464,
+    "total": 12316
+  },
+  "input_features": [
+    {
+      "name": "driver_age_band",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Unknown",
+        "Under 18",
+        "18-30",
+        "31-50",
+        "Over 51"
+      ]
+    },
+    {
+      "name": "driver_experience",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Unknown",
+        "No Licence",
+        "Below 1yr",
+        "1-2yr",
+        "2-5yr",
+        "5-10yr",
+        "Above 10yr"
+      ]
+    },
+    {
+      "name": "time_of_day",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Night",
+        "Morning",
+        "Afternoon",
+        "Evening"
+      ]
+    },
+    {
+      "name": "vehicle_type",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Automobile",
+        "Bajaj",
+        "Bicycle",
+        "Lorry",
+        "Motorcycle",
+        "Other",
+        "Pickup",
+        "Public_transport",
+        "Taxi",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "weather",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Cloudy",
+        "Fog or mist",
+        "Normal",
+        "Other",
+        "Raining",
+        "Raining and Windy",
+        "Snow",
+        "Unknown",
+        "Windy"
+      ]
+    },
+    {
+      "name": "road_surface",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Asphalt roads",
+        "Asphalt roads with some distress",
+        "Earth roads",
+        "Gravel roads",
+        "Other",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "light_condition",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Darkness - lights lit",
+        "Darkness - lights unlit",
+        "Darkness - no lighting",
+        "Daylight"
+      ]
+    }
+  ],
+  "encoded_feature_names": [
+    "ordinal__driver_age_band",
+    "ordinal__driver_experience",
+    "ordinal__time_of_day",
+    "onehot__vehicle_type_Automobile",
+    "onehot__vehicle_type_Bajaj",
+    "onehot__vehicle_type_Bicycle",
+    "onehot__vehicle_type_Lorry",
+    "onehot__vehicle_type_Motorcycle",
+    "onehot__vehicle_type_Other",
+    "onehot__vehicle_type_Pickup",
+    "onehot__vehicle_type_Public_transport",
+    "onehot__vehicle_type_Taxi",
+    "onehot__vehicle_type_Unknown",
+    "onehot__weather_Cloudy",
+    "onehot__weather_Fog or mist",
+    "onehot__weather_Normal",
+    "onehot__weather_Other",
+    "onehot__weather_Raining",
+    "onehot__weather_Raining and Windy",
+    "onehot__weather_Snow",
+    "onehot__weather_Unknown",
+    "onehot__weather_Windy",
+    "onehot__road_surface_Asphalt roads",
+    "onehot__road_surface_Asphalt roads with some distress",
+    "onehot__road_surface_Earth roads",
+    "onehot__road_surface_Gravel roads",
+    "onehot__road_surface_Other",
+    "onehot__road_surface_Unknown",
+    "onehot__light_condition_Darkness - lights lit",
+    "onehot__light_condition_Darkness - lights unlit",
+    "onehot__light_condition_Darkness - no lighting",
+    "onehot__light_condition_Daylight"
+  ],
+  "n_encoded_features": 32,
+  "feature_selection": {
+    "method": "mutual_info",
+    "threshold": 0.0,
+    "scores": {
+      "driver_age_band": 0.0026968650532646315,
+      "driver_experience": 0.0012867643433019972,
+      "time_of_day": 0.0017699528921018845,
+      "vehicle_type": 0.0005984817513803206,
+      "weather": 0.0024353475117950556,
+      "road_surface": 0.0007503994858618103,
+      "light_condition": 0.0014797704591626945
+    },
+    "selected": [
+      "driver_age_band",
+      "driver_experience",
+      "time_of_day",
+      "vehicle_type",
+      "weather",
+      "road_surface",
+      "light_condition"
+    ]
+  },
+  "artifacts": {
+    "encoder": "encoders.joblib"
+  }
+}

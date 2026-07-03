@@ -1,0 +1,39 @@
+{
+  "n_samples": 1600,
+  "accuracy": 0.56125,
+  "f1_macro": 0.46029476209147313,
+  "recall_macro": 0.5542018681635974,
+  "precision_macro": 0.5228190875522347,
+  "roc_auc_ovr_macro": 0.5650088683398393,
+  "per_class": {
+    "No claim": {
+      "precision": 0.9023836549375709,
+      "recall": 0.5634301913536499,
+      "f1": 0.693717277486911,
+      "support": 1411,
+      "roc_auc_ovr": 0.5650088683398393
+    },
+    "Claim": {
+      "precision": 0.14325452016689846,
+      "recall": 0.544973544973545,
+      "f1": 0.22687224669603523,
+      "support": 189,
+      "roc_auc_ovr": 0.5650088683398393
+    }
+  },
+  "confusion_matrix": [
+    [
+      795,
+      616
+    ],
+    [
+      86,
+      103
+    ]
+  ],
+  "labels": [
+    "No claim",
+    "Claim"
+  ],
+  "model": "baseline"
+}

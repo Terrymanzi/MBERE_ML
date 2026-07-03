@@ -1,0 +1,27 @@
+{
+  "dataset": "addis",
+  "kind": "multiclass",
+  "random_state": 42,
+  "git_commit": "8044df66e409c0f20c6a7d8917d21d33b56a1a6a",
+  "created_utc": "2026-07-03T19:16:40.909649+00:00",
+  "models": {
+    "baseline": {
+      "f1_macro": 0.3356986276894744,
+      "recall_macro": 0.3331500109076843,
+      "roc_auc_ovr_macro": 0.531352534992663,
+      "accuracy": 0.7646103896103896
+    },
+    "random_forest": {
+      "f1_macro": 0.31261709820319955,
+      "recall_macro": 0.32929794843873456,
+      "roc_auc_ovr_macro": 0.551286748151172,
+      "accuracy": 0.8193993506493507
+    },
+    "xgboost": {
+      "f1_macro": 0.3155731835906319,
+      "recall_macro": 0.3347407912562536,
+      "roc_auc_ovr_macro": 0.5644024658912908,
+      "accuracy": 0.8352272727272727
+    }
+  }
+}

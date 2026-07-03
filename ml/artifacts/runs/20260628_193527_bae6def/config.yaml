@@ -1,0 +1,85 @@
+# Porto Seguro dataset (BENCHMARK, binary).
+# Driver-level records. TARGET = binary (filed an insurance claim or not).
+# Features are anonymized (ps_ind_* / ps_reg_* / ps_car_* / ps_calc_*).
+# This is a SEPARATE pipeline from Addis. Never merge the datasets.
+#
+# NOTE: the real Kaggle dataset is not downloaded yet. `paths.raw` points at a
+# SYNTHETIC placeholder with the real Porto schema (see scripts/make_porto_sample.py)
+# so the pipeline runs end-to-end. To use the real data, drop the Kaggle
+# train.csv at the path below -- no code or config changes needed (the feature
+# lists below are a subset of the real columns; extra columns are ignored).
+
+name: porto_seguro
+kind: binary
+description: >
+  Porto Seguro driver-level data. Predict whether a driver files a claim
+  (binary, anonymized features). Benchmark for the Addis severity pipeline.
+
+paths:
+  raw: data/raw/porto_seguro_sample.csv
+  processed_dir: data/processed
+  artifacts_dir: ml/artifacts
+
+target:
+  column: target
+  classes: ["No claim", "Claim"]      # index 0 / 1
+  label_map:
+    "0": "No claim"                   # raw 0/1 -> readable labels (quoted = string keys)
+    "1": "Claim"
+
+clean:
+  leakage_columns: [id]               # row identifier, not a feature
+  time_column: null
+  time_derived: null
+  missing_tokens: ["", "na", "nan"]   # Porto uses -1 for missing; kept as its own category
+  categorical_fill_value: "Unknown"
+
+# No domain feature engineering for the anonymized Porto features.
+feature_engineering: {}
+
+features:
+  ordinal: {}
+  onehot:                             # anonymized categorical features (_cat); -1 = a category
+    - ps_ind_02_cat
+    - ps_ind_04_cat
+    - ps_ind_05_cat
+    - ps_car_01_cat
+    - ps_car_04_cat
+    - ps_car_07_cat
+  numeric:                            # ordinal counts, binary flags, and continuous features
+    - ps_ind_01
+    - ps_ind_03
+    - ps_ind_15
+    - ps_ind_06_bin
+    - ps_ind_07_bin
+    - ps_ind_16_bin
+    - ps_ind_17_bin
+    - ps_reg_01
+    - ps_reg_02
+    - ps_reg_03
+    - ps_car_12
+    - ps_car_13
+    - ps_car_15
+    - ps_calc_01
+    - ps_calc_02
+    - ps_calc_15_bin
+    - ps_calc_16_bin
+
+encoding:
+  scale_numeric: true                 # helps the logistic baseline; harmless for trees
+
+split:
+  test_size: 0.2
+  random_state: 42
+  stratify: true
+  k_folds: 5
+
+feature_selection:
+  enabled: true
+  method: mutual_info
+  threshold: 0.0
+
+baseline:
+  kind: logistic                      # transparent linear baseline (no interpretable rules to encode)
+
+random_state: 42

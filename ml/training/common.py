@@ -39,8 +39,11 @@ def processed_path(config: DatasetConfig, split: str) -> Path:
 
 def load_processed(config: DatasetConfig, split: str) -> tuple[pd.DataFrame, np.ndarray, list[str]]:
     """Load engineered features + integer-coded target for 'train' or 'test'."""
+    import json
+    contract_path = Path(config.paths.artifacts_dir) / "feature_contract.json"
+    selected = json.loads(contract_path.read_text(encoding="utf-8"))["feature_selection"]["selected"]
     df = pd.read_csv(processed_path(config, split))
-    X = df[config.features.all].copy()
+    X = df[selected].copy()
     y, classes = encode_target(df[config.target.column], config)
     return X, y, classes
 
@@ -55,8 +58,11 @@ def get_cv(config: DatasetConfig) -> StratifiedKFold:
 def make_resampling_pipeline(config: DatasetConfig, classifier) -> ImbPipeline:
     """encoder -> SMOTE -> classifier. The encoder is fit per fold; SMOTE only
     resamples the training fold."""
+    import json
+    contract_path = Path(config.paths.artifacts_dir) / "feature_contract.json"
+    selected = json.loads(contract_path.read_text(encoding="utf-8"))["feature_selection"]["selected"]
     return ImbPipeline([
-        ("encoder", build_encoder(config)),
+        ("encoder", build_encoder(config, subset=selected)),
         ("smote", SMOTE(random_state=config.random_state)),
         ("classifier", classifier),
     ])

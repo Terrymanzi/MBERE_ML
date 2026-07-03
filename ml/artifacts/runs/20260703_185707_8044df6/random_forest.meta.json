@@ -1,0 +1,113 @@
+{
+  "model": "random_forest",
+  "model_version": "0.1.0",
+  "created_utc": "2026-07-03T16:58:01.958213+00:00",
+  "git_commit": "8044df66e409c0f20c6a7d8917d21d33b56a1a6a",
+  "random_state": 42,
+  "dataset": {
+    "name": "addis",
+    "kind": "multiclass",
+    "rows": 9852,
+    "target": "Accident_severity",
+    "classes": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  },
+  "features": [
+    "driver_age_band",
+    "driver_experience",
+    "time_of_day",
+    "driver_education",
+    "vehicle_service_year",
+    "vehicle_type",
+    "weather",
+    "road_surface",
+    "light_condition",
+    "driver_sex",
+    "driver_vehicle_relation",
+    "vehicle_owner",
+    "vehicle_defect"
+  ],
+  "cv": {
+    "scheme": "StratifiedKFold",
+    "k_folds": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "params": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 300,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "metrics_cv": {
+    "n_samples": 9852,
+    "accuracy": 0.8319123020706456,
+    "f1_macro": 0.3161239019362301,
+    "recall_macro": 0.33430330363376926,
+    "precision_macro": 0.3364544491234156,
+    "roc_auc_ovr_macro": 0.5434689816009803,
+    "per_class": {
+      "Slight Injury": {
+        "precision": 0.8460980412477977,
+        "recall": 0.979954387228424,
+        "f1": 0.9081201334816462,
+        "support": 8331,
+        "roc_auc_ovr": 0.5310569405192823
+      },
+      "Serious Injury": {
+        "precision": 0.16326530612244897,
+        "recall": 0.02295552367288379,
+        "f1": 0.04025157232704402,
+        "support": 1394,
+        "roc_auc_ovr": 0.5235027885275305
+      },
+      "Fatal Injury": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 127,
+        "roc_auc_ovr": 0.5758472157561282
+      }
+    },
+    "confusion_matrix": [
+      [
+        8164,
+        161,
+        6
+      ],
+      [
+        1361,
+        32,
+        1
+      ],
+      [
+        124,
+        3,
+        0
+      ]
+    ],
+    "labels": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  }
+}

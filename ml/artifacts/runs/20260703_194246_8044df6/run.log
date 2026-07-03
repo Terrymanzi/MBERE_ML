@@ -1,0 +1,13 @@
+[INFO] mbere-ml: === mbere-ml run: dataset=addis kind=multiclass models=all seed=42 ===
+[INFO] mbere-ml: run dir: C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260703_194246_8044df6
+[INFO] mbere-ml: clean: rows 12316 -> 12316 (dropped 0); cols=25
+[INFO] mbere-ml: split: train=9852 test=2464 (test_size=0.20, stratified=True)
+[INFO] mbere-ml: feature_selection (mutual_info): scores={'driver_age_band': 0.0027, 'driver_experience': 0.0013, 'time_of_day': 0.0018, 'driver_education': 0.0002, 'vehicle_service_year': 0.0003, 'vehicle_type': 0.0006, 'weather': 0.0024, 'road_surface': 0.0008, 'light_condition': 0.0015, 'driver_sex': 0.0002, 'driver_vehicle_relation': 0.0004, 'vehicle_owner': 0.0003, 'vehicle_defect': 0.0004}
+[INFO] mbere-ml: selected 11/13 features: ['driver_age_band', 'driver_experience', 'time_of_day', 'vehicle_service_year', 'vehicle_type', 'weather', 'road_surface', 'light_condition', 'driver_vehicle_relation', 'vehicle_owner', 'vehicle_defect']
+[INFO] mbere-ml: wrote: addis_train.csv, addis_test.csv, encoders.joblib, split_indices.json, feature_contract.json
+[INFO] mbere-ml: encoded feature dim: 46
+[INFO] mbere-ml: train_baseline: X=(9852, 11), class counts={np.int64(0): np.int64(8331), np.int64(1): np.int64(1394), np.int64(2): np.int64(127)}
+[INFO] mbere-ml: train_baseline: CV f1_macro=0.3287 recall_macro=0.3312 roc_auc_ovr=0.5054
+[INFO] mbere-ml: train_baseline: wrote baseline.pkl + baseline.meta.json
+[INFO] mbere-ml: evaluate[baseline]: f1_macro=0.3357 recall_macro=0.3332 roc_auc_ovr=0.5314 -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260703_194246_8044df6\reports\baseline
+[INFO] mbere-ml: train_random_forest: X=(9852, 11), class counts={np.int64(0): np.int64(8331), np.int64(1): np.int64(1394), np.int64(2): np.int64(127)}

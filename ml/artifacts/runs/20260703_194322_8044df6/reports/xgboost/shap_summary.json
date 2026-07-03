@@ -1,0 +1,49 @@
+{
+  "model": "xgboost",
+  "n_samples_explained": 500,
+  "n_encoded_features": 46,
+  "high_risk_case_index": 299,
+  "high_risk_positive_proba": 0.4430539608001709,
+  "top_features": [
+    {
+      "feature": "ordinal__driver_experience",
+      "mean_abs_shap": 0.4751855432987213
+    },
+    {
+      "feature": "ordinal__driver_age_band",
+      "mean_abs_shap": 0.3867417871952057
+    },
+    {
+      "feature": "ordinal__time_of_day",
+      "mean_abs_shap": 0.3017938435077667
+    },
+    {
+      "feature": "onehot__vehicle_defect_No defect",
+      "mean_abs_shap": 0.2492821216583252
+    },
+    {
+      "feature": "ordinal__vehicle_service_year",
+      "mean_abs_shap": 0.2344561517238617
+    },
+    {
+      "feature": "onehot__weather_Normal",
+      "mean_abs_shap": 0.1745641827583313
+    },
+    {
+      "feature": "onehot__vehicle_type_Automobile",
+      "mean_abs_shap": 0.16092102229595184
+    },
+    {
+      "feature": "onehot__vehicle_defect_Unknown",
+      "mean_abs_shap": 0.15416613221168518
+    },
+    {
+      "feature": "onehot__vehicle_type_Lorry",
+      "mean_abs_shap": 0.1428433060646057
+    },
+    {
+      "feature": "onehot__light_condition_Daylight",
+      "mean_abs_shap": 0.10904006659984589
+    }
+  ]
+}

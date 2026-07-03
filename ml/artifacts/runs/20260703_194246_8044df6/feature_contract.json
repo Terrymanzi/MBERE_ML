@@ -1,0 +1,258 @@
+{
+  "dataset": "addis",
+  "kind": "multiclass",
+  "created_utc": "2026-07-03T17:42:47.922035+00:00",
+  "git_commit": "8044df66e409c0f20c6a7d8917d21d33b56a1a6a",
+  "random_state": 42,
+  "target": {
+    "column": "Accident_severity",
+    "classes": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  },
+  "rows": {
+    "train": 9852,
+    "test": 2464,
+    "total": 12316
+  },
+  "input_features": [
+    {
+      "name": "driver_age_band",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Unknown",
+        "Under 18",
+        "18-30",
+        "31-50",
+        "Over 51"
+      ]
+    },
+    {
+      "name": "driver_experience",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Unknown",
+        "No Licence",
+        "Below 1yr",
+        "1-2yr",
+        "2-5yr",
+        "5-10yr",
+        "Above 10yr"
+      ]
+    },
+    {
+      "name": "time_of_day",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Night",
+        "Morning",
+        "Afternoon",
+        "Evening"
+      ]
+    },
+    {
+      "name": "vehicle_service_year",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Unknown",
+        "Below 1yr",
+        "1-2yr",
+        "2-5yrs",
+        "5-10yrs",
+        "Above 10yr"
+      ]
+    },
+    {
+      "name": "vehicle_type",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Automobile",
+        "Bajaj",
+        "Bicycle",
+        "Lorry",
+        "Motorcycle",
+        "Other",
+        "Pickup",
+        "Public_transport",
+        "Taxi",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "weather",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Cloudy",
+        "Fog or mist",
+        "Normal",
+        "Other",
+        "Raining",
+        "Raining and Windy",
+        "Snow",
+        "Unknown",
+        "Windy"
+      ]
+    },
+    {
+      "name": "road_surface",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Asphalt roads",
+        "Asphalt roads with some distress",
+        "Earth roads",
+        "Gravel roads",
+        "Other",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "light_condition",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Darkness - lights lit",
+        "Darkness - lights unlit",
+        "Darkness - no lighting",
+        "Daylight"
+      ]
+    },
+    {
+      "name": "driver_vehicle_relation",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Employee",
+        "Other",
+        "Owner",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "vehicle_owner",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Governmental",
+        "Organization",
+        "Other",
+        "Owner",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "vehicle_defect",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "5",
+        "7",
+        "No defect",
+        "Unknown"
+      ]
+    }
+  ],
+  "encoded_feature_names": [
+    "ordinal__driver_age_band",
+    "ordinal__driver_experience",
+    "ordinal__time_of_day",
+    "ordinal__vehicle_service_year",
+    "onehot__vehicle_type_Automobile",
+    "onehot__vehicle_type_Bajaj",
+    "onehot__vehicle_type_Bicycle",
+    "onehot__vehicle_type_Lorry",
+    "onehot__vehicle_type_Motorcycle",
+    "onehot__vehicle_type_Other",
+    "onehot__vehicle_type_Pickup",
+    "onehot__vehicle_type_Public_transport",
+    "onehot__vehicle_type_Taxi",
+    "onehot__vehicle_type_Unknown",
+    "onehot__weather_Cloudy",
+    "onehot__weather_Fog or mist",
+    "onehot__weather_Normal",
+    "onehot__weather_Other",
+    "onehot__weather_Raining",
+    "onehot__weather_Raining and Windy",
+    "onehot__weather_Snow",
+    "onehot__weather_Unknown",
+    "onehot__weather_Windy",
+    "onehot__road_surface_Asphalt roads",
+    "onehot__road_surface_Asphalt roads with some distress",
+    "onehot__road_surface_Earth roads",
+    "onehot__road_surface_Gravel roads",
+    "onehot__road_surface_Other",
+    "onehot__road_surface_Unknown",
+    "onehot__light_condition_Darkness - lights lit",
+    "onehot__light_condition_Darkness - lights unlit",
+    "onehot__light_condition_Darkness - no lighting",
+    "onehot__light_condition_Daylight",
+    "onehot__driver_vehicle_relation_Employee",
+    "onehot__driver_vehicle_relation_Other",
+    "onehot__driver_vehicle_relation_Owner",
+    "onehot__driver_vehicle_relation_Unknown",
+    "onehot__vehicle_owner_Governmental",
+    "onehot__vehicle_owner_Organization",
+    "onehot__vehicle_owner_Other",
+    "onehot__vehicle_owner_Owner",
+    "onehot__vehicle_owner_Unknown",
+    "onehot__vehicle_defect_5",
+    "onehot__vehicle_defect_7",
+    "onehot__vehicle_defect_No defect",
+    "onehot__vehicle_defect_Unknown"
+  ],
+  "n_encoded_features": 46,
+  "feature_selection": {
+    "method": "mutual_info",
+    "threshold": 0.0003,
+    "scores": {
+      "driver_age_band": 0.0026968650532646315,
+      "driver_experience": 0.0012867643433019972,
+      "time_of_day": 0.0017699528921018845,
+      "driver_education": 0.00021892548847597844,
+      "vehicle_service_year": 0.0003135992617565725,
+      "vehicle_type": 0.0005984817513803206,
+      "weather": 0.0024353475117950556,
+      "road_surface": 0.0007503994858618103,
+      "light_condition": 0.0014797704591626945,
+      "driver_sex": 0.00017193621965468206,
+      "driver_vehicle_relation": 0.00037295798726805674,
+      "vehicle_owner": 0.00030990341844084463,
+      "vehicle_defect": 0.00036965579891565237
+    },
+    "selected": [
+      "driver_age_band",
+      "driver_experience",
+      "time_of_day",
+      "vehicle_service_year",
+      "vehicle_type",
+      "weather",
+      "road_surface",
+      "light_condition",
+      "driver_vehicle_relation",
+      "vehicle_owner",
+      "vehicle_defect"
+    ]
+  },
+  "artifacts": {
+    "encoder": "encoders.joblib"
+  }
+}

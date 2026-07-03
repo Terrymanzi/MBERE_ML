@@ -1,0 +1,49 @@
+{
+  "model": "random_forest",
+  "n_samples_explained": 500,
+  "n_encoded_features": 50,
+  "high_risk_case_index": 471,
+  "high_risk_positive_proba": 0.316107898272751,
+  "top_features": [
+    {
+      "feature": "ordinal__time_of_day",
+      "mean_abs_shap": 0.03158051167125627
+    },
+    {
+      "feature": "ordinal__driver_experience",
+      "mean_abs_shap": 0.025188500324442
+    },
+    {
+      "feature": "ordinal__driver_age_band",
+      "mean_abs_shap": 0.024840637982060907
+    },
+    {
+      "feature": "onehot__weather_Normal",
+      "mean_abs_shap": 0.02373182334739913
+    },
+    {
+      "feature": "onehot__vehicle_type_Automobile",
+      "mean_abs_shap": 0.021731877624812143
+    },
+    {
+      "feature": "ordinal__driver_education",
+      "mean_abs_shap": 0.019471274654320553
+    },
+    {
+      "feature": "onehot__vehicle_defect_No defect",
+      "mean_abs_shap": 0.01891898157512511
+    },
+    {
+      "feature": "onehot__light_condition_Darkness - lights lit",
+      "mean_abs_shap": 0.017237076356039896
+    },
+    {
+      "feature": "onehot__light_condition_Daylight",
+      "mean_abs_shap": 0.014908532508842111
+    },
+    {
+      "feature": "onehot__vehicle_type_Lorry",
+      "mean_abs_shap": 0.013921113184734098
+    }
+  ]
+}

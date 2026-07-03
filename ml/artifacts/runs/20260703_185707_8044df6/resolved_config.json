@@ -1,0 +1,197 @@
+{
+  "name": "addis",
+  "kind": "multiclass",
+  "paths": {
+    "raw": "C:\\Users\\Terry\\OneDrive\\Desktop\\ALU\\Yr3Tr3\\Mission Capstone\\Proposal 2\\Implementation\\Codebase\\data\\raw\\RTA Dataset.csv",
+    "processed_dir": "C:\\Users\\Terry\\OneDrive\\Desktop\\ALU\\Yr3Tr3\\Mission Capstone\\Proposal 2\\Implementation\\Codebase\\ml\\artifacts\\runs\\20260703_185707_8044df6\\processed",
+    "artifacts_dir": "C:\\Users\\Terry\\OneDrive\\Desktop\\ALU\\Yr3Tr3\\Mission Capstone\\Proposal 2\\Implementation\\Codebase\\ml\\artifacts\\runs\\20260703_185707_8044df6"
+  },
+  "target": {
+    "column": "Accident_severity",
+    "classes": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ],
+    "label_map": {
+      "Fatal injury": "Fatal Injury"
+    }
+  },
+  "clean": {
+    "leakage_columns": [
+      "Number_of_casualties",
+      "Casualty_class",
+      "Sex_of_casualty",
+      "Age_band_of_casualty",
+      "Casualty_severity",
+      "Work_of_casuality",
+      "Fitness_of_casuality"
+    ],
+    "time_column": "Time",
+    "time_derived": "hour_of_day",
+    "missing_tokens": [
+      "",
+      "na",
+      "nan",
+      "unknown"
+    ],
+    "categorical_fill_value": "Unknown"
+  },
+  "feature_engineering": {
+    "renames": {
+      "driver_age_band": "Age_band_of_driver",
+      "driver_experience": "Driving_experience",
+      "weather": "Weather_conditions",
+      "road_surface": "Road_surface_type",
+      "light_condition": "Light_conditions",
+      "driver_sex": "Sex_of_driver",
+      "driver_education": "Educational_level",
+      "driver_vehicle_relation": "Vehicle_driver_relation",
+      "vehicle_owner": "Owner_of_vehicle",
+      "vehicle_service_year": "Service_year_of_vehicle",
+      "vehicle_defect": "Defect_of_vehicle"
+    },
+    "time_of_day": {
+      "source": "hour_of_day",
+      "derived": "time_of_day",
+      "buckets": {
+        "Night": [
+          0,
+          5
+        ],
+        "Morning": [
+          6,
+          11
+        ],
+        "Afternoon": [
+          12,
+          17
+        ],
+        "Evening": [
+          18,
+          23
+        ]
+      }
+    },
+    "vehicle_type": {
+      "source": "Type_of_vehicle",
+      "derived": "vehicle_type",
+      "default_group": "Other",
+      "rules": [
+        {
+          "keyword": "Unknown",
+          "group": "Unknown"
+        },
+        {
+          "keyword": "Motorcycle",
+          "group": "Motorcycle"
+        },
+        {
+          "keyword": "Bajaj",
+          "group": "Bajaj"
+        },
+        {
+          "keyword": "Bicycle",
+          "group": "Bicycle"
+        },
+        {
+          "keyword": "Public",
+          "group": "Public_transport"
+        },
+        {
+          "keyword": "Taxi",
+          "group": "Taxi"
+        },
+        {
+          "keyword": "Lorry",
+          "group": "Lorry"
+        },
+        {
+          "keyword": "Pick up",
+          "group": "Pickup"
+        },
+        {
+          "keyword": "Automobile",
+          "group": "Automobile"
+        },
+        {
+          "keyword": "Stationwagen",
+          "group": "Automobile"
+        }
+      ]
+    }
+  },
+  "features": {
+    "ordinal": {
+      "driver_age_band": [
+        "Unknown",
+        "Under 18",
+        "18-30",
+        "31-50",
+        "Over 51"
+      ],
+      "driver_experience": [
+        "Unknown",
+        "No Licence",
+        "Below 1yr",
+        "1-2yr",
+        "2-5yr",
+        "5-10yr",
+        "Above 10yr"
+      ],
+      "time_of_day": [
+        "Night",
+        "Morning",
+        "Afternoon",
+        "Evening"
+      ],
+      "driver_education": [
+        "Unknown",
+        "Illiterate",
+        "Writing & reading",
+        "Elementary school",
+        "Junior high school",
+        "High school",
+        "Above high school"
+      ],
+      "vehicle_service_year": [
+        "Unknown",
+        "Below 1yr",
+        "1-2yr",
+        "2-5yrs",
+        "5-10yrs",
+        "Above 10yr"
+      ]
+    },
+    "onehot": [
+      "vehicle_type",
+      "weather",
+      "road_surface",
+      "light_condition",
+      "driver_sex",
+      "driver_vehicle_relation",
+      "vehicle_owner",
+      "vehicle_defect"
+    ],
+    "numeric": []
+  },
+  "encoding": {
+    "scale_numeric": false
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true,
+    "k_folds": 5
+  },
+  "feature_selection": {
+    "enabled": true,
+    "method": "mutual_info",
+    "threshold": 0.0
+  },
+  "baseline": {
+    "kind": "rule_based"
+  },
+  "random_state": 42,
+  "description": "Addis Ababa Road Traffic Accident data. Predict accident severity (Slight / Serious / Fatal) as a risk-level proxy.\n"
+}

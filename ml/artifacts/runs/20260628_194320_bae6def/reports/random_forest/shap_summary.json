@@ -1,0 +1,49 @@
+{
+  "model": "random_forest",
+  "n_samples_explained": 500,
+  "n_encoded_features": 59,
+  "high_risk_case_index": 193,
+  "high_risk_positive_proba": 0.3993724053724053,
+  "top_features": [
+    {
+      "feature": "onehot__ps_car_07_cat_0",
+      "mean_abs_shap": 0.03136755267366749
+    },
+    {
+      "feature": "onehot__ps_car_07_cat_1",
+      "mean_abs_shap": 0.026336453873238738
+    },
+    {
+      "feature": "onehot__ps_ind_02_cat_4",
+      "mean_abs_shap": 0.016196079372677277
+    },
+    {
+      "feature": "onehot__ps_ind_02_cat_1",
+      "mean_abs_shap": 0.01559295577215361
+    },
+    {
+      "feature": "onehot__ps_ind_02_cat_3",
+      "mean_abs_shap": 0.015354318828807837
+    },
+    {
+      "feature": "onehot__ps_ind_05_cat_4",
+      "mean_abs_shap": 0.014653044242279784
+    },
+    {
+      "feature": "onehot__ps_ind_05_cat_0",
+      "mean_abs_shap": 0.014577457189894295
+    },
+    {
+      "feature": "onehot__ps_ind_02_cat_2",
+      "mean_abs_shap": 0.012801761428166239
+    },
+    {
+      "feature": "numeric__ps_reg_02",
+      "mean_abs_shap": 0.011883640600768542
+    },
+    {
+      "feature": "onehot__ps_ind_04_cat_0",
+      "mean_abs_shap": 0.0116994073601901
+    }
+  ]
+}

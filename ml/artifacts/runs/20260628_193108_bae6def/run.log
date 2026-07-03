@@ -1,0 +1,30 @@
+[INFO] mbere-ml: === mbere-ml run: dataset=addis kind=multiclass models=all seed=42 ===
+[INFO] mbere-ml: run dir: C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193108_bae6def
+[INFO] mbere-ml: clean: rows 12316 -> 12316 (dropped 0); cols=25
+[INFO] mbere-ml: split: train=9852 test=2464 (test_size=0.20, stratified=True)
+[INFO] mbere-ml: feature_selection (mutual_info): scores={'driver_age_band': 0.0027, 'driver_experience': 0.0013, 'time_of_day': 0.0018, 'vehicle_type': 0.0006, 'weather': 0.0024, 'road_surface': 0.0008, 'light_condition': 0.0015}
+[INFO] mbere-ml: selected 7/7 features: ['driver_age_band', 'driver_experience', 'time_of_day', 'vehicle_type', 'weather', 'road_surface', 'light_condition']
+[INFO] mbere-ml: wrote: addis_train.csv, addis_test.csv, encoders.joblib, split_indices.json, feature_contract.json
+[INFO] mbere-ml: encoded feature dim: 32
+[INFO] mbere-ml: train_baseline: X=(9852, 7), class counts={np.int64(0): np.int64(8331), np.int64(1): np.int64(1394), np.int64(2): np.int64(127)}
+[INFO] mbere-ml: train_baseline: CV f1_macro=0.3287 recall_macro=0.3312 roc_auc_ovr=0.5054
+[INFO] mbere-ml: train_baseline: wrote baseline.pkl + baseline.meta.json
+[INFO] mbere-ml: evaluate[baseline]: f1_macro=0.3357 recall_macro=0.3332 roc_auc_ovr=0.5314 -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193108_bae6def\reports\baseline
+[INFO] mbere-ml: train_random_forest: X=(9852, 7), class counts={np.int64(0): np.int64(8331), np.int64(1): np.int64(1394), np.int64(2): np.int64(127)}
+[INFO] mbere-ml: train_random_forest: CV f1_macro=0.3497 recall_macro=0.3498 roc_auc_ovr=0.5587
+[INFO] mbere-ml: train_random_forest: wrote random_forest.pkl + random_forest.meta.json
+[INFO] mbere-ml: evaluate[random_forest]: f1_macro=0.3437 recall_macro=0.3443 roc_auc_ovr=0.5671 -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193108_bae6def\reports\random_forest
+[INFO] mbere-ml: shap[random_forest]: wrote summary_plot.png, waterfall_plot.png, importance.csv -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193108_bae6def\reports\random_forest
+[INFO] mbere-ml: train_xgboost: X=(9852, 7), class counts={np.int64(0): np.int64(8331), np.int64(1): np.int64(1394), np.int64(2): np.int64(127)}
+[INFO] mbere-ml: train_xgboost: CV f1_macro=0.3490 recall_macro=0.3480 roc_auc_ovr=0.5540
+[INFO] mbere-ml: train_xgboost: wrote xgboost.pkl + xgboost.meta.json
+[INFO] mbere-ml: evaluate[xgboost]: f1_macro=0.3300 recall_macro=0.3307 roc_auc_ovr=0.5302 -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193108_bae6def\reports\xgboost
+[INFO] mbere-ml: shap[xgboost]: wrote summary_plot.png, waterfall_plot.png, importance.csv -> C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193108_bae6def\reports\xgboost
+[INFO] mbere-ml: 
+[INFO] mbere-ml: === SUMMARY  dataset=addis  kind=multiclass  seed=42 ===
+[INFO] mbere-ml: model             macro-F1    recall       AUC   accuracy
+[INFO] mbere-ml: ---------------------------------------------------------
+[INFO] mbere-ml: baseline            0.3357    0.3332    0.5314     0.7646
+[INFO] mbere-ml: random_forest       0.3437    0.3443    0.5671     0.7256
+[INFO] mbere-ml: xgboost             0.3300    0.3307    0.5302     0.7565
+[INFO] mbere-ml: run complete: C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193108_bae6def

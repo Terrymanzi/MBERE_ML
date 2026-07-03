@@ -1,0 +1,39 @@
+{
+  "n_samples": 1600,
+  "accuracy": 0.878125,
+  "f1_macro": 0.46755407653910147,
+  "recall_macro": 0.49787384833451453,
+  "precision_macro": 0.4407151819322459,
+  "roc_auc_ovr_macro": 0.531849151976721,
+  "per_class": {
+    "No claim": {
+      "precision": 0.8814303638644918,
+      "recall": 0.9957476966690291,
+      "f1": 0.9351081530782029,
+      "support": 1411,
+      "roc_auc_ovr": 0.5318472770634358
+    },
+    "Claim": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 189,
+      "roc_auc_ovr": 0.531849151976721
+    }
+  },
+  "confusion_matrix": [
+    [
+      1405,
+      6
+    ],
+    [
+      189,
+      0
+    ]
+  ],
+  "labels": [
+    "No claim",
+    "Claim"
+  ],
+  "model": "xgboost"
+}

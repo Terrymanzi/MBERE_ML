@@ -1,0 +1,54 @@
+{
+  "n_samples": 2464,
+  "accuracy": 0.8287337662337663,
+  "f1_macro": 0.31212462493871,
+  "recall_macro": 0.33138644917294086,
+  "precision_macro": 0.3217213228172132,
+  "roc_auc_ovr_macro": 0.557868804317372,
+  "per_class": {
+    "Slight Injury": {
+      "precision": 0.8451639684516397,
+      "recall": 0.9769673704414588,
+      "f1": 0.9062986868462052,
+      "support": 2084,
+      "roc_auc_ovr": 0.5565132841701181
+    },
+    "Serious Injury": {
+      "precision": 0.12,
+      "recall": 0.017191977077363897,
+      "f1": 0.03007518796992481,
+      "support": 349,
+      "roc_auc_ovr": 0.565961511105692
+    },
+    "Fatal Injury": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 31,
+      "roc_auc_ovr": 0.5511316176763057
+    }
+  },
+  "confusion_matrix": [
+    [
+      2036,
+      43,
+      5
+    ],
+    [
+      343,
+      6,
+      0
+    ],
+    [
+      30,
+      1,
+      0
+    ]
+  ],
+  "labels": [
+    "Slight Injury",
+    "Serious Injury",
+    "Fatal Injury"
+  ],
+  "model": "random_forest"
+}

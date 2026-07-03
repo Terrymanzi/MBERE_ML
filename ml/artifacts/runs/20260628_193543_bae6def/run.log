@@ -1,0 +1,6 @@
+[INFO] mbere-ml: === mbere-ml run: dataset=porto_seguro kind=binary models=all seed=42 ===
+[INFO] mbere-ml: run dir: C:\Users\Terry\OneDrive\Desktop\ALU\Yr3Tr3\Mission Capstone\Proposal 2\Implementation\Codebase\ml\artifacts\runs\20260628_193543_bae6def
+[INFO] mbere-ml: clean: rows 8000 -> 8000 (dropped 0); cols=26
+[INFO] mbere-ml: split: train=6400 test=1600 (test_size=0.20, stratified=True)
+[INFO] mbere-ml: feature_selection (mutual_info): scores={'ps_ind_02_cat': 0.0001, 'ps_ind_04_cat': 0.0001, 'ps_ind_05_cat': 0.0036, 'ps_car_01_cat': 0.0008, 'ps_car_04_cat': 0.0006, 'ps_car_07_cat': 0.001, 'ps_ind_01': 0.0, 'ps_ind_03': 0.0, 'ps_ind_15': 0.0006, 'ps_ind_06_bin': 0.0016, 'ps_ind_07_bin': 0.0004, 'ps_ind_16_bin': 0.0059, 'ps_ind_17_bin': 0.0025, 'ps_reg_01': 0.0, 'ps_reg_02': 0.0, 'ps_reg_03': 0.0009, 'ps_car_12': 0.0011, 'ps_car_13': 0.0021, 'ps_car_15': 0.0008, 'ps_calc_01': 0.0022, 'ps_calc_02': 0.0034, 'ps_calc_15_bin': 0.0, 'ps_calc_16_bin': 0.0}
+[INFO] mbere-ml: selected 23/23 features: ['ps_ind_02_cat', 'ps_ind_04_cat', 'ps_ind_05_cat', 'ps_car_01_cat', 'ps_car_04_cat', 'ps_car_07_cat', 'ps_ind_01', 'ps_ind_03', 'ps_ind_15', 'ps_ind_06_bin', 'ps_ind_07_bin', 'ps_ind_16_bin', 'ps_ind_17_bin', 'ps_reg_01', 'ps_reg_02', 'ps_reg_03', 'ps_car_12', 'ps_car_13', 'ps_car_15', 'ps_calc_01', 'ps_calc_02', 'ps_calc_15_bin', 'ps_calc_16_bin']

@@ -1,0 +1,332 @@
+{
+  "dataset": "porto_seguro",
+  "kind": "binary",
+  "created_utc": "2026-06-28T17:52:14.558932+00:00",
+  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "random_state": 42,
+  "target": {
+    "column": "target",
+    "classes": [
+      "No claim",
+      "Claim"
+    ]
+  },
+  "rows": {
+    "train": 6400,
+    "test": 1600,
+    "total": 8000
+  },
+  "input_features": [
+    {
+      "name": "ps_ind_02_cat",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        -1,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "ps_ind_04_cat",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        -1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ps_ind_05_cat",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "ps_car_01_cat",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "name": "ps_car_04_cat",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "name": "ps_car_07_cat",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        -1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ps_ind_01",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_ind_03",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_ind_15",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_ind_06_bin",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_ind_07_bin",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_ind_16_bin",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_ind_17_bin",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_reg_01",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_reg_02",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_reg_03",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_car_12",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_car_13",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_car_15",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_calc_01",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_calc_02",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_calc_15_bin",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    },
+    {
+      "name": "ps_calc_16_bin",
+      "kind": "numeric",
+      "encoding": "numeric",
+      "dtype": "float64"
+    }
+  ],
+  "encoded_feature_names": [
+    "onehot__ps_ind_02_cat_-1",
+    "onehot__ps_ind_02_cat_1",
+    "onehot__ps_ind_02_cat_2",
+    "onehot__ps_ind_02_cat_3",
+    "onehot__ps_ind_02_cat_4",
+    "onehot__ps_ind_04_cat_-1",
+    "onehot__ps_ind_04_cat_0",
+    "onehot__ps_ind_04_cat_1",
+    "onehot__ps_ind_05_cat_-1",
+    "onehot__ps_ind_05_cat_0",
+    "onehot__ps_ind_05_cat_1",
+    "onehot__ps_ind_05_cat_2",
+    "onehot__ps_ind_05_cat_3",
+    "onehot__ps_ind_05_cat_4",
+    "onehot__ps_ind_05_cat_5",
+    "onehot__ps_ind_05_cat_6",
+    "onehot__ps_car_01_cat_-1",
+    "onehot__ps_car_01_cat_0",
+    "onehot__ps_car_01_cat_1",
+    "onehot__ps_car_01_cat_2",
+    "onehot__ps_car_01_cat_3",
+    "onehot__ps_car_01_cat_4",
+    "onehot__ps_car_01_cat_5",
+    "onehot__ps_car_01_cat_6",
+    "onehot__ps_car_01_cat_7",
+    "onehot__ps_car_01_cat_8",
+    "onehot__ps_car_01_cat_9",
+    "onehot__ps_car_01_cat_10",
+    "onehot__ps_car_01_cat_11",
+    "onehot__ps_car_04_cat_0",
+    "onehot__ps_car_04_cat_1",
+    "onehot__ps_car_04_cat_2",
+    "onehot__ps_car_04_cat_3",
+    "onehot__ps_car_04_cat_4",
+    "onehot__ps_car_04_cat_5",
+    "onehot__ps_car_04_cat_6",
+    "onehot__ps_car_04_cat_7",
+    "onehot__ps_car_04_cat_8",
+    "onehot__ps_car_04_cat_9",
+    "onehot__ps_car_07_cat_-1",
+    "onehot__ps_car_07_cat_0",
+    "onehot__ps_car_07_cat_1",
+    "numeric__ps_ind_01",
+    "numeric__ps_ind_03",
+    "numeric__ps_ind_15",
+    "numeric__ps_ind_06_bin",
+    "numeric__ps_ind_07_bin",
+    "numeric__ps_ind_16_bin",
+    "numeric__ps_ind_17_bin",
+    "numeric__ps_reg_01",
+    "numeric__ps_reg_02",
+    "numeric__ps_reg_03",
+    "numeric__ps_car_12",
+    "numeric__ps_car_13",
+    "numeric__ps_car_15",
+    "numeric__ps_calc_01",
+    "numeric__ps_calc_02",
+    "numeric__ps_calc_15_bin",
+    "numeric__ps_calc_16_bin"
+  ],
+  "n_encoded_features": 59,
+  "feature_selection": {
+    "method": "mutual_info",
+    "threshold": 0.0,
+    "scores": {
+      "ps_ind_02_cat": 0.00014678702349643462,
+      "ps_ind_04_cat": 0.00013330263287504064,
+      "ps_ind_05_cat": 0.003629362808999866,
+      "ps_car_01_cat": 0.0007942859001148495,
+      "ps_car_04_cat": 0.0006228945598242275,
+      "ps_car_07_cat": 0.0010124559203657166,
+      "ps_ind_01": 0.0,
+      "ps_ind_03": 0.0,
+      "ps_ind_15": 0.0005652916060081559,
+      "ps_ind_06_bin": 0.0015745081341742573,
+      "ps_ind_07_bin": 0.00037700307790844434,
+      "ps_ind_16_bin": 0.005933082411495816,
+      "ps_ind_17_bin": 0.0024500477835378565,
+      "ps_reg_01": 0.0,
+      "ps_reg_02": 0.0,
+      "ps_reg_03": 0.0009044509618747476,
+      "ps_car_12": 0.0010945392835626233,
+      "ps_car_13": 0.0021010805518946185,
+      "ps_car_15": 0.0008400338699121601,
+      "ps_calc_01": 0.0022452058658755103,
+      "ps_calc_02": 0.0034288519604670498,
+      "ps_calc_15_bin": 0.0,
+      "ps_calc_16_bin": 0.0
+    },
+    "selected": [
+      "ps_ind_02_cat",
+      "ps_ind_04_cat",
+      "ps_ind_05_cat",
+      "ps_car_01_cat",
+      "ps_car_04_cat",
+      "ps_car_07_cat",
+      "ps_ind_01",
+      "ps_ind_03",
+      "ps_ind_15",
+      "ps_ind_06_bin",
+      "ps_ind_07_bin",
+      "ps_ind_16_bin",
+      "ps_ind_17_bin",
+      "ps_reg_01",
+      "ps_reg_02",
+      "ps_reg_03",
+      "ps_car_12",
+      "ps_car_13",
+      "ps_car_15",
+      "ps_calc_01",
+      "ps_calc_02",
+      "ps_calc_15_bin",
+      "ps_calc_16_bin"
+    ]
+  },
+  "artifacts": {
+    "encoder": "encoders.joblib"
+  }
+}

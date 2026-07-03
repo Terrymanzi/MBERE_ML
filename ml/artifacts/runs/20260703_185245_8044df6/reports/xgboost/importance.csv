@@ -1,0 +1,51 @@
+feature,mean_abs_shap
+ordinal__driver_experience,0.42751753
+ordinal__driver_age_band,0.35585925
+ordinal__time_of_day,0.26629803
+onehot__vehicle_defect_No defect,0.2443846
+ordinal__vehicle_service_year,0.20910187
+ordinal__driver_education,0.20706816
+onehot__vehicle_type_Automobile,0.16142431
+onehot__weather_Normal,0.14989027
+onehot__vehicle_type_Lorry,0.14846602
+onehot__vehicle_defect_Unknown,0.14276859
+onehot__light_condition_Darkness - lights lit,0.1288635
+onehot__light_condition_Daylight,0.11080073
+onehot__weather_Raining,0.10190857
+onehot__vehicle_type_Public_transport,0.089355335
+onehot__driver_vehicle_relation_Employee,0.086170316
+onehot__driver_vehicle_relation_Owner,0.071234845
+onehot__vehicle_type_Unknown,0.05879468
+onehot__vehicle_owner_Owner,0.057716537
+onehot__vehicle_type_Other,0.053970404
+onehot__vehicle_type_Pickup,0.050878763
+onehot__vehicle_owner_Governmental,0.04596631
+onehot__road_surface_Asphalt roads,0.03169427
+onehot__road_surface_Gravel roads,0.025267728
+onehot__driver_sex_Male,0.02488889
+onehot__road_surface_Earth roads,0.024615001
+onehot__light_condition_Darkness - no lighting,0.02158822
+onehot__driver_sex_Female,0.019893434
+onehot__driver_vehicle_relation_Unknown,0.016504988
+onehot__vehicle_owner_Unknown,0.01442282
+onehot__vehicle_type_Taxi,0.013824498
+onehot__weather_Unknown,0.0137871625
+onehot__vehicle_owner_Organization,0.013557621
+onehot__vehicle_type_Motorcycle,0.0114730885
+onehot__road_surface_Asphalt roads with some distress,0.009795955
+onehot__driver_vehicle_relation_Other,0.00904494
+onehot__weather_Other,0.0066243187
+onehot__road_surface_Unknown,0.0057158745
+onehot__road_surface_Other,0.005483742
+onehot__weather_Cloudy,0.0052810535
+onehot__driver_sex_Unknown,0.005101812
+onehot__weather_Windy,0.0050193258
+onehot__weather_Snow,0.004954645
+onehot__weather_Raining and Windy,0.0029475866
+onehot__vehicle_defect_7,0.002635112
+onehot__vehicle_owner_Other,0.0018838014
+onehot__light_condition_Darkness - lights unlit,0.0011358296
+onehot__vehicle_defect_5,0.0010131003
+onehot__vehicle_type_Bajaj,0.00091356563
+onehot__vehicle_type_Bicycle,0.00014077361
+onehot__weather_Fog or mist,0.0

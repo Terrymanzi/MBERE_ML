@@ -1,0 +1,49 @@
+{
+  "model": "random_forest",
+  "n_samples_explained": 500,
+  "n_encoded_features": 32,
+  "high_risk_case_index": 186,
+  "high_risk_positive_proba": 0.7239217494177594,
+  "top_features": [
+    {
+      "feature": "ordinal__driver_experience",
+      "mean_abs_shap": 0.04489197769015326
+    },
+    {
+      "feature": "ordinal__time_of_day",
+      "mean_abs_shap": 0.04199236542063351
+    },
+    {
+      "feature": "ordinal__driver_age_band",
+      "mean_abs_shap": 0.04166298369597446
+    },
+    {
+      "feature": "onehot__weather_Normal",
+      "mean_abs_shap": 0.032308717001115775
+    },
+    {
+      "feature": "onehot__vehicle_type_Automobile",
+      "mean_abs_shap": 0.021499089611349456
+    },
+    {
+      "feature": "onehot__light_condition_Darkness - lights lit",
+      "mean_abs_shap": 0.016989260159417083
+    },
+    {
+      "feature": "onehot__vehicle_type_Lorry",
+      "mean_abs_shap": 0.015004608880933933
+    },
+    {
+      "feature": "onehot__road_surface_Asphalt roads",
+      "mean_abs_shap": 0.012673285235070492
+    },
+    {
+      "feature": "onehot__light_condition_Daylight",
+      "mean_abs_shap": 0.01209079173482153
+    },
+    {
+      "feature": "onehot__vehicle_type_Public_transport",
+      "mean_abs_shap": 0.010736274999764154
+    }
+  ]
+}

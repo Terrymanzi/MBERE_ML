@@ -1,0 +1,102 @@
+{
+  "model": "baseline",
+  "model_version": "0.1.0",
+  "created_utc": "2026-06-28T17:52:15.207481+00:00",
+  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "random_state": 42,
+  "dataset": {
+    "name": "porto_seguro",
+    "kind": "binary",
+    "rows": 6400,
+    "target": "target",
+    "classes": [
+      "No claim",
+      "Claim"
+    ]
+  },
+  "features": [
+    "ps_ind_02_cat",
+    "ps_ind_04_cat",
+    "ps_ind_05_cat",
+    "ps_car_01_cat",
+    "ps_car_04_cat",
+    "ps_car_07_cat",
+    "ps_ind_01",
+    "ps_ind_03",
+    "ps_ind_15",
+    "ps_ind_06_bin",
+    "ps_ind_07_bin",
+    "ps_ind_16_bin",
+    "ps_ind_17_bin",
+    "ps_reg_01",
+    "ps_reg_02",
+    "ps_reg_03",
+    "ps_car_12",
+    "ps_car_13",
+    "ps_car_15",
+    "ps_calc_01",
+    "ps_calc_02",
+    "ps_calc_15_bin",
+    "ps_calc_16_bin"
+  ],
+  "cv": {
+    "scheme": "StratifiedKFold",
+    "k_folds": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "params": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "metrics_cv": {
+    "n_samples": 6400,
+    "accuracy": 0.57140625,
+    "f1_macro": 0.4686003279777756,
+    "recall_macro": 0.5654332791722148,
+    "precision_macro": 0.5276029139571022,
+    "roc_auc_ovr_macro": 0.5819032256172315,
+    "per_class": {
+      "No claim": {
+        "precision": 0.9064425770308123,
+        "recall": 0.5732506643046944,
+        "f1": 0.7023331524688009,
+        "support": 5645,
+        "roc_auc_ovr": 0.5819032256172314
+      },
+      "Claim": {
+        "precision": 0.14876325088339223,
+        "recall": 0.5576158940397351,
+        "f1": 0.23486750348675034,
+        "support": 755,
+        "roc_auc_ovr": 0.5819032256172315
+      }
+    },
+    "confusion_matrix": [
+      [
+        3236,
+        2409
+      ],
+      [
+        334,
+        421
+      ]
+    ],
+    "labels": [
+      "No claim",
+      "Claim"
+    ]
+  }
+}
