@@ -10,10 +10,15 @@ import pytest
 from ml.utils.config import load_config
 
 # Canonical Addis engineered feature vocabulary (matches ml/configs/addis.yaml).
+# Includes all 13 yaml-declared features (ordinal + onehot), including the two
+# pruned by threshold (driver_education, driver_sex) — needed for test frames.
 ADDIS_FEATURE_VALUES = {
     "driver_age_band": ["Under 18", "18-30", "31-50", "Over 51", "Unknown"],
     "driver_experience": ["No Licence", "Below 1yr", "1-2yr", "2-5yr", "5-10yr", "Above 10yr", "Unknown"],
     "time_of_day": ["Night", "Morning", "Afternoon", "Evening"],
+    "driver_education": ["Unknown", "Illiterate", "Writing & reading", "Elementary school",
+                         "Junior high school", "High school", "Above high school"],
+    "vehicle_service_year": ["Unknown", "Below 1yr", "1-2yr", "2-5yrs", "5-10yrs", "Above 10yr"],
     "vehicle_type": ["Automobile", "Motorcycle", "Lorry", "Public_transport", "Taxi",
                      "Pickup", "Bicycle", "Bajaj", "Unknown", "Other"],
     "weather": ["Normal", "Raining", "Cloudy", "Windy", "Snow", "Fog or mist",
@@ -21,6 +26,10 @@ ADDIS_FEATURE_VALUES = {
     "road_surface": ["Asphalt roads", "Earth roads", "Gravel roads",
                      "Asphalt roads with some distress", "Other", "Unknown"],
     "light_condition": ["Daylight", "Darkness - lights lit", "Darkness - no lighting", "Darkness - lights unlit"],
+    "driver_sex": ["Male", "Female", "Unknown"],
+    "driver_vehicle_relation": ["Employee", "Other", "Owner", "Unknown"],
+    "vehicle_owner": ["Governmental", "Organization", "Other", "Owner", "Unknown"],
+    "vehicle_defect": ["5", "7", "No defect", "Unknown"],
 }
 ADDIS_CLASSES = ["Slight Injury", "Serious Injury", "Fatal Injury"]
 

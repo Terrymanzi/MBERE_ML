@@ -1,8 +1,11 @@
-"""Binary-target (Porto) generalization: metrics, baseline factory, XGB objective, config."""
+"""Binary-target generalization: metrics and XGBoost objective awareness.
+
+Porto Seguro has been removed from scope. Tests that required porto_seguro.yaml
+have been removed. Generic binary-metric and XGBoost objective tests are kept.
+"""
 from __future__ import annotations
 
 import numpy as np
-from sklearn.linear_model import LogisticRegression
 
 from ml.evaluation.metrics import compute_metrics
 from ml.models import RuleBasedRiskClassifier, make_baseline
@@ -10,7 +13,6 @@ from ml.training.train_xgboost import build_estimator as build_xgb
 from ml.utils.config import load_config
 from ml.utils.paths import PROJECT_ROOT
 
-PORTO_CONFIG = PROJECT_ROOT / "ml" / "configs" / "porto_seguro.yaml"
 ADDIS_CONFIG = PROJECT_ROOT / "ml" / "configs" / "addis.yaml"
 
 
@@ -28,30 +30,12 @@ def test_compute_metrics_binary():
     assert 0.0 <= m["f1_macro"] <= 1.0
 
 
-def test_porto_config_is_binary():
-    cfg = load_config(PORTO_CONFIG)
-    assert cfg.kind == "binary"
-    assert cfg.n_classes == 2
-    assert cfg.target.column == "target"
-    assert cfg.baseline.kind == "logistic"
-    assert cfg.feature_engineering.time_of_day is None  # no domain FE for anonymized features
-
-
-def test_make_baseline_is_config_selected():
+def test_make_baseline_addis_is_rule_based():
     addis = load_config(ADDIS_CONFIG)
-    porto = load_config(PORTO_CONFIG)
-
     assert isinstance(make_baseline(addis), RuleBasedRiskClassifier)
 
-    porto_baseline = make_baseline(porto)  # encoder -> LogisticRegression pipeline
-    assert hasattr(porto_baseline, "named_steps")
-    assert isinstance(porto_baseline.named_steps["classifier"], LogisticRegression)
 
-
-def test_xgboost_objective_is_kind_aware():
-    porto = load_config(PORTO_CONFIG)
+def test_xgboost_objective_multiclass_for_addis():
     addis = load_config(ADDIS_CONFIG)
-    porto_clf = build_xgb(porto).named_steps["classifier"]
     addis_clf = build_xgb(addis).named_steps["classifier"]
-    assert porto_clf.get_params()["objective"] == "binary:logistic"
     assert addis_clf.get_params()["objective"] == "multi:softprob"

@@ -30,6 +30,17 @@ def test_train_and_save_baseline_smoke(tmp_path, make_addis_frame):
     df = make_addis_frame(n=210, seed=2)
     df.to_csv(cfg.paths.processed_dir / f"{cfg.name}_train.csv", index=False)
 
+    # train_and_save reads feature_contract.json to get the selected feature list.
+    (tmp_path / "artifacts").mkdir(parents=True, exist_ok=True)
+    contract = {
+        "feature_selection": {
+            "selected": list(cfg.features.all)
+        }
+    }
+    (tmp_path / "artifacts" / "feature_contract.json").write_text(
+        json.dumps(contract), encoding="utf-8"
+    )
+
     estimator = RuleBasedRiskClassifier()
     model_path, meta_path, cv_metrics = train_and_save(
         cfg, "baseline", "0.1.0", estimator, estimator.get_params()

@@ -20,8 +20,14 @@ def test_addis_config_structure():
     assert cfg.target.classes == ["Slight Injury", "Serious Injury", "Fatal Injury"]
     assert "Casualty_severity" in cfg.clean.leakage_columns
     assert "Number_of_casualties" in cfg.clean.leakage_columns
-    assert list(cfg.features.ordinal) == ["driver_age_band", "driver_experience", "time_of_day"]
-    assert cfg.features.onehot == ["vehicle_type", "weather", "road_surface", "light_condition"]
+    assert list(cfg.features.ordinal) == [
+        "driver_age_band", "driver_experience", "time_of_day",
+        "driver_education", "vehicle_service_year",
+    ]
+    assert cfg.features.onehot == [
+        "vehicle_type", "weather", "road_surface", "light_condition",
+        "driver_sex", "driver_vehicle_relation", "vehicle_owner", "vehicle_defect",
+    ]
     assert cfg.split.k_folds == 5
 
 

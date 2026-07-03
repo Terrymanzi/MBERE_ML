@@ -13,7 +13,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from ..api import drivers, health, models, predict
+from ..api import drivers, health, models, predict, synthetic_validation
 from ..auth import router as auth_router
 from ..database.session import SessionLocal, init_db
 from ..services.model_service import ArtifactNotFoundError, model_service
@@ -65,6 +65,7 @@ def create_app() -> FastAPI:
     app.include_router(predict.router)
     app.include_router(drivers.router)
     app.include_router(models.router)
+    app.include_router(synthetic_validation.router)
 
     @app.get("/", tags=["system"])
     def root() -> dict:

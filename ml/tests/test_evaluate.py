@@ -43,6 +43,14 @@ def test_evaluate_model_end_to_end_3class(tmp_path, make_addis_frame):
     df = make_addis_frame(n=180, seed=1)
     df.to_csv(cfg.paths.processed_dir / f"{cfg.name}_test.csv", index=False)
 
+    # load_processed reads feature_contract.json to get the selected feature list.
+    import json
+    (tmp_path / "artifacts").mkdir(parents=True, exist_ok=True)
+    contract = {"feature_selection": {"selected": list(cfg.features.all)}}
+    (tmp_path / "artifacts" / "feature_contract.json").write_text(
+        json.dumps(contract), encoding="utf-8"
+    )
+
     X = df[cfg.features.all]
     y, _ = encode_target(df[cfg.target.column], cfg)
     model = RuleBasedRiskClassifier().fit(X, y)
