@@ -13,6 +13,13 @@ class DriverCreate(BaseModel):
     notes: str | None = None
 
 
+class DriverUpdate(BaseModel):
+    license_number: str | None = None
+    full_name: str | None = None
+    date_of_birth: dt.date | None = None
+    notes: str | None = None
+
+
 class DriverRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 

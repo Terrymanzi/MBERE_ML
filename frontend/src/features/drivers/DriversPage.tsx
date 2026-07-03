@@ -11,14 +11,18 @@ import {
   LoadingState,
 } from "@/components/feedback/states";
 import { formatDate } from "@/lib/format";
-import { useDrivers } from "./useDrivers";
+import type { DriverRead } from "@/services";
+import { useDeleteDriver, useDrivers } from "./useDrivers";
 import { CreateDriverModal } from "./components/CreateDriverModal";
+import { EditDriverModal } from "./components/EditDriverModal";
 
 export function DriversPage() {
   const { data, isLoading, isError, error, refetch } = useDrivers();
+  const deleteDriver = useDeleteDriver();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [createOpen, setCreateOpen] = useState(false);
+  const [editTarget, setEditTarget] = useState<DriverRead | null>(null);
 
   const filtered = useMemo(() => {
     if (!data) return [];
@@ -30,6 +34,12 @@ export function DriversPage() {
         d.license_number.toLowerCase().includes(q),
     );
   }, [data, query]);
+
+  function handleDelete(e: React.MouseEvent, driver: DriverRead) {
+    e.stopPropagation();
+    if (!confirm(`Delete driver "${driver.full_name}"? This cannot be undone.`)) return;
+    deleteDriver.mutate(driver.id);
+  }
 
   return (
     <div>
@@ -111,14 +121,28 @@ export function DriversPage() {
                     <td className="px-6 py-4 text-slate-600">
                       {formatDate(d.created_at)}
                     </td>
-                    <td className="px-6 py-4 text-right">
-                      <Link
-                        to={`/app/drivers/${d.id}`}
-                        className="font-medium text-brand-700 hover:underline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        View
-                      </Link>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center justify-end gap-2">
+                        <Link
+                          to={`/app/drivers/${d.id}`}
+                          className="font-medium text-brand-700 hover:underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          View
+                        </Link>
+                        <button
+                          className="font-medium text-slate-500 hover:text-slate-900"
+                          onClick={(e) => { e.stopPropagation(); setEditTarget(d); }}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className="font-medium text-red-600 hover:text-red-800"
+                          onClick={(e) => handleDelete(e, d)}
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
@@ -133,6 +157,14 @@ export function DriversPage() {
         onClose={() => setCreateOpen(false)}
         onCreated={(id) => navigate(`/app/drivers/${id}`)}
       />
+
+      {editTarget && (
+        <EditDriverModal
+          open={editTarget !== null}
+          onClose={() => setEditTarget(null)}
+          driver={editTarget}
+        />
+      )}
     </div>
   );
 }

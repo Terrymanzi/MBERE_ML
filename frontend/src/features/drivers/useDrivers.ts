@@ -1,9 +1,12 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   createDriver,
+  deleteDriver,
   getDriverRiskHistory,
   listDrivers,
+  updateDriver,
   type DriverCreate,
+  type DriverUpdate,
 } from "@/services";
 import { queryKeys } from "@/lib/queryKeys";
 
@@ -28,6 +31,29 @@ export function useCreateDriver() {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (payload: DriverCreate) => createDriver(payload),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["drivers"] });
+      queryClient.invalidateQueries({ queryKey: queryKeys.dashboard });
+    },
+  });
+}
+
+export function useUpdateDriver() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, payload }: { id: number; payload: DriverUpdate }) =>
+      updateDriver(id, payload),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["drivers"] });
+      queryClient.invalidateQueries({ queryKey: queryKeys.dashboard });
+    },
+  });
+}
+
+export function useDeleteDriver() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (driverId: number) => deleteDriver(driverId),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["drivers"] });
       queryClient.invalidateQueries({ queryKey: queryKeys.dashboard });

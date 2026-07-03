@@ -2,6 +2,7 @@ import { apiRequest } from "./apiClient";
 import type {
   DriverCreate,
   DriverRead,
+  DriverUpdate,
   RiskAssessmentRead,
 } from "./types";
 
@@ -23,6 +24,14 @@ export function listDrivers(
 
 export function createDriver(payload: DriverCreate): Promise<DriverRead> {
   return apiRequest<DriverRead>("/drivers", { method: "POST", json: payload });
+}
+
+export function updateDriver(driverId: number, payload: DriverUpdate): Promise<DriverRead> {
+  return apiRequest<DriverRead>(`/drivers/${driverId}`, { method: "PUT", json: payload });
+}
+
+export function deleteDriver(driverId: number): Promise<void> {
+  return apiRequest<void>(`/drivers/${driverId}`, { method: "DELETE" });
 }
 
 export function getDriverRiskHistory(

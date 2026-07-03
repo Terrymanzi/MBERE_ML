@@ -43,6 +43,13 @@ export interface DriverCreate {
   notes?: string | null;
 }
 
+export interface DriverUpdate {
+  license_number?: string | null;
+  full_name?: string | null;
+  date_of_birth?: string | null;
+  notes?: string | null;
+}
+
 // ----------------------------------------------------------- model / contract -
 export type ModelKind = "binary" | "multiclass" | string;
 

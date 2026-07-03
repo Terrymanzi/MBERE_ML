@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -10,7 +11,8 @@ import {
 } from "@/components/feedback/states";
 import { formatDate, formatDateTime, formatPercent } from "@/lib/format";
 import type { RiskAssessmentRead } from "@/services";
-import { useDriverRiskHistory, useDrivers } from "./useDrivers";
+import { useDeleteDriver, useDriverRiskHistory, useDrivers } from "./useDrivers";
+import { EditDriverModal } from "./components/EditDriverModal";
 
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
@@ -70,12 +72,22 @@ export function DriverDetailsPage() {
   const { driverId } = useParams();
   const id = Number(driverId);
   const navigate = useNavigate();
+  const [editOpen, setEditOpen] = useState(false);
 
   const driversQuery = useDrivers();
   const driver = driversQuery.data?.find((d) => d.id === id);
   const historyQuery = useDriverRiskHistory(
     Number.isFinite(id) ? id : undefined,
   );
+  const deleteDriver = useDeleteDriver();
+
+  function handleDelete() {
+    if (!driver) return;
+    if (!confirm(`Delete driver "${driver.full_name}"? This cannot be undone.`)) return;
+    deleteDriver.mutate(driver.id, {
+      onSuccess: () => navigate("/app/drivers"),
+    });
+  }
 
   return (
     <div>
@@ -118,12 +130,27 @@ export function DriverDetailsPage() {
                 {driver.license_number}
               </p>
             </div>
-            <Button
-              onClick={() => navigate(`/app/predict?driver_id=${driver.id}`)}
-            >
-              <PredictIcon className="h-4 w-4" />
-              Run prediction
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="secondary"
+                onClick={() => setEditOpen(true)}
+              >
+                Edit
+              </Button>
+              <Button
+                variant="danger"
+                loading={deleteDriver.isPending}
+                onClick={handleDelete}
+              >
+                Delete
+              </Button>
+              <Button
+                onClick={() => navigate(`/app/predict?driver_id=${driver.id}`)}
+              >
+                <PredictIcon className="h-4 w-4" />
+                Run prediction
+              </Button>
+            </div>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
@@ -184,6 +211,14 @@ export function DriverDetailsPage() {
               </CardBody>
             </Card>
           </div>
+
+          {editOpen && (
+            <EditDriverModal
+              open={editOpen}
+              onClose={() => setEditOpen(false)}
+              driver={driver}
+            />
+          )}
         </>
       )}
     </div>
