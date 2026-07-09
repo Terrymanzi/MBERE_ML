@@ -13,11 +13,12 @@ venv/
 .ipynb_checkpoints/
 
 # Data and artifacts
-data/processed/
-data/external/
-# ml/artifacts/ # pushing models to github
+# data/processed/ # pushing processed data to github
+# data/external/  # pushing synthetic data to github
+# ml/artifacts/   # pushing models to github
+docs/IMPLEMENTATION_SUMMARY.md
 backend/.venv/
-frontend/node_modules/
+frontend/node_modules/  
 frontend/dist/
 
 # Local SQLite databases

@@ -1,0 +1,1001 @@
+driver_age_band,driver_sex,driver_experience,driver_education,driver_vehicle_relation,vehicle_type,vehicle_owner,vehicle_service_year,vehicle_defect,weather,road_surface,light_condition,time_of_day,synthetic_severity_label
+31-50,Male,Above 10yr,Junior high school,Owner,Motorcycle,Governmental,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,No Licence,Writing & reading,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Female,Above 10yr,High school,Unknown,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Public (12 seats),Organization,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Illiterate,Other,Lorry,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Owner,Unknown,Owner,2-5yrs,No defect,Windy,Gravel,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Elementary school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Motorcycle,Other,Unknown,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Automobile,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,High school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,Below 1yr,Elementary school,Owner,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,1-2yr,Elementary school,Other,Automobile,Owner,Below 1yr,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+Under 18,Female,Above 10yr,Junior high school,Other,Motorcycle,Owner,2-5yrs,No defect,Other,Asphalt,Darkness - lit,Morning,Slight
+31-50,Female,5-10yr,High school,Owner,Automobile,Other,Above 10yr,Unknown,Raining,Asphalt,Daylight,Evening,Slight
+Over 51,Male,1-2yr,Elementary school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Other,Automobile,Governmental,5-10yrs,No defect,Normal,Earth,Daylight,Evening,Slight
+31-50,Male,Unknown,High school,Owner,Public (>45 seats),Organization,1-2yr,No defect,Raining,Asphalt,Daylight,Morning,Slight
+Unknown,Male,2-5yr,High school,Employee,Other,Governmental,Above 10yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Unknown,No Licence,High school,Owner,Automobile,Owner,5-10yrs,No defect,Cloudy,Gravel,Daylight,Evening,Slight
+18-30,Male,No Licence,Elementary school,Other,Unknown,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Employee,Automobile,Other,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Public (12 seats),Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Below 1yr,High school,Employee,Automobile,Organization,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,No Licence,High school,Owner,Bajaj,Unknown,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Unknown,5-10yr,High school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Female,5-10yr,Elementary school,Employee,Automobile,Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,Above 10yr,Writing & reading,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Employee,Motorcycle,Other,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Unknown,Owner,Public (>45 seats),Governmental,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Unknown,Elementary school,Employee,Automobile,Governmental,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Other,Automobile,Organization,Above 10yr,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Illiterate,Owner,Lorry,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Female,1-2yr,Junior high school,Owner,Motorcycle,Owner,Below 1yr,No defect,Normal,Other,Daylight,Afternoon,Slight
+18-30,Male,No Licence,High school,Owner,Public (>45 seats),Unknown,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,2-5yr,Above high school,Owner,Automobile,Organization,5-10yrs,No defect,Normal,Earth,Unknown,Afternoon,Slight
+18-30,Male,Above 10yr,Unknown,Other,Automobile,Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,High school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Bajaj,Governmental,5-10yrs,No defect,Normal,Earth,Unknown,Morning,Slight
+31-50,Male,2-5yr,High school,Employee,Motorcycle,Owner,Below 1yr,7,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,1-2yr,Elementary school,Employee,Motorcycle,Unknown,1-2yr,No defect,Cloudy,Gravel,Daylight,Evening,Slight
+18-30,Male,2-5yr,Elementary school,Employee,Unknown,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,1-2yr,Elementary school,Employee,Unknown,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Unknown,Elementary school,Employee,Automobile,Unknown,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Writing & reading,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Motorcycle,Owner,1-2yr,5,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,Above high school,Employee,Automobile,Organization,Above 10yr,No defect,Other,Asphalt,Daylight,Evening,Slight
+Unknown,Male,5-10yr,Illiterate,Owner,Automobile,Owner,2-5yrs,No defect,Other,Asphalt,Daylight,Morning,Slight
+18-30,Female,2-5yr,Junior high school,Employee,Lorry,Other,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,High school,Owner,Bajaj,Owner,Above 10yr,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Elementary school,Owner,Automobile,Governmental,2-5yrs,No defect,Normal,Earth,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Employee,Motorcycle,Other,Above 10yr,No defect,Normal,Asphalt,Unknown,Evening,Slight
+18-30,Male,No Licence,Junior high school,Employee,Automobile,Owner,Unknown,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Other,Darkness - lit,Night,Slight
+18-30,Male,Above 10yr,High school,Owner,Other,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Writing & reading,Owner,Automobile,Governmental,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Owner,Bajaj,Organization,1-2yr,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Illiterate,Owner,Automobile,Owner,Below 1yr,No defect,Cloudy,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,2-5yr,High school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Motorcycle,Other,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Writing & reading,Unknown,Bajaj,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,5-10yr,Junior high school,Employee,Automobile,Organization,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Writing & reading,Owner,Public (>45 seats),Organization,Above 10yr,Unknown,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,2-5yr,Junior high school,Employee,Public (>45 seats),Other,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+31-50,Male,5-10yr,Junior high school,Employee,Motorcycle,Governmental,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,2-5yr,High school,Owner,Motorcycle,Owner,Unknown,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Above high school,Other,Other,Organization,1-2yr,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Motorcycle,Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Employee,Lorry,Governmental,5-10yrs,5,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,Below 1yr,Junior high school,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Below 1yr,Junior high school,Employee,Public (>45 seats),Owner,1-2yr,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Public (>45 seats),Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,Unknown,Elementary school,Employee,Automobile,Other,5-10yrs,No defect,Normal,Unknown,Darkness - unlit,Morning,Slight
+31-50,Male,No Licence,Junior high school,Employee,Other,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Writing & reading,Owner,Automobile,Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,No Licence,High school,Other,Motorcycle,Owner,5-10yrs,No defect,Raining,Gravel,Daylight,Afternoon,Slight
+Unknown,Male,2-5yr,High school,Other,Automobile,Owner,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Public (12 seats),Organization,5-10yrs,No defect,Normal,Unknown,Unknown,Evening,Slight
+18-30,Male,Unknown,Elementary school,Employee,Lorry,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Unknown,Junior high school,Employee,Automobile,Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Female,5-10yr,Above high school,Owner,Motorcycle,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Female,2-5yr,Junior high school,Owner,Motorcycle,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Earth,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,Above high school,Employee,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Writing & reading,Owner,Bajaj,Organization,2-5yrs,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+18-30,Male,1-2yr,Writing & reading,Owner,Lorry,Owner,Above 10yr,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,5-10yr,Above high school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,5-10yr,Illiterate,Other,Bajaj,Owner,Below 1yr,No defect,Windy,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,1-2yr,Junior high school,Employee,Automobile,Other,Above 10yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Motorcycle,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Unknown,Male,Above 10yr,Writing & reading,Employee,Lorry,Owner,Below 1yr,No defect,Raining,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Automobile,Other,2-5yrs,5,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Employee,Automobile,Unknown,2-5yrs,No defect,Normal,Asphalt,Unknown,Evening,Slight
+31-50,Male,2-5yr,High school,Owner,Public (>45 seats),Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Employee,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,Illiterate,Employee,Automobile,Owner,Below 1yr,Unknown,Raining,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,Below 1yr,Writing & reading,Owner,Automobile,Governmental,2-5yrs,Unknown,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Organization,2-5yrs,Unknown,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Writing & reading,Employee,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,High school,Owner,Automobile,Organization,Below 1yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Below 1yr,Above high school,Employee,Automobile,Other,Above 10yr,No defect,Normal,Unknown,Unknown,Morning,Slight
+18-30,Female,Unknown,High school,Owner,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Unknown,Darkness - lit,Afternoon,Slight
+31-50,Male,Above 10yr,Writing & reading,Unknown,Automobile,Organization,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Automobile,Governmental,1-2yr,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Above high school,Owner,Public (>45 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Unknown,2-5yr,High school,Owner,Public (>45 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Above high school,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,2-5yr,Above high school,Owner,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Bajaj,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Owner,Bicycle,Governmental,Above 10yr,No defect,Normal,Earth,Darkness - lit,Evening,Slight
+18-30,Male,2-5yr,High school,Employee,Motorcycle,Owner,5-10yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Female,2-5yr,Above high school,Employee,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,1-2yr,Elementary school,Employee,Automobile,Unknown,Unknown,Unknown,Cloudy,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,1-2yr,High school,Other,Bajaj,Owner,Above 10yr,No defect,Windy,Asphalt,Daylight,Night,Slight
+31-50,Male,Above 10yr,Illiterate,Employee,Automobile,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Owner,Bicycle,Governmental,5-10yrs,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,Above 10yr,Writing & reading,Other,Bajaj,Other,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Unknown,2-5yrs,No defect,Raining,Asphalt,Daylight,Evening,Slight
+31-50,Male,Below 1yr,High school,Other,Public (>45 seats),Owner,1-2yr,No defect,Normal,Earth,Daylight,Afternoon,Slight
+Unknown,Male,Above 10yr,Above high school,Owner,Bajaj,Governmental,Below 1yr,No defect,Other,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Above high school,Other,Unknown,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,Above 10yr,High school,Employee,Automobile,Owner,Unknown,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+Over 51,Male,Above 10yr,Junior high school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Other,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Writing & reading,Employee,Automobile,Governmental,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Motorcycle,Organization,Below 1yr,No defect,Cloudy,Gravel,Darkness - unlit,Night,Slight
+31-50,Male,1-2yr,Above high school,Owner,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Elementary school,Owner,Automobile,Owner,5-10yrs,No defect,Other,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Writing & reading,Owner,Motorcycle,Owner,Above 10yr,7,Normal,Earth,Daylight,Afternoon,Slight
+31-50,Male,Unknown,Junior high school,Owner,Bajaj,Governmental,Unknown,5,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Owner,Public (12 seats),Owner,Above 10yr,No defect,Normal,Gravel,Unknown,Night,Slight
+Unknown,Male,2-5yr,Writing & reading,Owner,Automobile,Owner,2-5yrs,No defect,Unknown,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Employee,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,2-5yr,Junior high school,Employee,Public (12 seats),Organization,1-2yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+31-50,Male,Unknown,Junior high school,Owner,Other,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,2-5yr,Writing & reading,Owner,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,High school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Employee,Automobile,Owner,2-5yrs,Unknown,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Unknown,Owner,Motorcycle,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Other,Unknown,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Female,Above 10yr,Unknown,Unknown,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+Over 51,Male,Above 10yr,Junior high school,Owner,Unknown,Owner,2-5yrs,5,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Unknown,Junior high school,Owner,Motorcycle,Owner,2-5yrs,5,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Governmental,2-5yrs,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+Unknown,Male,5-10yr,Above high school,Owner,Automobile,Organization,Above 10yr,No defect,Raining,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,2-5yr,Above high school,Owner,Bajaj,Owner,1-2yr,No defect,Normal,Other,Daylight,Morning,Slight
+31-50,Male,Above 10yr,High school,Other,Motorcycle,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Employee,Motorcycle,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Owner,Public (>45 seats),Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,Above high school,Employee,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Other,Automobile,Other,2-5yrs,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Elementary school,Owner,Lorry,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Writing & reading,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Unknown,Evening,Slight
+31-50,Male,No Licence,High school,Other,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,High school,Owner,Motorcycle,Organization,1-2yr,No defect,Windy,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,1-2yr,High school,Owner,Bajaj,Unknown,1-2yr,No defect,Unknown,Asphalt,Daylight,Night,Slight
+31-50,Male,1-2yr,Writing & reading,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Writing & reading,Owner,Automobile,Owner,Unknown,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,Above 10yr,High school,Employee,Automobile,Owner,Below 1yr,No defect,Cloudy,Gravel,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Writing & reading,Owner,Bajaj,Owner,1-2yr,7,Windy,Earth,Daylight,Evening,Slight
+31-50,Male,5-10yr,Above high school,Owner,Motorcycle,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Motorcycle,Unknown,2-5yrs,Unknown,Normal,Other,Daylight,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Employee,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Elementary school,Employee,Lorry,Organization,Below 1yr,No defect,Normal,Unknown,Daylight,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Public (>45 seats),Owner,5-10yrs,No defect,Normal,Other,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Bicycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Employee,Lorry,Organization,2-5yrs,No defect,Normal,Earth,Daylight,Afternoon,Slight
+31-50,Male,Below 1yr,Junior high school,Employee,Unknown,Owner,1-2yr,No defect,Unknown,Asphalt,Daylight,Evening,Slight
+31-50,Male,1-2yr,Above high school,Owner,Motorcycle,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Night,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Motorcycle,Governmental,2-5yrs,No defect,Windy,Asphalt,Daylight,Morning,Slight
+Over 51,Male,No Licence,High school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Female,No Licence,Junior high school,Employee,Automobile,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Motorcycle,Owner,2-5yrs,No defect,Raining,Unknown,Unknown,Night,Slight
+18-30,Male,2-5yr,Elementary school,Employee,Automobile,Other,Above 10yr,No defect,Windy,Earth,Unknown,Evening,Slight
+31-50,Male,1-2yr,Above high school,Owner,Other,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,5-10yr,Junior high school,Unknown,Automobile,Governmental,Below 1yr,No defect,Normal,Earth,Daylight,Evening,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Unknown,Night,Slight
+31-50,Male,Above 10yr,Unknown,Employee,Automobile,Organization,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Other,Other,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Writing & reading,Owner,Motorcycle,Owner,Above 10yr,No defect,Windy,Gravel,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Junior high school,Other,Automobile,Owner,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Writing & reading,Owner,Automobile,Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Unknown,High school,Owner,Lorry,Governmental,5-10yrs,No defect,Normal,Asphalt,Darkness - unlit,Evening,Slight
+31-50,Male,5-10yr,Elementary school,Employee,Bajaj,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Above high school,Owner,Motorcycle,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Elementary school,Owner,Bajaj,Governmental,Above 10yr,No defect,Windy,Earth,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Above high school,Other,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,Elementary school,Employee,Motorcycle,Unknown,Unknown,No defect,Raining,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Writing & reading,Employee,Automobile,Governmental,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Female,Above 10yr,Illiterate,Employee,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+Over 51,Male,Above 10yr,High school,Employee,Bajaj,Organization,Above 10yr,Unknown,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Above high school,Employee,Public (>45 seats),Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Writing & reading,Owner,Automobile,Governmental,Unknown,No defect,Raining,Gravel,Darkness - unlit,Morning,Slight
+Over 51,Male,2-5yr,Elementary school,Owner,Automobile,Governmental,2-5yrs,No defect,Raining,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,Unknown,Junior high school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Public (>45 seats),Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Female,Above 10yr,High school,Owner,Public (12 seats),Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Other,Automobile,Organization,2-5yrs,No defect,Raining,Unknown,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Above high school,Unknown,Automobile,Owner,Above 10yr,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Public (>45 seats),Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Unknown,Automobile,Owner,Below 1yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Illiterate,Employee,Automobile,Owner,2-5yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,Below 1yr,High school,Owner,Bajaj,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Owner,Automobile,Other,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Elementary school,Other,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,5-10yr,Junior high school,Owner,Bajaj,Owner,Above 10yr,No defect,Cloudy,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,5-10yr,Writing & reading,Employee,Automobile,Owner,Below 1yr,Unknown,Windy,Gravel,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Other,Public (12 seats),Organization,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,Above 10yr,Junior high school,Employee,Automobile,Owner,2-5yrs,5,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Owner,Automobile,Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Above high school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Unknown,Above 10yr,Writing & reading,Owner,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Above high school,Employee,Automobile,Owner,Above 10yr,5,Cloudy,Asphalt,Darkness - unlit,Morning,Slight
+Over 51,Male,2-5yr,Elementary school,Owner,Bajaj,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Unknown,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Junior high school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Owner,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+Unknown,Female,Below 1yr,High school,Employee,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Female,No Licence,Junior high school,Employee,Motorcycle,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+Under 18,Male,5-10yr,Elementary school,Other,Motorcycle,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,Below 1yr,High school,Employee,Automobile,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Elementary school,Other,Automobile,Owner,Below 1yr,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+Over 51,Male,1-2yr,Junior high school,Employee,Motorcycle,Organization,5-10yrs,No defect,Normal,Earth,Darkness - unlit,Night,Slight
+18-30,Female,5-10yr,Illiterate,Employee,Motorcycle,Organization,Above 10yr,No defect,Windy,Asphalt,Unknown,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Unknown,Morning,Slight
+18-30,Male,Below 1yr,Illiterate,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,Above 10yr,Junior high school,Other,Public (12 seats),Organization,5-10yrs,No defect,Windy,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,High school,Employee,Motorcycle,Other,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Unknown,Male,Above 10yr,High school,Owner,Motorcycle,Owner,Above 10yr,No defect,Normal,Asphalt,Darkness - unlit,Evening,Slight
+31-50,Male,Below 1yr,High school,Owner,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Writing & reading,Owner,Automobile,Owner,5-10yrs,No defect,Unknown,Asphalt,Darkness - lit,Morning,Slight
+31-50,Female,Unknown,Writing & reading,Unknown,Other,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,1-2yr,Above high school,Owner,Automobile,Governmental,5-10yrs,No defect,Unknown,Unknown,Daylight,Night,Slight
+Unknown,Male,Above 10yr,Above high school,Other,Lorry,Owner,1-2yr,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Owner,Automobile,Other,2-5yrs,Unknown,Normal,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,5-10yr,Junior high school,Employee,Motorcycle,Governmental,5-10yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,Above high school,Owner,Bajaj,Owner,2-5yrs,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Elementary school,Other,Automobile,Other,1-2yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Elementary school,Employee,Motorcycle,Governmental,1-2yr,No defect,Cloudy,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,2-5yr,Above high school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Other,Public (12 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,1-2yr,High school,Employee,Bajaj,Organization,Unknown,No defect,Cloudy,Other,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Employee,Automobile,Organization,5-10yrs,No defect,Normal,Gravel,Darkness - lit,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Unknown,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Automobile,Organization,Above 10yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Automobile,Organization,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Writing & reading,Employee,Motorcycle,Governmental,Above 10yr,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,High school,Owner,Automobile,Other,Below 1yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Elementary school,Other,Motorcycle,Organization,1-2yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Windy,Unknown,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Above high school,Other,Bicycle,Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Owner,Public (12 seats),Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Above high school,Unknown,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Unknown,Morning,Slight
+31-50,Male,5-10yr,High school,Owner,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,High school,Employee,Lorry,Owner,5-10yrs,7,Normal,Gravel,Unknown,Afternoon,Slight
+18-30,Male,5-10yr,High school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Automobile,Owner,2-5yrs,No defect,Other,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Employee,Motorcycle,Owner,Unknown,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,No Licence,Junior high school,Employee,Public (>45 seats),Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,2-5yr,Elementary school,Employee,Automobile,Owner,Unknown,No defect,Windy,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Automobile,Owner,Unknown,No defect,Raining,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Bajaj,Owner,Below 1yr,7,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Unknown,Morning,Slight
+Unknown,Male,Unknown,Elementary school,Other,Public (12 seats),Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+Under 18,Male,Above 10yr,Above high school,Owner,Automobile,Organization,5-10yrs,No defect,Normal,Unknown,Daylight,Morning,Slight
+Under 18,Male,Below 1yr,High school,Owner,Automobile,Owner,Above 10yr,No defect,Windy,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Bicycle,Owner,Above 10yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+Under 18,Male,Above 10yr,High school,Owner,Bicycle,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Junior high school,Other,Motorcycle,Governmental,Unknown,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Writing & reading,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,1-2yr,Junior high school,Other,Public (>45 seats),Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Motorcycle,Other,5-10yrs,5,Windy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Motorcycle,Governmental,Below 1yr,No defect,Other,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,High school,Owner,Automobile,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Writing & reading,Employee,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Employee,Public (>45 seats),Owner,2-5yrs,No defect,Windy,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,2-5yr,Above high school,Owner,Public (>45 seats),Owner,1-2yr,No defect,Normal,Other,Daylight,Morning,Slight
+31-50,Male,Above 10yr,High school,Employee,Bicycle,Unknown,1-2yr,7,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Elementary school,Owner,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Junior high school,Employee,Public (>45 seats),Owner,Unknown,5,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Above high school,Owner,Bajaj,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Unknown,High school,Employee,Motorcycle,Other,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Employee,Motorcycle,Owner,1-2yr,No defect,Raining,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,5-10yr,High school,Other,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Employee,Automobile,Unknown,Above 10yr,No defect,Normal,Gravel,Darkness - lit,Afternoon,Slight
+18-30,Male,No Licence,Writing & reading,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Employee,Automobile,Owner,Above 10yr,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,High school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Unknown,Motorcycle,Organization,1-2yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Lorry,Owner,Below 1yr,Unknown,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Writing & reading,Other,Automobile,Owner,Below 1yr,No defect,Other,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,1-2yr,Unknown,Owner,Automobile,Owner,2-5yrs,No defect,Other,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Unknown,High school,Employee,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Employee,Lorry,Owner,Below 1yr,No defect,Raining,Asphalt,Darkness - unlit,Evening,Slight
+18-30,Male,Unknown,Elementary school,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Female,Above 10yr,High school,Employee,Motorcycle,Owner,2-5yrs,No defect,Windy,Unknown,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Employee,Automobile,Organization,2-5yrs,Unknown,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Other,Public (12 seats),Other,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Lorry,Organization,1-2yr,No defect,Windy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Unknown,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Motorcycle,Governmental,2-5yrs,No defect,Normal,Gravel,Daylight,Evening,Slight
+18-30,Male,Below 1yr,Above high school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Unknown,Daylight,Morning,Slight
+Unknown,Male,5-10yr,Writing & reading,Owner,Unknown,Owner,Unknown,No defect,Windy,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Automobile,Organization,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,Above 10yr,Writing & reading,Owner,Bajaj,Owner,2-5yrs,5,Cloudy,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Motorcycle,Owner,2-5yrs,No defect,Raining,Asphalt,Darkness - unlit,Afternoon,Slight
+31-50,Female,2-5yr,Elementary school,Owner,Automobile,Organization,1-2yr,Unknown,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Automobile,Organization,5-10yrs,Unknown,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Writing & reading,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Owner,Public (>45 seats),Organization,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+31-50,Female,5-10yr,Elementary school,Employee,Motorcycle,Organization,Below 1yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,2-5yr,High school,Owner,Public (12 seats),Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,Unknown,Employee,Motorcycle,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Automobile,Unknown,Below 1yr,No defect,Normal,Earth,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,No Licence,High school,Employee,Public (12 seats),Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Above 10yr,High school,Owner,Automobile,Owner,5-10yrs,No defect,Other,Asphalt,Daylight,Morning,Slight
+18-30,Male,No Licence,Junior high school,Owner,Automobile,Governmental,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+Over 51,Male,2-5yr,Junior high school,Owner,Public (12 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,High school,Owner,Automobile,Organization,1-2yr,No defect,Raining,Other,Daylight,Night,Slight
+31-50,Male,Below 1yr,High school,Owner,Bajaj,Owner,Above 10yr,No defect,Raining,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,Writing & reading,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Other,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Female,Unknown,Junior high school,Employee,Public (12 seats),Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Elementary school,Employee,Bajaj,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,Above 10yr,High school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+Over 51,Female,Above 10yr,Above high school,Other,Automobile,Owner,Above 10yr,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,High school,Employee,Bicycle,Owner,5-10yrs,No defect,Normal,Earth,Darkness - lit,Afternoon,Slight
+18-30,Male,1-2yr,High school,Owner,Automobile,Owner,Below 1yr,No defect,Normal,Gravel,Darkness - lit,Morning,Slight
+Over 51,Male,2-5yr,Illiterate,Owner,Automobile,Owner,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Above high school,Other,Automobile,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Unknown,Owner,Automobile,Owner,2-5yrs,No defect,Windy,Gravel,Daylight,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Public (>45 seats),Organization,1-2yr,No defect,Raining,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Bajaj,Governmental,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Below 1yr,Junior high school,Owner,Automobile,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Writing & reading,Employee,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Other,Motorcycle,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Unknown,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Female,2-5yr,Junior high school,Other,Automobile,Owner,1-2yr,No defect,Raining,Asphalt,Unknown,Morning,Slight
+18-30,Male,No Licence,High school,Employee,Automobile,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,High school,Unknown,Lorry,Owner,5-10yrs,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,High school,Employee,Motorcycle,Other,1-2yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,2-5yr,Illiterate,Owner,Lorry,Organization,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,5-10yr,High school,Employee,Motorcycle,Organization,1-2yr,No defect,Unknown,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Writing & reading,Employee,Public (12 seats),Owner,5-10yrs,No defect,Raining,Unknown,Daylight,Morning,Slight
+Over 51,Male,Unknown,Elementary school,Other,Bicycle,Owner,2-5yrs,Unknown,Normal,Earth,Darkness - lit,Evening,Slight
+31-50,Male,1-2yr,Elementary school,Other,Automobile,Organization,2-5yrs,No defect,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Other,Automobile,Owner,Above 10yr,No defect,Normal,Other,Daylight,Night,Slight
+31-50,Male,Below 1yr,High school,Owner,Automobile,Owner,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Elementary school,Employee,Motorcycle,Organization,2-5yrs,No defect,Normal,Other,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,High school,Employee,Other,Owner,Below 1yr,Unknown,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Writing & reading,Owner,Bajaj,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Below 1yr,Junior high school,Owner,Unknown,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,1-2yr,Junior high school,Owner,Automobile,Organization,2-5yrs,5,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,Unknown,High school,Employee,Other,Owner,2-5yrs,No defect,Cloudy,Asphalt,Darkness - lit,Morning,Slight
+31-50,Unknown,Above 10yr,Writing & reading,Owner,Bajaj,Governmental,Above 10yr,No defect,Normal,Other,Daylight,Evening,Slight
+31-50,Female,5-10yr,Illiterate,Owner,Motorcycle,Organization,Unknown,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,Unknown,Illiterate,Other,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,Above 10yr,High school,Owner,Motorcycle,Governmental,Unknown,No defect,Windy,Gravel,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Elementary school,Owner,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,No Licence,High school,Employee,Public (12 seats),Organization,Below 1yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Employee,Automobile,Owner,Below 1yr,No defect,Raining,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Writing & reading,Owner,Motorcycle,Governmental,Above 10yr,5,Normal,Asphalt,Darkness - unlit,Morning,Slight
+18-30,Male,Below 1yr,Writing & reading,Owner,Bajaj,Governmental,1-2yr,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+18-30,Female,1-2yr,High school,Employee,Other,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Elementary school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Writing & reading,Owner,Automobile,Organization,Above 10yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,5-10yr,Above high school,Owner,Motorcycle,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Other,Public (>45 seats),Owner,1-2yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,5-10yr,Elementary school,Owner,Automobile,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Motorcycle,Owner,Above 10yr,5,Unknown,Unknown,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Other,Bajaj,Governmental,Above 10yr,No defect,Raining,Earth,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Other,Other,Owner,Below 1yr,7,Cloudy,Asphalt,Daylight,Evening,Slight
+18-30,Male,Below 1yr,Elementary school,Other,Motorcycle,Organization,2-5yrs,No defect,Cloudy,Earth,Darkness - unlit,Afternoon,Slight
+18-30,Male,2-5yr,Above high school,Unknown,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Below 1yr,High school,Employee,Automobile,Owner,Above 10yr,No defect,Normal,Earth,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Elementary school,Other,Motorcycle,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Above high school,Unknown,Bajaj,Owner,Unknown,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Other,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Other,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Other,Owner,5-10yrs,No defect,Raining,Asphalt,Daylight,Evening,Slight
+31-50,Male,5-10yr,High school,Owner,Lorry,Owner,5-10yrs,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+31-50,Male,5-10yr,High school,Owner,Bajaj,Governmental,1-2yr,No defect,Normal,Asphalt,Unknown,Evening,Slight
+18-30,Male,5-10yr,Above high school,Owner,Motorcycle,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,5-10yr,Elementary school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Unknown,Daylight,Morning,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Organization,Unknown,No defect,Unknown,Asphalt,Unknown,Evening,Slight
+31-50,Male,Unknown,Elementary school,Owner,Motorcycle,Organization,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Female,Below 1yr,High school,Owner,Motorcycle,Organization,5-10yrs,No defect,Windy,Asphalt,Unknown,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Other,Bajaj,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Motorcycle,Organization,1-2yr,No defect,Normal,Gravel,Darkness - lit,Evening,Slight
+18-30,Male,2-5yr,Above high school,Employee,Automobile,Other,5-10yrs,7,Unknown,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Elementary school,Owner,Automobile,Owner,2-5yrs,Unknown,Normal,Unknown,Daylight,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Employee,Automobile,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Night,Slight
+18-30,Male,5-10yr,Elementary school,Employee,Bajaj,Owner,Below 1yr,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,2-5yr,Above high school,Owner,Motorcycle,Organization,2-5yrs,No defect,Other,Gravel,Daylight,Evening,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Automobile,Owner,Above 10yr,No defect,Cloudy,Other,Darkness - lit,Afternoon,Slight
+18-30,Male,Below 1yr,High school,Owner,Lorry,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Employee,Public (12 seats),Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+Unknown,Male,Below 1yr,High school,Employee,Bajaj,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Writing & reading,Owner,Bajaj,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Automobile,Organization,Above 10yr,No defect,Normal,Unknown,Darkness - unlit,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Employee,Automobile,Governmental,2-5yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+Over 51,Male,1-2yr,Elementary school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Female,2-5yr,High school,Owner,Unknown,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Bajaj,Owner,2-5yrs,7,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Junior high school,Owner,Motorcycle,Owner,2-5yrs,Unknown,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,5-10yr,Writing & reading,Employee,Automobile,Organization,Above 10yr,5,Normal,Gravel,Daylight,Morning,Slight
+18-30,Male,2-5yr,High school,Employee,Motorcycle,Governmental,2-5yrs,5,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Below 1yr,Writing & reading,Other,Automobile,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,1-2yr,High school,Employee,Bajaj,Owner,Below 1yr,No defect,Raining,Asphalt,Unknown,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Writing & reading,Employee,Bajaj,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Writing & reading,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,Above 10yr,Elementary school,Employee,Motorcycle,Owner,Above 10yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Owner,Bajaj,Owner,1-2yr,No defect,Raining,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,No Licence,Elementary school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Employee,Motorcycle,Governmental,5-10yrs,Unknown,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,1-2yr,Junior high school,Employee,Automobile,Owner,1-2yr,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Public (>45 seats),Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Organization,2-5yrs,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Junior high school,Owner,Other,Owner,Above 10yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,No Licence,Writing & reading,Owner,Public (>45 seats),Owner,Unknown,No defect,Cloudy,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,Above 10yr,Unknown,Owner,Bajaj,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Above high school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,Junior high school,Employee,Public (12 seats),Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Illiterate,Owner,Bajaj,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,1-2yr,High school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Earth,Daylight,Morning,Slight
+18-30,Male,Below 1yr,Writing & reading,Owner,Bajaj,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,High school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Owner,Bajaj,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,No Licence,Illiterate,Owner,Automobile,Owner,2-5yrs,No defect,Unknown,Asphalt,Daylight,Morning,Slight
+31-50,Unknown,1-2yr,Junior high school,Owner,Public (>45 seats),Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Employee,Automobile,Owner,2-5yrs,No defect,Other,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,High school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,2-5yr,Above high school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Bajaj,Owner,1-2yr,No defect,Normal,Earth,Darkness - lit,Evening,Slight
+31-50,Male,5-10yr,Above high school,Employee,Automobile,Owner,1-2yr,No defect,Raining,Asphalt,Daylight,Night,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Motorcycle,Other,5-10yrs,No defect,Cloudy,Earth,Daylight,Night,Slight
+31-50,Male,No Licence,Unknown,Owner,Lorry,Organization,1-2yr,No defect,Normal,Gravel,Daylight,Night,Slight
+18-30,Male,1-2yr,High school,Employee,Motorcycle,Owner,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Junior high school,Employee,Automobile,Owner,Below 1yr,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Elementary school,Employee,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Above high school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,Above 10yr,Junior high school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Unknown,Morning,Slight
+31-50,Male,Below 1yr,High school,Owner,Bicycle,Owner,5-10yrs,7,Unknown,Other,Daylight,Afternoon,Slight
+18-30,Female,Above 10yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Unknown,Asphalt,Daylight,Night,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Above high school,Employee,Automobile,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Automobile,Owner,5-10yrs,No defect,Cloudy,Earth,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Public (>45 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Female,2-5yr,Elementary school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,2-5yr,Junior high school,Owner,Motorcycle,Organization,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Female,2-5yr,Above high school,Other,Motorcycle,Organization,Unknown,No defect,Normal,Earth,Darkness - unlit,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Organization,1-2yr,No defect,Windy,Gravel,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Owner,Bajaj,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Night,Slight
+18-30,Male,Above 10yr,High school,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Unknown,Above high school,Owner,Motorcycle,Organization,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Junior high school,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Employee,Public (12 seats),Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Below 1yr,Above high school,Employee,Automobile,Governmental,2-5yrs,7,Normal,Unknown,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Owner,Automobile,Owner,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Unknown,Employee,Motorcycle,Owner,1-2yr,No defect,Unknown,Gravel,Daylight,Afternoon,Slight
+Unknown,Male,Below 1yr,High school,Unknown,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+18-30,Male,Below 1yr,Elementary school,Other,Bajaj,Owner,2-5yrs,No defect,Normal,Other,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Illiterate,Employee,Automobile,Owner,Unknown,No defect,Normal,Earth,Daylight,Afternoon,Slight
+31-50,Female,2-5yr,Junior high school,Owner,Automobile,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,No Licence,High school,Employee,Automobile,Owner,Below 1yr,No defect,Unknown,Gravel,Daylight,Morning,Slight
+18-30,Male,No Licence,Junior high school,Owner,Lorry,Owner,1-2yr,7,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Unknown,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Writing & reading,Owner,Bajaj,Owner,1-2yr,No defect,Unknown,Earth,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Owner,Motorcycle,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Female,No Licence,High school,Owner,Automobile,Governmental,Above 10yr,No defect,Normal,Earth,Daylight,Night,Slight
+31-50,Male,2-5yr,Junior high school,Employee,Motorcycle,Owner,1-2yr,No defect,Cloudy,Asphalt,Unknown,Afternoon,Slight
+Unknown,Male,5-10yr,Elementary school,Owner,Automobile,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Motorcycle,Governmental,5-10yrs,Unknown,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Writing & reading,Owner,Motorcycle,Other,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,Elementary school,Employee,Bajaj,Governmental,1-2yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Elementary school,Owner,Unknown,Organization,Above 10yr,No defect,Normal,Earth,Daylight,Night,Slight
+31-50,Male,1-2yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Unknown,Morning,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,Above high school,Employee,Unknown,Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+Over 51,Male,5-10yr,Unknown,Employee,Automobile,Organization,Below 1yr,5,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Unknown,Motorcycle,Owner,1-2yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Illiterate,Owner,Motorcycle,Other,5-10yrs,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+18-30,Female,5-10yr,Elementary school,Employee,Automobile,Other,Below 1yr,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Female,5-10yr,High school,Owner,Motorcycle,Governmental,Below 1yr,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,1-2yr,Elementary school,Employee,Motorcycle,Owner,2-5yrs,No defect,Raining,Asphalt,Darkness - lit,Morning,Slight
+Unknown,Female,5-10yr,Above high school,Owner,Public (12 seats),Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,1-2yr,Elementary school,Owner,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,2-5yr,Junior high school,Owner,Bajaj,Organization,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Employee,Automobile,Owner,1-2yr,No defect,Windy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Darkness - lit,Afternoon,Slight
+18-30,Female,2-5yr,High school,Other,Automobile,Owner,Above 10yr,No defect,Normal,Other,Daylight,Evening,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Automobile,Organization,Below 1yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Organization,Below 1yr,Unknown,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,2-5yr,High school,Other,Public (>45 seats),Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Unknown,Other,Public (12 seats),Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+Over 51,Male,1-2yr,Above high school,Owner,Automobile,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Public (12 seats),Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Female,5-10yr,Writing & reading,Employee,Bajaj,Other,1-2yr,5,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,1-2yr,Junior high school,Owner,Bicycle,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Elementary school,Other,Motorcycle,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Owner,Public (>45 seats),Owner,5-10yrs,No defect,Other,Asphalt,Daylight,Afternoon,Slight
+18-30,Female,2-5yr,High school,Other,Other,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,2-5yr,Junior high school,Other,Lorry,Governmental,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Automobile,Owner,Above 10yr,5,Normal,Asphalt,Daylight,Night,Slight
+Over 51,Male,1-2yr,Elementary school,Owner,Automobile,Owner,2-5yrs,No defect,Unknown,Unknown,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Above high school,Employee,Automobile,Owner,1-2yr,No defect,Cloudy,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,1-2yr,High school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,5-10yr,High school,Employee,Automobile,Governmental,2-5yrs,5,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,1-2yr,High school,Other,Bajaj,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Unknown,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Unknown,Automobile,Organization,1-2yr,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Employee,Motorcycle,Owner,5-10yrs,No defect,Cloudy,Earth,Daylight,Evening,Slight
+18-30,Male,1-2yr,High school,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Unknown,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,1-2yr,Elementary school,Owner,Automobile,Owner,Above 10yr,5,Other,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Writing & reading,Owner,Lorry,Owner,5-10yrs,No defect,Normal,Other,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Employee,Public (>45 seats),Owner,2-5yrs,No defect,Other,Unknown,Daylight,Evening,Slight
+18-30,Male,5-10yr,Illiterate,Owner,Bajaj,Owner,Above 10yr,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,2-5yr,High school,Owner,Motorcycle,Owner,5-10yrs,No defect,Unknown,Asphalt,Daylight,Evening,Slight
+Unknown,Male,Above 10yr,Junior high school,Owner,Other,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Elementary school,Owner,Lorry,Organization,1-2yr,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,Below 1yr,Junior high school,Owner,Bajaj,Organization,5-10yrs,Unknown,Normal,Gravel,Darkness - lit,Evening,Slight
+18-30,Male,No Licence,High school,Unknown,Public (12 seats),Other,Above 10yr,No defect,Windy,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Above high school,Employee,Automobile,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Other,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,1-2yr,Elementary school,Owner,Automobile,Owner,2-5yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Unknown,Motorcycle,Organization,Above 10yr,No defect,Normal,Gravel,Unknown,Morning,Slight
+Over 51,Male,2-5yr,High school,Unknown,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Unknown,Darkness - unlit,Morning,Slight
+18-30,Male,1-2yr,High school,Other,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Other,Bicycle,Governmental,Below 1yr,No defect,Normal,Asphalt,Unknown,Evening,Slight
+31-50,Male,Above 10yr,Writing & reading,Employee,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,1-2yr,Elementary school,Owner,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+31-50,Female,1-2yr,Junior high school,Other,Public (12 seats),Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Illiterate,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+Over 51,Male,Unknown,Above high school,Owner,Public (12 seats),Other,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Female,Above 10yr,Elementary school,Owner,Bajaj,Organization,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,Writing & reading,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Motorcycle,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Owner,Bajaj,Governmental,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Illiterate,Unknown,Public (>45 seats),Owner,1-2yr,No defect,Windy,Asphalt,Daylight,Morning,Slight
+Under 18,Male,Below 1yr,High school,Owner,Automobile,Organization,Below 1yr,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Motorcycle,Owner,Unknown,7,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Motorcycle,Other,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Writing & reading,Owner,Unknown,Organization,1-2yr,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Above high school,Owner,Automobile,Governmental,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,High school,Employee,Motorcycle,Governmental,5-10yrs,No defect,Cloudy,Earth,Daylight,Evening,Slight
+18-30,Unknown,5-10yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Unknown,Male,Above 10yr,Elementary school,Owner,Lorry,Organization,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,Above 10yr,Junior high school,Owner,Unknown,Governmental,1-2yr,No defect,Cloudy,Earth,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Illiterate,Employee,Automobile,Other,Above 10yr,No defect,Raining,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Unknown,Employee,Automobile,Owner,Below 1yr,No defect,Unknown,Gravel,Daylight,Night,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Governmental,5-10yrs,No defect,Raining,Asphalt,Daylight,Evening,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+31-50,Male,5-10yr,Illiterate,Employee,Motorcycle,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,Writing & reading,Owner,Lorry,Owner,2-5yrs,No defect,Cloudy,Unknown,Darkness - lit,Morning,Slight
+31-50,Male,1-2yr,Above high school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Earth,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Employee,Bajaj,Governmental,Above 10yr,No defect,Windy,Earth,Daylight,Evening,Slight
+18-30,Male,1-2yr,Above high school,Owner,Public (12 seats),Owner,Below 1yr,5,Windy,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,5-10yr,High school,Owner,Motorcycle,Organization,2-5yrs,No defect,Normal,Gravel,Daylight,Night,Slight
+31-50,Male,Above 10yr,Illiterate,Unknown,Automobile,Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Unknown,Male,1-2yr,High school,Owner,Public (12 seats),Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,High school,Owner,Bicycle,Unknown,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,2-5yr,High school,Owner,Motorcycle,Owner,5-10yrs,Unknown,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Other,Unknown,1-2yr,Unknown,Other,Gravel,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Owner,2-5yrs,7,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,5-10yr,High school,Unknown,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Unknown,Morning,Slight
+31-50,Male,No Licence,Junior high school,Owner,Automobile,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Female,1-2yr,Junior high school,Owner,Public (12 seats),Unknown,2-5yrs,No defect,Cloudy,Gravel,Unknown,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Other,Automobile,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Owner,Motorcycle,Owner,Above 10yr,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+Under 18,Male,2-5yr,Junior high school,Employee,Bajaj,Owner,5-10yrs,No defect,Windy,Gravel,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Other,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Writing & reading,Employee,Public (>45 seats),Organization,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Elementary school,Employee,Automobile,Organization,2-5yrs,No defect,Windy,Gravel,Unknown,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+Unknown,Male,5-10yr,Illiterate,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Above high school,Owner,Automobile,Organization,Below 1yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Other,Automobile,Organization,5-10yrs,No defect,Cloudy,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,Unknown,Junior high school,Employee,Bajaj,Owner,2-5yrs,No defect,Other,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Other,Lorry,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Under 18,Male,Unknown,Junior high school,Owner,Motorcycle,Owner,2-5yrs,5,Normal,Gravel,Unknown,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Motorcycle,Owner,Unknown,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Unknown,Junior high school,Employee,Motorcycle,Governmental,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Unknown,Employee,Public (12 seats),Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,1-2yr,Junior high school,Other,Automobile,Organization,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Above high school,Owner,Other,Owner,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,No Licence,Illiterate,Unknown,Automobile,Unknown,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,Above 10yr,Above high school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,No Licence,High school,Other,Lorry,Unknown,2-5yrs,No defect,Normal,Gravel,Darkness - lit,Morning,Slight
+18-30,Male,Above 10yr,Illiterate,Owner,Motorcycle,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Owner,Public (>45 seats),Owner,2-5yrs,No defect,Raining,Asphalt,Daylight,Night,Slight
+18-30,Male,5-10yr,High school,Employee,Automobile,Owner,Unknown,7,Raining,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,2-5yr,Writing & reading,Employee,Motorcycle,Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Above high school,Owner,Motorcycle,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Night,Slight
+31-50,Male,Below 1yr,High school,Other,Motorcycle,Organization,Below 1yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Other,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Illiterate,Owner,Automobile,Owner,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+Under 18,Male,2-5yr,High school,Employee,Other,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Motorcycle,Organization,1-2yr,No defect,Raining,Unknown,Daylight,Afternoon,Slight
+18-30,Female,No Licence,High school,Other,Automobile,Owner,2-5yrs,No defect,Raining,Gravel,Daylight,Morning,Slight
+18-30,Female,2-5yr,High school,Employee,Bajaj,Unknown,1-2yr,No defect,Windy,Asphalt,Daylight,Afternoon,Slight
+18-30,Female,Above 10yr,High school,Owner,Unknown,Owner,1-2yr,No defect,Windy,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,Above high school,Other,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Writing & reading,Owner,Bajaj,Governmental,Below 1yr,No defect,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Above high school,Unknown,Motorcycle,Governmental,2-5yrs,7,Windy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Junior high school,Employee,Motorcycle,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,High school,Owner,Automobile,Owner,Unknown,7,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,5-10yr,Illiterate,Owner,Lorry,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Automobile,Owner,5-10yrs,No defect,Windy,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,High school,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Employee,Bicycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Writing & reading,Owner,Bajaj,Other,5-10yrs,No defect,Windy,Asphalt,Daylight,Evening,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Automobile,Owner,5-10yrs,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,1-2yr,High school,Owner,Unknown,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Owner,Bajaj,Owner,5-10yrs,No defect,Normal,Other,Daylight,Afternoon,Slight
+18-30,Male,No Licence,High school,Unknown,Bajaj,Owner,2-5yrs,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,No Licence,Unknown,Other,Automobile,Other,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Illiterate,Other,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,High school,Employee,Public (>45 seats),Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,2-5yr,Elementary school,Owner,Bajaj,Unknown,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Junior high school,Employee,Motorcycle,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Elementary school,Owner,Automobile,Owner,Above 10yr,No defect,Windy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Writing & reading,Unknown,Bajaj,Other,2-5yrs,No defect,Windy,Gravel,Daylight,Morning,Slight
+31-50,Male,1-2yr,Elementary school,Other,Automobile,Owner,1-2yr,No defect,Normal,Unknown,Unknown,Morning,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Other,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Owner,Bajaj,Owner,1-2yr,No defect,Unknown,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,Illiterate,Owner,Motorcycle,Governmental,Unknown,5,Normal,Gravel,Darkness - lit,Evening,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Automobile,Organization,Below 1yr,No defect,Raining,Asphalt,Darkness - lit,Evening,Slight
+Under 18,Male,Unknown,Junior high school,Owner,Automobile,Owner,1-2yr,No defect,Other,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Writing & reading,Owner,Automobile,Owner,Above 10yr,No defect,Raining,Asphalt,Darkness - unlit,Morning,Slight
+Over 51,Male,Unknown,Above high school,Owner,Unknown,Governmental,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Female,5-10yr,High school,Other,Motorcycle,Owner,Unknown,No defect,Raining,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,Above 10yr,Junior high school,Other,Automobile,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Bajaj,Organization,1-2yr,Unknown,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Above high school,Employee,Unknown,Owner,5-10yrs,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Elementary school,Owner,Motorcycle,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Above high school,Owner,Other,Governmental,Above 10yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+Over 51,Male,Below 1yr,Junior high school,Other,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Automobile,Owner,5-10yrs,5,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Writing & reading,Owner,Unknown,Owner,Above 10yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Junior high school,Owner,Bajaj,Organization,Above 10yr,No defect,Raining,Asphalt,Daylight,Morning,Slight
+Over 51,Male,5-10yr,High school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Other,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Female,Above 10yr,Elementary school,Other,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Other,Motorcycle,Governmental,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Lorry,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Above high school,Owner,Public (>45 seats),Owner,Below 1yr,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Motorcycle,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Junior high school,Employee,Motorcycle,Governmental,Unknown,Unknown,Raining,Asphalt,Daylight,Morning,Slight
+18-30,Male,No Licence,Junior high school,Owner,Bajaj,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Motorcycle,Unknown,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Unknown,Above high school,Employee,Other,Owner,5-10yrs,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+18-30,Female,Above 10yr,Above high school,Owner,Motorcycle,Governmental,2-5yrs,No defect,Normal,Gravel,Darkness - unlit,Afternoon,Slight
+18-30,Male,2-5yr,High school,Employee,Lorry,Unknown,Below 1yr,No defect,Windy,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Automobile,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Elementary school,Owner,Motorcycle,Governmental,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Employee,Lorry,Unknown,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,High school,Owner,Unknown,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,5-10yr,Above high school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Above high school,Employee,Public (>45 seats),Owner,2-5yrs,No defect,Normal,Earth,Daylight,Evening,Slight
+31-50,Male,5-10yr,Junior high school,Owner,Lorry,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Under 18,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Unknown,2-5yr,High school,Owner,Automobile,Owner,Unknown,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Other,Organization,Unknown,No defect,Raining,Unknown,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Above high school,Owner,Automobile,Governmental,5-10yrs,No defect,Normal,Asphalt,Darkness - unlit,Evening,Slight
+18-30,Male,Below 1yr,High school,Employee,Bajaj,Organization,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Unknown,Evening,Slight
+18-30,Male,Above 10yr,Junior high school,Unknown,Unknown,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Female,Unknown,Writing & reading,Other,Automobile,Governmental,1-2yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Other,Automobile,Owner,5-10yrs,No defect,Raining,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,2-5yr,Elementary school,Unknown,Motorcycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Public (12 seats),Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Above 10yr,High school,Other,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Employee,Other,Owner,Above 10yr,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Public (12 seats),Organization,Below 1yr,No defect,Windy,Asphalt,Daylight,Evening,Slight
+18-30,Female,Above 10yr,High school,Owner,Public (12 seats),Owner,5-10yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Writing & reading,Owner,Automobile,Unknown,Unknown,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Unknown,Bicycle,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Motorcycle,Organization,1-2yr,No defect,Cloudy,Other,Daylight,Morning,Slight
+31-50,Male,Unknown,High school,Owner,Bajaj,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Unknown,High school,Employee,Public (12 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Above high school,Owner,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Public (12 seats),Owner,2-5yrs,No defect,Windy,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,High school,Employee,Automobile,Owner,Unknown,No defect,Normal,Unknown,Unknown,Evening,Slight
+31-50,Male,Above 10yr,High school,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Unknown,Employee,Automobile,Governmental,Above 10yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,1-2yr,Above high school,Employee,Public (>45 seats),Owner,Below 1yr,No defect,Raining,Asphalt,Daylight,Evening,Slight
+31-50,Male,5-10yr,Junior high school,Employee,Lorry,Owner,5-10yrs,No defect,Unknown,Unknown,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Above high school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Darkness - lit,Afternoon,Slight
+31-50,Female,Above 10yr,Elementary school,Other,Motorcycle,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Above high school,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,Junior high school,Employee,Motorcycle,Other,5-10yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,2-5yr,Above high school,Owner,Public (12 seats),Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,1-2yr,Junior high school,Owner,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+Under 18,Female,5-10yr,Writing & reading,Owner,Automobile,Owner,2-5yrs,7,Cloudy,Unknown,Darkness - unlit,Night,Slight
+18-30,Male,5-10yr,Illiterate,Unknown,Motorcycle,Owner,5-10yrs,No defect,Cloudy,Gravel,Daylight,Afternoon,Slight
+Under 18,Male,5-10yr,Elementary school,Owner,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,High school,Owner,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Other,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Unknown,Employee,Motorcycle,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Above high school,Employee,Lorry,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Unknown,Motorcycle,Organization,Below 1yr,No defect,Unknown,Unknown,Darkness - lit,Morning,Slight
+18-30,Male,5-10yr,High school,Other,Bicycle,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Writing & reading,Owner,Motorcycle,Governmental,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+Over 51,Male,Above 10yr,Writing & reading,Employee,Motorcycle,Organization,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Employee,Public (>45 seats),Organization,2-5yrs,Unknown,Normal,Gravel,Unknown,Afternoon,Slight
+18-30,Male,Above 10yr,Writing & reading,Owner,Other,Other,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Over 51,Male,5-10yr,Elementary school,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+Under 18,Male,5-10yr,Writing & reading,Employee,Bajaj,Organization,2-5yrs,No defect,Cloudy,Unknown,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Public (12 seats),Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Public (>45 seats),Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,5-10yr,Junior high school,Owner,Unknown,Owner,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,Below 1yr,Elementary school,Employee,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Automobile,Owner,1-2yr,No defect,Raining,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Unknown,Owner,Motorcycle,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Writing & reading,Other,Other,Other,2-5yrs,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,5-10yr,High school,Owner,Automobile,Other,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,2-5yr,High school,Owner,Lorry,Unknown,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Elementary school,Owner,Automobile,Other,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Above high school,Other,Public (>45 seats),Governmental,Below 1yr,No defect,Other,Asphalt,Daylight,Evening,Slight
+18-30,Male,No Licence,Elementary school,Owner,Automobile,Organization,1-2yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Employee,Public (12 seats),Owner,2-5yrs,5,Cloudy,Asphalt,Daylight,Morning,Slight
+Unknown,Male,2-5yr,High school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Earth,Daylight,Morning,Slight
+18-30,Male,Below 1yr,High school,Employee,Motorcycle,Owner,2-5yrs,No defect,Windy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,1-2yr,Elementary school,Owner,Motorcycle,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,Above 10yr,High school,Other,Motorcycle,Owner,5-10yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,Above 10yr,High school,Employee,Bajaj,Owner,1-2yr,No defect,Normal,Other,Daylight,Afternoon,Slight
+Unknown,Male,5-10yr,Illiterate,Employee,Lorry,Organization,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Public (12 seats),Owner,Below 1yr,No defect,Raining,Asphalt,Daylight,Night,Slight
+18-30,Male,No Licence,Writing & reading,Other,Motorcycle,Organization,2-5yrs,5,Windy,Asphalt,Darkness - unlit,Morning,Slight
+31-50,Male,Below 1yr,Unknown,Employee,Automobile,Organization,1-2yr,5,Normal,Asphalt,Unknown,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Employee,Automobile,Organization,Above 10yr,No defect,Cloudy,Earth,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Owner,Automobile,Owner,5-10yrs,No defect,Other,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,1-2yr,High school,Unknown,Automobile,Owner,1-2yr,No defect,Cloudy,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Above high school,Unknown,Motorcycle,Other,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Motorcycle,Owner,Above 10yr,No defect,Raining,Asphalt,Darkness - unlit,Evening,Slight
+31-50,Male,5-10yr,Above high school,Employee,Motorcycle,Other,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,2-5yr,Junior high school,Employee,Bajaj,Owner,1-2yr,No defect,Raining,Gravel,Daylight,Afternoon,Slight
+Over 51,Male,Below 1yr,Junior high school,Other,Motorcycle,Organization,2-5yrs,No defect,Normal,Unknown,Daylight,Evening,Slight
+18-30,Female,2-5yr,Writing & reading,Owner,Motorcycle,Other,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+Unknown,Male,1-2yr,High school,Employee,Bajaj,Owner,Above 10yr,No defect,Normal,Other,Unknown,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Unknown,Bicycle,Other,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Organization,Unknown,No defect,Normal,Earth,Daylight,Afternoon,Slight
+18-30,Female,1-2yr,High school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Public (12 seats),Owner,Below 1yr,No defect,Normal,Asphalt,Unknown,Evening,Slight
+31-50,Male,1-2yr,Junior high school,Employee,Bajaj,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Unknown,Above high school,Employee,Automobile,Other,Above 10yr,5,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Above high school,Employee,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,1-2yr,Junior high school,Other,Automobile,Organization,2-5yrs,No defect,Raining,Gravel,Daylight,Evening,Slight
+18-30,Male,1-2yr,High school,Employee,Bajaj,Organization,Below 1yr,No defect,Normal,Earth,Unknown,Afternoon,Slight
+18-30,Male,1-2yr,High school,Employee,Automobile,Unknown,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,No Licence,High school,Owner,Automobile,Organization,1-2yr,No defect,Normal,Unknown,Unknown,Afternoon,Slight
+31-50,Male,Above 10yr,Above high school,Employee,Automobile,Owner,5-10yrs,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Owner,Motorcycle,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,Above 10yr,High school,Employee,Automobile,Governmental,2-5yrs,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+31-50,Male,2-5yr,Writing & reading,Employee,Public (12 seats),Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,Elementary school,Other,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+Over 51,Male,2-5yr,Junior high school,Other,Lorry,Owner,Unknown,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Unknown,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Unknown,Evening,Slight
+31-50,Male,1-2yr,Above high school,Employee,Motorcycle,Governmental,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Organization,5-10yrs,No defect,Normal,Gravel,Daylight,Night,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,High school,Owner,Automobile,Owner,1-2yr,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Unknown,Automobile,Owner,1-2yr,No defect,Other,Gravel,Unknown,Evening,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Governmental,Above 10yr,7,Unknown,Gravel,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Unknown,Bajaj,Owner,5-10yrs,No defect,Normal,Earth,Darkness - unlit,Evening,Slight
+31-50,Female,5-10yr,Junior high school,Owner,Automobile,Unknown,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Female,No Licence,High school,Employee,Motorcycle,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Automobile,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Junior high school,Employee,Motorcycle,Other,Below 1yr,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Employee,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,2-5yr,High school,Employee,Automobile,Organization,Below 1yr,No defect,Windy,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Owner,Lorry,Organization,5-10yrs,No defect,Unknown,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Other,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Motorcycle,Organization,Unknown,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+31-50,Male,2-5yr,High school,Employee,Automobile,Unknown,2-5yrs,No defect,Normal,Earth,Daylight,Afternoon,Slight
+31-50,Male,Unknown,High school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Earth,Unknown,Afternoon,Slight
+18-30,Male,5-10yr,High school,Unknown,Other,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Illiterate,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,Elementary school,Employee,Motorcycle,Organization,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Unknown,Junior high school,Employee,Automobile,Owner,Above 10yr,No defect,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Female,5-10yr,Above high school,Employee,Motorcycle,Governmental,Below 1yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,5-10yr,Above high school,Employee,Motorcycle,Unknown,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Lorry,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Employee,Other,Organization,5-10yrs,No defect,Cloudy,Asphalt,Unknown,Evening,Slight
+31-50,Male,5-10yr,High school,Employee,Bajaj,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Above high school,Owner,Automobile,Owner,2-5yrs,5,Unknown,Unknown,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Owner,Bajaj,Owner,2-5yrs,No defect,Raining,Asphalt,Daylight,Evening,Slight
+18-30,Male,Above 10yr,Elementary school,Employee,Motorcycle,Organization,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+31-50,Female,Above 10yr,Writing & reading,Owner,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Employee,Automobile,Owner,2-5yrs,7,Normal,Asphalt,Daylight,Evening,Slight
+Unknown,Male,2-5yr,Writing & reading,Employee,Automobile,Owner,2-5yrs,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Above high school,Owner,Automobile,Owner,Unknown,No defect,Unknown,Gravel,Daylight,Evening,Slight
+31-50,Female,Above 10yr,Junior high school,Owner,Bajaj,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Unknown,Elementary school,Owner,Public (>45 seats),Governmental,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Automobile,Owner,Above 10yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Owner,Unknown,No defect,Windy,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Above high school,Employee,Public (>45 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Other,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Female,5-10yr,Unknown,Unknown,Motorcycle,Governmental,2-5yrs,Unknown,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Unknown,Motorcycle,Owner,2-5yrs,No defect,Cloudy,Asphalt,Unknown,Morning,Slight
+31-50,Female,Below 1yr,Junior high school,Owner,Motorcycle,Owner,2-5yrs,No defect,Other,Asphalt,Unknown,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Automobile,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Above high school,Employee,Automobile,Organization,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Other,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Below 1yr,Above high school,Owner,Automobile,Organization,Above 10yr,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,Illiterate,Unknown,Automobile,Governmental,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Female,Above 10yr,Junior high school,Employee,Automobile,Owner,2-5yrs,Unknown,Cloudy,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,Unknown,Owner,Other,Owner,1-2yr,Unknown,Cloudy,Gravel,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Employee,Motorcycle,Owner,5-10yrs,7,Cloudy,Gravel,Daylight,Afternoon,Slight
+31-50,Male,Below 1yr,Junior high school,Employee,Public (>45 seats),Other,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Unknown,Employee,Lorry,Organization,Above 10yr,No defect,Cloudy,Asphalt,Darkness - unlit,Night,Slight
+18-30,Male,1-2yr,High school,Employee,Bicycle,Organization,5-10yrs,Unknown,Normal,Asphalt,Unknown,Morning,Slight
+31-50,Male,5-10yr,Elementary school,Employee,Motorcycle,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Bajaj,Owner,1-2yr,No defect,Unknown,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Automobile,Owner,1-2yr,Unknown,Normal,Asphalt,Darkness - unlit,Morning,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Motorcycle,Organization,Above 10yr,Unknown,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,Above 10yr,Above high school,Owner,Public (>45 seats),Owner,5-10yrs,No defect,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Unknown,Other,Owner,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Female,Above 10yr,High school,Other,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Unknown,Morning,Slight
+18-30,Female,Above 10yr,High school,Owner,Bajaj,Organization,5-10yrs,No defect,Cloudy,Other,Darkness - unlit,Afternoon,Slight
+31-50,Female,1-2yr,Junior high school,Unknown,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Unknown,Male,Above 10yr,Junior high school,Unknown,Motorcycle,Other,5-10yrs,5,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Unknown,Elementary school,Owner,Motorcycle,Governmental,2-5yrs,No defect,Cloudy,Gravel,Daylight,Morning,Slight
+31-50,Male,2-5yr,Elementary school,Employee,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Automobile,Owner,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,High school,Other,Lorry,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Employee,Bajaj,Unknown,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Public (>45 seats),Owner,5-10yrs,Unknown,Normal,Earth,Daylight,Afternoon,Slight
+Under 18,Male,2-5yr,Writing & reading,Employee,Lorry,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Elementary school,Unknown,Automobile,Unknown,2-5yrs,5,Cloudy,Asphalt,Daylight,Night,Slight
+31-50,Male,2-5yr,High school,Unknown,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Motorcycle,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Unknown,5-10yr,Junior high school,Employee,Public (>45 seats),Owner,5-10yrs,No defect,Unknown,Asphalt,Daylight,Night,Slight
+31-50,Male,1-2yr,Elementary school,Unknown,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Unknown,Morning,Slight
+18-30,Male,2-5yr,Elementary school,Owner,Other,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,High school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Unknown,Elementary school,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Public (12 seats),Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Automobile,Owner,Above 10yr,No defect,Unknown,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Employee,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+Under 18,Male,No Licence,Junior high school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Unknown,Daylight,Night,Slight
+31-50,Male,2-5yr,Above high school,Owner,Motorcycle,Organization,1-2yr,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight
+18-30,Male,Above 10yr,High school,Employee,Motorcycle,Unknown,5-10yrs,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+18-30,Male,2-5yr,Above high school,Owner,Motorcycle,Unknown,5-10yrs,No defect,Normal,Earth,Daylight,Morning,Slight
+18-30,Male,5-10yr,High school,Owner,Motorcycle,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,Below 1yr,Junior high school,Owner,Bajaj,Owner,Above 10yr,No defect,Normal,Unknown,Daylight,Morning,Slight
+18-30,Female,No Licence,Junior high school,Owner,Automobile,Owner,1-2yr,No defect,Normal,Unknown,Darkness - unlit,Morning,Slight
+31-50,Male,5-10yr,Unknown,Other,Unknown,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Writing & reading,Unknown,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Unknown,Other,Bajaj,Organization,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Above high school,Other,Motorcycle,Governmental,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Female,Above 10yr,Elementary school,Employee,Automobile,Unknown,2-5yrs,No defect,Raining,Asphalt,Darkness - lit,Night,Slight
+Unknown,Male,1-2yr,Writing & reading,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,Above 10yr,High school,Employee,Bajaj,Governmental,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Junior high school,Unknown,Bajaj,Owner,Above 10yr,No defect,Cloudy,Asphalt,Darkness - unlit,Afternoon,Slight
+Unknown,Male,1-2yr,Writing & reading,Owner,Automobile,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,5-10yr,Unknown,Owner,Bajaj,Governmental,2-5yrs,No defect,Windy,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,Elementary school,Owner,Automobile,Owner,Above 10yr,Unknown,Normal,Unknown,Daylight,Morning,Slight
+31-50,Male,2-5yr,High school,Owner,Public (12 seats),Owner,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Owner,Other,Unknown,5-10yrs,No defect,Normal,Asphalt,Darkness - unlit,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Employee,Automobile,Owner,Unknown,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+Unknown,Female,No Licence,Writing & reading,Owner,Automobile,Other,2-5yrs,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Male,1-2yr,Above high school,Employee,Automobile,Owner,Below 1yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Bajaj,Owner,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,Above high school,Employee,Other,Governmental,Below 1yr,No defect,Windy,Other,Daylight,Morning,Slight
+Over 51,Male,Above 10yr,Junior high school,Unknown,Bajaj,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,2-5yr,Junior high school,Owner,Bajaj,Owner,2-5yrs,Unknown,Normal,Unknown,Daylight,Afternoon,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Automobile,Owner,Above 10yr,No defect,Normal,Asphalt,Unknown,Night,Slight
+18-30,Male,Unknown,Elementary school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Unknown,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Other,Automobile,Owner,Below 1yr,No defect,Normal,Gravel,Darkness - lit,Afternoon,Slight
+Over 51,Male,1-2yr,Elementary school,Owner,Public (12 seats),Owner,5-10yrs,No defect,Normal,Other,Darkness - unlit,Evening,Slight
+31-50,Male,Above 10yr,High school,Employee,Unknown,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Elementary school,Employee,Motorcycle,Organization,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,High school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+18-30,Male,5-10yr,Elementary school,Other,Automobile,Organization,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,No Licence,High school,Employee,Public (>45 seats),Owner,Above 10yr,No defect,Unknown,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Above high school,Other,Motorcycle,Owner,Below 1yr,No defect,Raining,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Above high school,Unknown,Automobile,Organization,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,High school,Owner,Automobile,Organization,Below 1yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+18-30,Female,2-5yr,Above high school,Owner,Motorcycle,Owner,1-2yr,5,Raining,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,2-5yr,Junior high school,Owner,Bajaj,Organization,Above 10yr,No defect,Other,Gravel,Daylight,Afternoon,Slight
+18-30,Female,No Licence,High school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Darkness - lit,Morning,Slight
+31-50,Male,5-10yr,Unknown,Other,Bicycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,High school,Other,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,2-5yr,High school,Employee,Other,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Below 1yr,Above high school,Other,Bajaj,Unknown,5-10yrs,No defect,Windy,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Other,Bajaj,Other,Above 10yr,No defect,Raining,Gravel,Darkness - unlit,Night,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Bajaj,Owner,Above 10yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Employee,Public (>45 seats),Governmental,5-10yrs,No defect,Normal,Earth,Daylight,Morning,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Other,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Morning,Slight
+31-50,Female,1-2yr,Junior high school,Employee,Automobile,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+31-50,Male,Above 10yr,Above high school,Owner,Lorry,Owner,1-2yr,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,5-10yr,Above high school,Employee,Automobile,Owner,2-5yrs,No defect,Normal,Earth,Darkness - lit,Morning,Slight
+31-50,Male,2-5yr,Writing & reading,Employee,Public (>45 seats),Governmental,Unknown,No defect,Raining,Gravel,Daylight,Morning,Slight
+18-30,Female,Unknown,Junior high school,Employee,Automobile,Owner,Below 1yr,Unknown,Other,Asphalt,Unknown,Afternoon,Slight
+Over 51,Male,Above 10yr,Writing & reading,Owner,Automobile,Owner,1-2yr,No defect,Raining,Gravel,Daylight,Afternoon,Slight
+Over 51,Female,Below 1yr,Elementary school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Earth,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,Junior high school,Owner,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,High school,Owner,Bajaj,Owner,Below 1yr,7,Raining,Asphalt,Daylight,Evening,Slight
+18-30,Male,1-2yr,Above high school,Employee,Bajaj,Owner,Unknown,No defect,Unknown,Asphalt,Darkness - lit,Morning,Slight
+31-50,Male,5-10yr,High school,Employee,Automobile,Owner,Below 1yr,No defect,Windy,Asphalt,Daylight,Morning,Slight
+31-50,Male,1-2yr,High school,Employee,Public (12 seats),Organization,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Elementary school,Owner,Motorcycle,Other,5-10yrs,No defect,Cloudy,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Below 1yr,Writing & reading,Owner,Automobile,Owner,5-10yrs,No defect,Cloudy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Other,Owner,5-10yrs,No defect,Windy,Gravel,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,2-5yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,1-2yr,Junior high school,Owner,Automobile,Owner,2-5yrs,Unknown,Normal,Asphalt,Daylight,Afternoon,Slight
+Under 18,Male,No Licence,Above high school,Owner,Automobile,Other,1-2yr,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,5-10yr,High school,Owner,Automobile,Organization,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Employee,Automobile,Owner,5-10yrs,No defect,Normal,Asphalt,Daylight,Night,Slight
+31-50,Male,2-5yr,High school,Owner,Lorry,Owner,Above 10yr,5,Normal,Asphalt,Daylight,Morning,Slight
+Over 51,Male,5-10yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Evening,Slight
+Over 51,Male,5-10yr,High school,Owner,Bajaj,Owner,1-2yr,No defect,Cloudy,Gravel,Daylight,Afternoon,Slight
+18-30,Male,No Licence,Junior high school,Owner,Public (>45 seats),Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Motorcycle,Owner,Below 1yr,7,Normal,Asphalt,Darkness - lit,Night,Slight
+18-30,Male,1-2yr,Junior high school,Employee,Motorcycle,Organization,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,High school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,Junior high school,Owner,Automobile,Other,2-5yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,5-10yr,High school,Owner,Bajaj,Owner,1-2yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,High school,Owner,Automobile,Unknown,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,No Licence,High school,Other,Lorry,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Lorry,Other,5-10yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Above high school,Owner,Bicycle,Owner,Above 10yr,Unknown,Normal,Earth,Daylight,Night,Slight
+Unknown,Male,2-5yr,Junior high school,Employee,Automobile,Owner,2-5yrs,No defect,Raining,Asphalt,Unknown,Evening,Slight
+31-50,Male,1-2yr,Junior high school,Owner,Automobile,Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - lit,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Other,Automobile,Organization,5-10yrs,No defect,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Unknown,Employee,Automobile,Owner,5-10yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Junior high school,Owner,Lorry,Owner,Above 10yr,7,Normal,Other,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Elementary school,Owner,Automobile,Organization,1-2yr,No defect,Normal,Earth,Daylight,Afternoon,Slight
+Unknown,Male,5-10yr,Junior high school,Owner,Other,Owner,1-2yr,No defect,Normal,Gravel,Darkness - lit,Night,Slight
+31-50,Male,5-10yr,Elementary school,Other,Lorry,Owner,2-5yrs,No defect,Cloudy,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,High school,Owner,Bicycle,Governmental,Above 10yr,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+31-50,Male,Above 10yr,Above high school,Employee,Public (>45 seats),Governmental,Above 10yr,No defect,Normal,Asphalt,Daylight,Evening,Slight
+18-30,Male,5-10yr,High school,Owner,Motorcycle,Owner,Above 10yr,No defect,Raining,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Writing & reading,Other,Automobile,Owner,1-2yr,No defect,Normal,Unknown,Daylight,Morning,Slight
+31-50,Male,2-5yr,Elementary school,Owner,Lorry,Governmental,5-10yrs,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Governmental,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+31-50,Male,5-10yr,Elementary school,Employee,Motorcycle,Owner,1-2yr,No defect,Cloudy,Unknown,Darkness - lit,Afternoon,Slight
+31-50,Male,2-5yr,Writing & reading,Owner,Automobile,Other,2-5yrs,No defect,Raining,Gravel,Daylight,Morning,Slight
+31-50,Male,Above 10yr,Elementary school,Owner,Bajaj,Organization,Above 10yr,No defect,Unknown,Other,Daylight,Evening,Slight
+Under 18,Male,Above 10yr,Elementary school,Employee,Motorcycle,Other,Above 10yr,No defect,Normal,Asphalt,Unknown,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Automobile,Unknown,1-2yr,5,Normal,Asphalt,Darkness - lit,Evening,Slight
+31-50,Male,5-10yr,High school,Employee,Automobile,Governmental,5-10yrs,5,Windy,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,High school,Owner,Public (12 seats),Owner,1-2yr,No defect,Normal,Gravel,Daylight,Morning,Slight
+31-50,Female,Below 1yr,Junior high school,Employee,Motorcycle,Owner,Above 10yr,No defect,Windy,Asphalt,Darkness - lit,Evening,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Owner,2-5yrs,Unknown,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Motorcycle,Organization,2-5yrs,No defect,Raining,Asphalt,Darkness - lit,Afternoon,Slight
+18-30,Male,No Licence,Elementary school,Employee,Bajaj,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Afternoon,Slight
+18-30,Female,No Licence,Junior high school,Employee,Motorcycle,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,1-2yr,High school,Employee,Motorcycle,Organization,1-2yr,5,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,Above 10yr,Junior high school,Owner,Motorcycle,Owner,2-5yrs,No defect,Normal,Gravel,Daylight,Evening,Slight
+31-50,Male,1-2yr,High school,Other,Automobile,Owner,Unknown,No defect,Normal,Asphalt,Daylight,Afternoon,Slight
+18-30,Male,2-5yr,Junior high school,Owner,Automobile,Organization,Unknown,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,5-10yr,High school,Owner,Automobile,Owner,2-5yrs,No defect,Normal,Asphalt,Daylight,Morning,Slight
+18-30,Male,2-5yr,High school,Employee,Motorcycle,Owner,Below 1yr,No defect,Normal,Asphalt,Darkness - unlit,Morning,Slight

@@ -1,0 +1,56 @@
+{
+  "dataset_name": "rwanda_driver_risk_profiles_synthetic",
+  "source": "Fabricate tool",
+  "purpose": "validation_only",
+
+  "rows": 30000,
+  "class_distribution": {
+    "Slight": 10000,
+    "Serious": 10000,
+    "Fatal": 10000
+  },
+
+  "generation_method": "class_conditional_sampling",
+  "sampling_note": "Each severity class generated from separate joint distributions (not pooled).",
+
+  "schema": {
+    "num_features": 14,
+    "feature_contract": "Addis Ababa RTA-compatible vocabulary",
+    "validation_rule": "All categories must match allowed feature lists; unseen categories rejected"
+  },
+
+  "constraints": {
+    "no_free_text": true,
+    "strict_categorical_enforcement": true,
+    "db_check_constraints": true
+  },
+
+  "rwandan_context_rules": {
+    "motorcycle_heavy": true,
+    "male_skew": 0.9,
+    "age_focus": "18-50",
+    "risk_monotonicity_expected": true
+  },
+
+  "risk_monotonicity_expectation": {
+    "slight_lt_serious_lt_fatal": [
+      "motorcycle",
+      "bicycle",
+      "darkness_unlit",
+      "raining",
+      "gravel_earth",
+      "low_experience"
+    ]
+  },
+
+  "generator_reference": "generate_driver_risk_profiles.ts",
+  "parameterization": {
+    "n_per_class": 10000
+  },
+
+  "versioning": {
+    "seed": null,
+    "fabricate_run_id": null,
+    "created_at": "2026-07-03T..."
+  }
+}
