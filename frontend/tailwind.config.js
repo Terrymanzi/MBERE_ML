@@ -1,4 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+
+// Single source of truth for the product's brand typeface. Change this one
+// array to swap the font everywhere (Tailwind's default `sans` is aliased to
+// it, and `font-brand` is available for explicit use).
+const BRAND_FONT = [
+  "Helvetica Neue",
+  "Helvetica",
+  "Arial",
+  "ui-sans-serif",
+  "system-ui",
+  "sans-serif",
+];
+
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
@@ -24,17 +37,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "sans-serif",
-        ],
+        sans: BRAND_FONT,
+        brand: BRAND_FONT,
       },
     },
   },

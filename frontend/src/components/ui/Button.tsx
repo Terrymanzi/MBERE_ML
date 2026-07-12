@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/cn";
 import { Spinner } from "./Spinner";
 
-type Variant = "primary" | "secondary" | "ghost" | "danger";
+type Variant = "primary" | "secondary" | "ghost" | "danger" | "inverse";
 type Size = "sm" | "md" | "lg";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,6 +21,9 @@ const VARIANTS: Record<Variant, string> = {
     "bg-transparent text-slate-700 hover:bg-slate-100 focus-visible:outline-slate-400",
   danger:
     "bg-red-600 text-white hover:bg-red-700 focus-visible:outline-red-600 disabled:bg-red-300",
+  // Solid white on a brand-coloured background (hero/banner sections on the marketing page).
+  inverse:
+    "bg-white text-[#0F6CBD] hover:bg-blue-50 focus-visible:outline-white",
 };
 
 const SIZES: Record<Size, string> = {
