@@ -9,6 +9,7 @@ Key guarantees:
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import numpy as np
@@ -37,11 +38,15 @@ def processed_path(config: DatasetConfig, split: str) -> Path:
     return Path(config.paths.processed_dir) / f"{config.name}_{split}.csv"
 
 
+def selected_features(config: DatasetConfig) -> list[str]:
+    """Feature names kept by feature selection (persisted in feature_contract.json)."""
+    contract_path = Path(config.paths.artifacts_dir) / "feature_contract.json"
+    return json.loads(contract_path.read_text(encoding="utf-8"))["feature_selection"]["selected"]
+
+
 def load_processed(config: DatasetConfig, split: str) -> tuple[pd.DataFrame, np.ndarray, list[str]]:
     """Load engineered features + integer-coded target for 'train' or 'test'."""
-    import json
-    contract_path = Path(config.paths.artifacts_dir) / "feature_contract.json"
-    selected = json.loads(contract_path.read_text(encoding="utf-8"))["feature_selection"]["selected"]
+    selected = selected_features(config)
     df = pd.read_csv(processed_path(config, split))
     X = df[selected].copy()
     y, classes = encode_target(df[config.target.column], config)
@@ -58,14 +63,16 @@ def get_cv(config: DatasetConfig) -> StratifiedKFold:
 def make_resampling_pipeline(config: DatasetConfig, classifier) -> ImbPipeline:
     """encoder -> SMOTE -> classifier. The encoder is fit per fold; SMOTE only
     resamples the training fold."""
-    import json
-    contract_path = Path(config.paths.artifacts_dir) / "feature_contract.json"
-    selected = json.loads(contract_path.read_text(encoding="utf-8"))["feature_selection"]["selected"]
+    selected = selected_features(config)
     return ImbPipeline([
         ("encoder", build_encoder(config, subset=selected)),
         ("smote", SMOTE(random_state=config.random_state)),
         ("classifier", classifier),
     ])
+
+
+def fmt4(x: float | None) -> str:
+    return f"{x:.4f}" if x is not None else "n/a"
 
 
 def cross_val_oof(

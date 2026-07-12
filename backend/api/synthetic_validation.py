@@ -20,7 +20,7 @@ from pydantic import BaseModel, ConfigDict
 from ..app.config import PROJECT_ROOT, get_settings
 from ..auth.deps import get_current_user
 from ..database.models import User
-from ..services.model_service import ArtifactNotFoundError, model_service
+from ..services.model_registry import model_registry
 
 router = APIRouter(tags=["synthetic-validation"])
 
@@ -56,7 +56,8 @@ def synthetic_validation(
     This is MODEL PERFORMANCE SIMULATION only — results are not persisted and
     never merged into metrics.json.
     """
-    if not model_service.loaded:
+    svc = model_registry.default()
+    if svc is None or not svc.loaded:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "no model loaded")
 
     csv_path = Path(payload.fabricate_csv) if (payload and payload.fabricate_csv) else _DEFAULT_CSV
@@ -68,8 +69,8 @@ def synthetic_validation(
             f"Fabricate CSV not found: {csv_path}",
         )
 
-    contract_path = model_service.run_dir / "feature_contract.json"
-    model_path = model_service.run_dir / f"{model_service.name}.pkl"
+    contract_path = svc.run_dir / "feature_contract.json"
+    model_path = svc.run_dir / f"{svc.name}.pkl"
 
     try:
         # Import here to keep the backend independent of the ml package at module load.
@@ -84,8 +85,8 @@ def synthetic_validation(
 
     return SyntheticValidationResponse(
         note=result["note"],
-        model_name=model_service.name,
-        model_version=model_service.version,
+        model_name=svc.name,
+        model_version=svc.version,
         n_rows=result["n_rows"],
         labels_evaluated=result["labels_evaluated"],
         mean_p_fatal=result["mean_p_fatal"],

@@ -35,9 +35,46 @@ class FeatureContractResponse(BaseModel):
     input_features: list[ContractFeature]
 
 
+class ModelPerformance(BaseModel):
+    n_samples: int
+    accuracy: float
+    f1_macro: float
+    recall_macro: float
+    precision_macro: float
+    roc_auc_ovr_macro: float
+
+
+class ModelCatalogEntry(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
+    name: str
+    version: str
+    dataset_name: str
+    kind: str
+    target_classes: list[str]
+    git_commit: str | None = None
+    created_utc: str | None = None
+    metrics_cv: dict[str, Any]
+    metrics_test: ModelPerformance | None = None
+    is_active: bool
+    model_version_id: int | None = None
+
+
+class ModelCatalogResponse(BaseModel):
+    catalog_dir: str
+    models: list[ModelCatalogEntry]
+
+
 class PredictRequest(BaseModel):
     driver_id: int | None = Field(
         default=None, description="Optional driver to attach this assessment to."
+    )
+    model_name: str | None = Field(
+        default=None,
+        description=(
+            "Optional catalog model name (see GET /models/catalog) to use for "
+            "this prediction only. Omit to use the current active model."
+        ),
     )
     features: dict[str, Any] = Field(
         ..., description="Raw feature map; keys/types must match the model contract."

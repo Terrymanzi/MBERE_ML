@@ -89,6 +89,34 @@ export interface ModelVersionRead {
   created_at: string;
 }
 
+export interface ModelPerformance {
+  n_samples: number;
+  accuracy: number;
+  f1_macro: number;
+  recall_macro: number;
+  precision_macro: number;
+  roc_auc_ovr_macro: number;
+}
+
+export interface ModelCatalogEntry {
+  name: string;
+  version: string;
+  dataset_name: string;
+  kind: ModelKind;
+  target_classes: string[];
+  git_commit: string | null;
+  created_utc: string | null;
+  metrics_cv: Record<string, number | string | null>;
+  metrics_test: ModelPerformance | null;
+  is_active: boolean;
+  model_version_id: number | null;
+}
+
+export interface ModelCatalogResponse {
+  catalog_dir: string;
+  models: ModelCatalogEntry[];
+}
+
 // ------------------------------------------------------------- prediction -----
 export type RiskBand = "Low" | "Medium" | "High";
 
@@ -107,6 +135,7 @@ export interface Explanation {
 
 export interface PredictRequest {
   driver_id?: number | null;
+  model_name?: string | null;
   features: Record<string, unknown>;
 }
 

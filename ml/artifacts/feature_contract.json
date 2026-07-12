@@ -1,8 +1,8 @@
 {
   "dataset": "addis",
   "kind": "multiclass",
-  "created_utc": "2026-06-28T14:26:03.603663+00:00",
-  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "created_utc": "2026-07-12T18:31:52.823757+00:00",
+  "git_commit": "0ac2be6a4b4cf70e5a3f50ae0382deecb9e24d70",
   "random_state": 42,
   "target": {
     "column": "Accident_severity",
@@ -56,6 +56,20 @@
         "Morning",
         "Afternoon",
         "Evening"
+      ]
+    },
+    {
+      "name": "vehicle_service_year",
+      "kind": "categorical",
+      "encoding": "ordinal",
+      "dtype": "string",
+      "categories": [
+        "Unknown",
+        "Below 1yr",
+        "1-2yr",
+        "2-5yrs",
+        "5-10yrs",
+        "Above 10yr"
       ]
     },
     {
@@ -118,12 +132,50 @@
         "Darkness - no lighting",
         "Daylight"
       ]
+    },
+    {
+      "name": "driver_vehicle_relation",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Employee",
+        "Other",
+        "Owner",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "vehicle_owner",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "Governmental",
+        "Organization",
+        "Other",
+        "Owner",
+        "Unknown"
+      ]
+    },
+    {
+      "name": "vehicle_defect",
+      "kind": "categorical",
+      "encoding": "onehot",
+      "dtype": "string",
+      "categories": [
+        "5",
+        "7",
+        "No defect",
+        "Unknown"
+      ]
     }
   ],
   "encoded_feature_names": [
     "ordinal__driver_age_band",
     "ordinal__driver_experience",
     "ordinal__time_of_day",
+    "ordinal__vehicle_service_year",
     "onehot__vehicle_type_Automobile",
     "onehot__vehicle_type_Bajaj",
     "onehot__vehicle_type_Bicycle",
@@ -152,29 +204,52 @@
     "onehot__light_condition_Darkness - lights lit",
     "onehot__light_condition_Darkness - lights unlit",
     "onehot__light_condition_Darkness - no lighting",
-    "onehot__light_condition_Daylight"
+    "onehot__light_condition_Daylight",
+    "onehot__driver_vehicle_relation_Employee",
+    "onehot__driver_vehicle_relation_Other",
+    "onehot__driver_vehicle_relation_Owner",
+    "onehot__driver_vehicle_relation_Unknown",
+    "onehot__vehicle_owner_Governmental",
+    "onehot__vehicle_owner_Organization",
+    "onehot__vehicle_owner_Other",
+    "onehot__vehicle_owner_Owner",
+    "onehot__vehicle_owner_Unknown",
+    "onehot__vehicle_defect_5",
+    "onehot__vehicle_defect_7",
+    "onehot__vehicle_defect_No defect",
+    "onehot__vehicle_defect_Unknown"
   ],
-  "n_encoded_features": 32,
+  "n_encoded_features": 46,
   "feature_selection": {
     "method": "mutual_info",
-    "threshold": 0.0,
+    "threshold": 0.0003,
     "scores": {
       "driver_age_band": 0.0026968650532646315,
       "driver_experience": 0.0012867643433019972,
       "time_of_day": 0.0017699528921018845,
+      "driver_education": 0.00021892548847597844,
+      "vehicle_service_year": 0.0003135992617565725,
       "vehicle_type": 0.0005984817513803206,
       "weather": 0.0024353475117950556,
       "road_surface": 0.0007503994858618103,
-      "light_condition": 0.0014797704591626945
+      "light_condition": 0.0014797704591626945,
+      "driver_sex": 0.00017193621965468206,
+      "driver_vehicle_relation": 0.00037295798726805674,
+      "vehicle_owner": 0.00030990341844084463,
+      "vehicle_defect": 0.00036965579891565237
     },
     "selected": [
       "driver_age_band",
       "driver_experience",
       "time_of_day",
+      "vehicle_service_year",
       "vehicle_type",
       "weather",
       "road_surface",
-      "light_condition"
+      "light_condition",
+      "driver_vehicle_relation",
+      "vehicle_owner",
+      "vehicle_defect"
     ]
   },
   "artifacts": {

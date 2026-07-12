@@ -1,8 +1,8 @@
 {
   "model": "baseline",
   "model_version": "0.1.0",
-  "created_utc": "2026-06-28T15:01:14.626461+00:00",
-  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "created_utc": "2026-07-09T18:58:46.457676+00:00",
+  "git_commit": "0ac2be6a4b4cf70e5a3f50ae0382deecb9e24d70",
   "random_state": 42,
   "dataset": {
     "name": "addis",
@@ -19,10 +19,16 @@
     "driver_age_band",
     "driver_experience",
     "time_of_day",
+    "driver_education",
+    "vehicle_service_year",
     "vehicle_type",
     "weather",
     "road_surface",
-    "light_condition"
+    "light_condition",
+    "driver_sex",
+    "driver_vehicle_relation",
+    "vehicle_owner",
+    "vehicle_defect"
   ],
   "cv": {
     "scheme": "StratifiedKFold",

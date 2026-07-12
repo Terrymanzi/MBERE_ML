@@ -45,6 +45,11 @@ class Settings(BaseSettings):
     model_run_dir: str | None = None
     model_name: str = "random_forest"
 
+    # --- selectable model catalog (multi-model picker) ---
+    # Directory scanned for named top-level models (`{name}.pkl` + a shared
+    # feature_contract.json) a user can choose between for predictions.
+    model_catalog_dir: str = "ml/artifacts"
+
     # --- risk banding on the [0,1] risk score (positive-class / expected severity) ---
     risk_band_low_max: float = 0.34
     risk_band_medium_max: float = 0.67

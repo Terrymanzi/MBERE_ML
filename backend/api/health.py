@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from ..database.session import get_db
 from ..schemas.prediction import HealthResponse, ModelInfo
-from ..services.model_service import model_service
+from ..services.model_registry import model_registry
 
 router = APIRouter(tags=["system"])
 
@@ -20,13 +20,15 @@ def health(db: Session = Depends(get_db)) -> HealthResponse:
     except Exception:
         db_ok = False
 
-    model = ModelInfo(**model_service.model_info()) if model_service.loaded else None
-    n_features = len(model_service.feature_names) if model_service.loaded else None
-    status = "ok" if (db_ok and model_service.loaded) else "degraded"
+    svc = model_registry.default()
+    loaded = svc is not None and svc.loaded
+    model = ModelInfo(**svc.model_info()) if loaded else None
+    n_features = len(svc.feature_names) if loaded else None
+    status = "ok" if (db_ok and loaded) else "degraded"
     return HealthResponse(
         status=status,
         db_ok=db_ok,
-        model_loaded=model_service.loaded,
+        model_loaded=loaded,
         model=model,
         n_input_features=n_features,
     )

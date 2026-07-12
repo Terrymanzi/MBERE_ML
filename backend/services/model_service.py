@@ -439,7 +439,3 @@ class ModelService:
         body = enc_name.split("__", 1)[1] if "__" in enc_name else enc_name
         candidates = [f for f in self.feature_names if body == f or body.startswith(f + "_")]
         return max(candidates, key=len) if candidates else body
-
-
-# Module-level singleton used across the app.
-model_service = ModelService()

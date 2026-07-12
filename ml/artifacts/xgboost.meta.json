@@ -1,8 +1,8 @@
 {
   "model": "xgboost",
   "model_version": "0.1.0",
-  "created_utc": "2026-06-28T15:01:57.146884+00:00",
-  "git_commit": "bae6defa5a5c3c8b6cf05af53d8b595c4363b001",
+  "created_utc": "2026-07-12T18:37:53.854886+00:00",
+  "git_commit": "0ac2be6a4b4cf70e5a3f50ae0382deecb9e24d70",
   "random_state": 42,
   "dataset": {
     "name": "addis",
@@ -19,10 +19,16 @@
     "driver_age_band",
     "driver_experience",
     "time_of_day",
+    "driver_education",
+    "vehicle_service_year",
     "vehicle_type",
     "weather",
     "road_surface",
-    "light_condition"
+    "light_condition",
+    "driver_sex",
+    "driver_vehicle_relation",
+    "vehicle_owner",
+    "vehicle_defect"
   ],
   "cv": {
     "scheme": "StratifiedKFold",
@@ -75,49 +81,49 @@
   },
   "metrics_cv": {
     "n_samples": 9852,
-    "accuracy": 0.7746650426309378,
-    "f1_macro": 0.3489898548579721,
-    "recall_macro": 0.3479597764819669,
-    "precision_macro": 0.35473329599743986,
-    "roc_auc_ovr_macro": 0.5540099034009746,
+    "accuracy": 0.8314047909053999,
+    "f1_macro": 0.31483024133603293,
+    "recall_macro": 0.3335059211127179,
+    "precision_macro": 0.3325744088718197,
+    "roc_auc_ovr_macro": 0.5538776670502231,
     "per_class": {
       "Slight Injury": {
-        "precision": 0.8484090909090909,
-        "recall": 0.8961709278598008,
-        "f1": 0.871636215048742,
+        "precision": 0.8458907658824749,
+        "recall": 0.9797143200096027,
+        "f1": 0.9078976640711902,
         "support": 8331,
-        "roc_auc_ovr": 0.5287770911160845
+        "roc_auc_ovr": 0.5311785524799014
       },
       "Serious Injury": {
-        "precision": 0.1670103092783505,
-        "recall": 0.11621233859397417,
-        "f1": 0.13705583756345177,
+        "precision": 0.1518324607329843,
+        "recall": 0.02080344332855093,
+        "f1": 0.03659305993690852,
         "support": 1394,
-        "roc_auc_ovr": 0.5282925964161509
+        "roc_auc_ovr": 0.5274894465453912
       },
       "Fatal Injury": {
-        "precision": 0.04878048780487805,
-        "recall": 0.031496062992125984,
-        "f1": 0.03827751196172249,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
         "support": 127,
-        "roc_auc_ovr": 0.604960022670688
+        "roc_auc_ovr": 0.602965002125377
       }
     },
     "confusion_matrix": [
       [
-        7466,
-        799,
-        66
+        8162,
+        160,
+        9
       ],
       [
-        1220,
-        162,
-        12
+        1362,
+        29,
+        3
       ],
       [
-        114,
-        9,
-        4
+        125,
+        2,
+        0
       ]
     ],
     "labels": [

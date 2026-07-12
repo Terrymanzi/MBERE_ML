@@ -16,28 +16,88 @@ from fastapi.middleware.cors import CORSMiddleware
 from ..api import drivers, health, models, predict, synthetic_validation
 from ..auth import router as auth_router
 from ..database.session import SessionLocal, init_db
-from ..services.model_service import ArtifactNotFoundError, model_service
-from ..services.registry import ensure_model_version
+from ..services.model_registry import model_registry, resolve_path
+from ..services.model_service import ArtifactNotFoundError, ModelService
+from ..services.registry import activate_model_version, get_active_model_version
 from .config import get_settings
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("backend.app")
 
 
+def _load_pin(settings) -> ModelService | None:
+    """Load the legacy MODEL_RUN_DIR-pinned artifact and adopt it as default.
+    Fails fast on a bad artifact, matching historical startup behavior for an
+    explicit pin."""
+    pinned = ModelService()
+    try:
+        pinned.load(settings)
+    except ArtifactNotFoundError as exc:
+        logger.warning("MODEL_RUN_DIR pin failed to load: %s", exc)
+        return None
+    model_registry.seed(pinned)
+    return pinned
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_db()
-    try:
-        model_service.load()
-    except ArtifactNotFoundError as exc:
-        # No servable artifact yet -> start DEGRADED (health reports it, /predict 503).
-        logger.warning("starting without a model: %s", exc)
-    # NOTE: ContractMismatchError is intentionally NOT caught -> fail fast.
+    settings = get_settings()
+    model_registry.configure(settings)
+    catalog_dir = str(model_registry.catalog_dir())
+    pin_dir = str(resolve_path(settings.model_run_dir)) if settings.model_run_dir else None
 
-    if model_service.loaded:
-        with SessionLocal() as db:
-            mv = ensure_model_version(db, model_service)
-            logger.info("active model version: id=%s %s v%s", mv.id, mv.name, mv.version)
+    with SessionLocal() as db:
+        active_row = get_active_model_version(db)
+        default_svc: ModelService | None = None
+
+        if active_row is not None and active_row.run_dir == catalog_dir:
+            # Previously activated via the catalog (the normal UI flow) —
+            # rehydrate the same artifact regardless of what .env says.
+            default_svc = model_registry.try_get(active_row.name)
+            if default_svc is not None:
+                model_registry.set_default(active_row.name)
+        elif active_row is not None and pin_dir is not None and active_row.run_dir == pin_dir:
+            # Previously activated via the legacy MODEL_RUN_DIR pin, and the
+            # pin still points at the same place — reload it the same way.
+            default_svc = _load_pin(settings)
+        elif active_row is None:
+            # Fresh DB: seed from configuration.
+            if settings.model_run_dir:
+                default_svc = _load_pin(settings)
+            else:
+                names = model_registry.available_names()
+                seed_name = (
+                    settings.model_name
+                    if settings.model_name in names
+                    else (names[0] if names else None)
+                )
+                if seed_name:
+                    # try_get: one bad catalog artifact shouldn't crash the app.
+                    default_svc = model_registry.try_get(seed_name)
+                    if default_svc is not None:
+                        model_registry.set_default(seed_name)
+            if default_svc is not None:
+                mv = activate_model_version(db, default_svc)
+                logger.info("active model version: id=%s %s v%s", mv.id, mv.name, mv.version)
+        else:
+            # active_row points somewhere we can't currently resolve (e.g. an
+            # archived runs/ snapshot that moved, or MODEL_RUN_DIR changed) —
+            # don't guess which artifact to serve under that name; stay degraded.
+            logger.warning(
+                "active model version (name=%s run_dir=%s) is not resolvable via "
+                "catalog_dir=%s or MODEL_RUN_DIR=%s; leaving unloaded",
+                active_row.name, active_row.run_dir, catalog_dir, settings.model_run_dir,
+            )
+
+        if default_svc is None:
+            # No servable artifact -> start DEGRADED (health reports it, /predict 503).
+            logger.warning("starting without a model: no active DB row and nothing loadable")
+        else:
+            logger.info(
+                "active model: %s v%s (run_dir=%s)",
+                default_svc.name, default_svc.version, default_svc.run_dir,
+            )
     yield
 
 

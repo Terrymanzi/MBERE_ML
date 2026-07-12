@@ -1,6 +1,8 @@
 """POST /predict — inference + persisted audit trail."""
 from __future__ import annotations
 
+import logging
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
@@ -13,13 +15,11 @@ from ..schemas.prediction import (
     PredictRequest,
     PredictResponse,
 )
-from ..services.model_service import (
-    ArtifactNotFoundError,
-    FeatureValidationError,
-    model_service,
-)
-from ..services.registry import get_active_model_version
+from ..services.model_registry import model_registry
+from ..services.model_service import ArtifactNotFoundError, FeatureValidationError
+from ..services.registry import ensure_model_version_row
 
+logger = logging.getLogger("backend.api.predict")
 router = APIRouter(tags=["prediction"])
 
 
@@ -29,7 +29,23 @@ def predict(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> PredictResponse:
-    if not model_service.loaded:
+    if payload.model_name is not None:
+        if payload.model_name not in model_registry.available_names():
+            raise HTTPException(
+                status.HTTP_404_NOT_FOUND, f"unknown model '{payload.model_name}'"
+            )
+        try:
+            svc = model_registry.get(payload.model_name)
+        except Exception:
+            logger.exception("model '%s' failed to load", payload.model_name)
+            raise HTTPException(
+                status.HTTP_503_SERVICE_UNAVAILABLE,
+                f"model '{payload.model_name}' is unavailable",
+            )
+    else:
+        svc = model_registry.default()
+
+    if svc is None or not svc.loaded:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "no model loaded")
 
     # optional driver linkage
@@ -38,7 +54,7 @@ def predict(
 
     # inference (bad features -> 422)
     try:
-        result = model_service.predict(payload.features)
+        result = svc.predict(payload.features)
     except FeatureValidationError as exc:
         raise HTTPException(
             status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -47,7 +63,9 @@ def predict(
     except ArtifactNotFoundError:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "no model loaded")
 
-    model_version = get_active_model_version(db, model_service)
+    # register-only: never flips the org-wide active flag, so a one-off
+    # override doesn't redefine the default model.
+    model_version = ensure_model_version_row(db, svc)
 
     # persist audit trail: features -> assessment -> prediction
     feature_record = FeatureRecord(driver_id=payload.driver_id, payload=payload.features)
@@ -81,7 +99,7 @@ def predict(
         risk_assessment_id=assessment.id,
         prediction_id=prediction.id,
         driver_id=payload.driver_id,
-        model=ModelInfo(**model_service.model_info()),
+        model=ModelInfo(**svc.model_info()),
         predicted_class=result.predicted_class,
         risk_band=result.risk_band,
         risk_score=result.risk_score,

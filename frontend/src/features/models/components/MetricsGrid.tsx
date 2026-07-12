@@ -4,10 +4,13 @@ const PREFERRED_ORDER = [
   "accuracy",
   "balanced_accuracy",
   "precision",
+  "precision_macro",
   "recall",
+  "recall_macro",
   "f1",
   "f1_macro",
   "roc_auc",
+  "roc_auc_ovr_macro",
   "pr_auc",
   "log_loss",
 ];
@@ -15,9 +18,12 @@ const PREFERRED_ORDER = [
 function prettyLabel(key: string): string {
   const overrides: Record<string, string> = {
     roc_auc: "ROC AUC",
+    roc_auc_ovr_macro: "ROC AUC (macro)",
     pr_auc: "PR AUC",
     f1: "F1",
     f1_macro: "F1 (macro)",
+    precision_macro: "Precision (macro)",
+    recall_macro: "Recall (macro)",
     log_loss: "Log loss",
   };
   if (overrides[key]) return overrides[key];

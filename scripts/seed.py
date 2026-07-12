@@ -31,11 +31,12 @@ if str(ROOT) not in sys.path:
 from sqlalchemy import select  # noqa: E402
 from sqlalchemy.exc import OperationalError, ProgrammingError  # noqa: E402
 
+from backend.app.config import get_settings  # noqa: E402
 from backend.auth.security import hash_password  # noqa: E402
 from backend.database.models import Driver, User  # noqa: E402
 from backend.database.session import SessionLocal, engine  # noqa: E402
-from backend.services.model_service import ArtifactNotFoundError, ModelService  # noqa: E402
-from backend.services.registry import ensure_model_version  # noqa: E402
+from backend.services.model_registry import model_registry  # noqa: E402
+from backend.services.registry import activate_model_version, get_active_model_version  # noqa: E402
 
 DEMO_DRIVERS = [
     # license_number, full_name, date_of_birth, notes
@@ -101,16 +102,23 @@ def seed_drivers(db, owner: User) -> int:
 
 
 def seed_model_version(db) -> None:
-    """Register the currently-configured artifact from its meta.json."""
-    service = ModelService()
-    try:
-        service.load()
-    except ArtifactNotFoundError as exc:
-        print(f"  model     : SKIPPED -- no servable artifact found ({exc}).")
-        print("              Predictions need a ModelVersion; point MODEL_RUN_DIR at a run "
-              "and re-run.")
+    """Register + activate a catalog model if none is active yet."""
+    model_registry.configure()
+    if get_active_model_version(db) is not None:
+        print("  model     : an active model is already registered, skipping seed")
         return
-    row = ensure_model_version(db, service)
+    names = model_registry.available_names()
+    settings = get_settings()
+    name = settings.model_name if settings.model_name in names else (names[0] if names else None)
+    if name is None:
+        print("  model     : SKIPPED -- no catalog models found under model_catalog_dir.")
+        print("              Predictions need a ModelVersion; check MODEL_CATALOG_DIR and re-run.")
+        return
+    service = model_registry.try_get(name)
+    if service is None:
+        print(f"  model     : SKIPPED -- '{name}' failed to load (missing/mismatched artifact).")
+        return
+    row = activate_model_version(db, service)
     print(
         f"  model     : {row.name} v{row.version} "
         f"[{row.dataset_name}/{row.kind}] active (id={row.id})\n"

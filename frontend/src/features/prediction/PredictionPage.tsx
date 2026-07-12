@@ -9,6 +9,7 @@ import {
 } from "@/components/feedback/states";
 import { ApiError } from "@/services";
 import { useDrivers } from "@/features/drivers/useDrivers";
+import { useModelCatalog } from "@/features/models/useModels";
 import { useFeatureContract, usePredict } from "./usePrediction";
 import { PredictionForm } from "./components/PredictionForm";
 import { PredictionResult } from "./components/PredictionResult";
@@ -20,7 +21,10 @@ export function PredictionPage() {
 
   const contractQuery = useFeatureContract();
   const driversQuery = useDrivers();
+  const catalogQuery = useModelCatalog();
   const predictMutation = usePredict();
+  const activeModelName =
+    catalogQuery.data?.models.find((m) => m.is_active)?.name ?? null;
 
   const modelUnavailable =
     contractQuery.error instanceof ApiError && contractQuery.error.status === 503;
@@ -52,10 +56,16 @@ export function PredictionPage() {
               <PredictionForm
                 features={contractQuery.data.input_features}
                 drivers={driversQuery.data ?? []}
+                models={catalogQuery.data?.models ?? []}
+                activeModelName={activeModelName}
                 initialDriverId={initialDriverId}
                 isSubmitting={predictMutation.isPending}
-                onSubmit={(features, driverId) =>
-                  predictMutation.mutate({ features, driver_id: driverId })
+                onSubmit={(features, driverId, modelName) =>
+                  predictMutation.mutate({
+                    features,
+                    driver_id: driverId,
+                    model_name: modelName,
+                  })
                 }
               />
             </CardBody>

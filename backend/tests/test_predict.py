@@ -82,3 +82,33 @@ def test_predict_unknown_feature_rejected(client, auth_headers, valid_features):
     r = client.post("/predict", json={"features": payload}, headers=auth_headers)
     assert r.status_code == 422
     assert "surprise_feature" in str(r.json()["detail"])
+
+
+def test_predict_with_model_override_does_not_change_active_default(
+    client, auth_headers, valid_features
+):
+    before = client.get("/models").json()
+    active_before = next(v for v in before if v["is_active"])
+    other_name = "baseline" if active_before["name"] != "baseline" else "random_forest"
+
+    r = client.post(
+        "/predict",
+        json={"model_name": other_name, "features": valid_features},
+        headers=auth_headers,
+    )
+    assert r.status_code == 200, r.text
+    assert r.json()["model"]["name"] == other_name
+
+    after = client.get("/models").json()
+    active_after = next(v for v in after if v["is_active"])
+    assert active_after["id"] == active_before["id"]
+    assert active_after["name"] == active_before["name"]
+
+
+def test_predict_unknown_model_name_404(client, auth_headers, valid_features):
+    r = client.post(
+        "/predict",
+        json={"model_name": "does-not-exist", "features": valid_features},
+        headers=auth_headers,
+    )
+    assert r.status_code == 404

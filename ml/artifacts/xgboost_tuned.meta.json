@@ -1,0 +1,135 @@
+{
+  "model": "xgboost_tuned",
+  "model_version": "0.2.0-tuned",
+  "created_utc": "2026-07-12T19:15:24.197216+00:00",
+  "git_commit": "0ac2be6a4b4cf70e5a3f50ae0382deecb9e24d70",
+  "random_state": 42,
+  "dataset": {
+    "name": "addis",
+    "kind": "multiclass",
+    "rows": 9852,
+    "target": "Accident_severity",
+    "classes": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  },
+  "features": [
+    "driver_age_band",
+    "driver_experience",
+    "time_of_day",
+    "driver_education",
+    "vehicle_service_year",
+    "vehicle_type",
+    "weather",
+    "road_surface",
+    "light_condition",
+    "driver_sex",
+    "driver_vehicle_relation",
+    "vehicle_owner",
+    "vehicle_defect"
+  ],
+  "cv": {
+    "scheme": "StratifiedKFold",
+    "k_folds": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "params": {
+    "objective": "multi:softprob",
+    "base_score": null,
+    "booster": null,
+    "callbacks": null,
+    "colsample_bylevel": null,
+    "colsample_bynode": null,
+    "colsample_bytree": 0.85,
+    "device": null,
+    "early_stopping_rounds": null,
+    "enable_categorical": true,
+    "eval_metric": "mlogloss",
+    "feature_types": null,
+    "feature_weights": null,
+    "gamma": 0.1,
+    "grow_policy": null,
+    "importance_type": null,
+    "interaction_constraints": null,
+    "learning_rate": 0.03,
+    "max_bin": null,
+    "max_cat_threshold": null,
+    "max_cat_to_onehot": null,
+    "max_delta_step": null,
+    "max_depth": 8,
+    "max_leaves": null,
+    "min_child_weight": 1,
+    "missing": NaN,
+    "monotone_constraints": null,
+    "multi_strategy": null,
+    "n_estimators": 800,
+    "n_jobs": -1,
+    "num_parallel_tree": null,
+    "random_state": 42,
+    "reg_alpha": null,
+    "reg_lambda": null,
+    "sampling_method": null,
+    "scale_pos_weight": null,
+    "subsample": 0.85,
+    "tree_method": "hist",
+    "validate_parameters": null,
+    "verbosity": null,
+    "num_class": 3
+  },
+  "metrics_cv": {
+    "n_samples": 9852,
+    "accuracy": 0.7327446203816484,
+    "f1_macro": 0.3491514123264647,
+    "recall_macro": 0.349959779540246,
+    "precision_macro": 0.35022205826956504,
+    "roc_auc_ovr_macro": 0.5590546709048622,
+    "per_class": {
+      "Slight Injury": {
+        "precision": 0.8521931441208994,
+        "recall": 0.8325531148721642,
+        "f1": 0.8422586520947176,
+        "support": 8331,
+        "roc_auc_ovr": 0.5351381621568043
+      },
+      "Serious Injury": {
+        "precision": 0.17144600366076876,
+        "recall": 0.20157819225251075,
+        "f1": 0.1852950873722387,
+        "support": 1394,
+        "roc_auc_ovr": 0.5294598120580959
+      },
+      "Fatal Injury": {
+        "precision": 0.02702702702702703,
+        "recall": 0.015748031496062992,
+        "f1": 0.01990049751243781,
+        "support": 127,
+        "roc_auc_ovr": 0.6125660384996863
+      }
+    },
+    "confusion_matrix": [
+      [
+        6936,
+        1335,
+        60
+      ],
+      [
+        1101,
+        281,
+        12
+      ],
+      [
+        102,
+        23,
+        2
+      ]
+    ],
+    "labels": [
+      "Slight Injury",
+      "Serious Injury",
+      "Fatal Injury"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+feature,mean_abs_shap
+ordinal__driver_experience,0.45935583
+ordinal__driver_age_band,0.3992948
+ordinal__time_of_day,0.32924035
+ordinal__vehicle_service_year,0.2451928
+onehot__vehicle_defect_No defect,0.21935433
+onehot__vehicle_type_Automobile,0.15646853
+onehot__vehicle_type_Lorry,0.13239692
+onehot__weather_Normal,0.12922466
+onehot__vehicle_defect_Unknown,0.1242482
+onehot__light_condition_Darkness - lights lit,0.115297675
+onehot__vehicle_type_Public_transport,0.110337414
+onehot__driver_vehicle_relation_Employee,0.09946525
+onehot__light_condition_Daylight,0.09744017
+onehot__weather_Raining,0.091771655
+onehot__driver_vehicle_relation_Owner,0.080959655
+onehot__vehicle_owner_Owner,0.06295131
+onehot__vehicle_type_Unknown,0.058776177
+onehot__vehicle_type_Pickup,0.058448654
+onehot__vehicle_type_Other,0.0581613
+onehot__vehicle_owner_Governmental,0.050496012
+onehot__road_surface_Asphalt roads,0.045917105
+onehot__road_surface_Earth roads,0.0349317
+onehot__light_condition_Darkness - no lighting,0.02469312
+onehot__vehicle_type_Motorcycle,0.01892547
+onehot__weather_Unknown,0.017604828
+onehot__road_surface_Gravel roads,0.016778197
+onehot__vehicle_owner_Unknown,0.016366912
+onehot__vehicle_type_Taxi,0.016028598
+onehot__vehicle_owner_Organization,0.013750714
+onehot__driver_vehicle_relation_Unknown,0.012929397
+onehot__driver_vehicle_relation_Other,0.010177105
+onehot__weather_Other,0.010137268
+onehot__road_surface_Asphalt roads with some distress,0.008428068
+onehot__weather_Windy,0.007510004
+onehot__road_surface_Other,0.006655768
+onehot__road_surface_Unknown,0.0056909663
+onehot__vehicle_defect_7,0.0036585592
+onehot__weather_Snow,0.0025066172
+onehot__weather_Cloudy,0.0023225807
+onehot__vehicle_defect_5,0.0016759657
+onehot__vehicle_type_Bajaj,0.0011126257
+onehot__light_condition_Darkness - lights unlit,0.00085173716
+onehot__vehicle_type_Bicycle,0.00037075632
+onehot__weather_Raining and Windy,0.00032007784
+onehot__vehicle_owner_Other,1.3635226e-05
+onehot__weather_Fog or mist,0.0

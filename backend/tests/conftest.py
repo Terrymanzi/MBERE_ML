@@ -28,12 +28,15 @@ CLASSES = ["Slight Injury", "Serious Injury", "Fatal Injury"]
 _TMP = Path(tempfile.mkdtemp(prefix="mbere_backend_test_"))
 _RUN = _TMP / "run"
 _RUN.mkdir(parents=True, exist_ok=True)
+_CATALOG = _TMP / "catalog"
+_CATALOG.mkdir(parents=True, exist_ok=True)
 _DB = _TMP / "test.db"
 
 os.environ["DATABASE_URL"] = f"sqlite:///{_DB.as_posix()}"
 os.environ["ARTIFACTS_ROOT"] = str(_TMP)
 os.environ["MODEL_RUN_DIR"] = str(_RUN)
 os.environ["MODEL_NAME"] = "random_forest"
+os.environ["MODEL_CATALOG_DIR"] = str(_CATALOG)
 os.environ["SECRET_KEY"] = "test-secret-key-not-for-prod"
 
 
@@ -106,12 +109,38 @@ def _build_artifact(run_dir: Path, *, model_name: str = "random_forest",
     (run_dir / f"{model_name}.meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
 
+def _write_report_metrics(catalog_dir: Path, name: str, metrics: dict) -> None:
+    report_dir = catalog_dir / "reports" / name
+    report_dir.mkdir(parents=True, exist_ok=True)
+    (report_dir / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+
+
 _build_artifact(_RUN)
+
+# Catalog: two selectable models sharing one feature_contract.json under _CATALOG.
+# "baseline" gets a held-out test metrics.json; "random_forest" deliberately does
+# NOT, so tests can assert the catalog's metrics_test is null when the report is
+# absent.
+_build_artifact(_CATALOG, model_name="baseline")
+_build_artifact(_CATALOG, model_name="random_forest")
+_write_report_metrics(_CATALOG, "baseline", {
+    "n_samples": 48,
+    "accuracy": 0.8,
+    "f1_macro": 0.5,
+    "recall_macro": 0.5,
+    "precision_macro": 0.5,
+    "roc_auc_ovr_macro": 0.6,
+})
 
 
 @pytest.fixture(scope="session")
 def artifact_dir() -> Path:
     return _RUN
+
+
+@pytest.fixture(scope="session")
+def catalog_dir() -> Path:
+    return _CATALOG
 
 
 @pytest.fixture(scope="session")

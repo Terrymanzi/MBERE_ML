@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { FormEvent } from "react";
-import type { ContractFeature, DriverRead } from "@/services";
+import type { ContractFeature, DriverRead, ModelCatalogEntry } from "@/services";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
@@ -14,9 +14,15 @@ import {
 interface PredictionFormProps {
   features: ContractFeature[];
   drivers: DriverRead[];
+  models: ModelCatalogEntry[];
+  activeModelName: string | null;
   initialDriverId?: number | null;
   isSubmitting: boolean;
-  onSubmit: (features: Record<string, unknown>, driverId: number | null) => void;
+  onSubmit: (
+    features: Record<string, unknown>,
+    driverId: number | null,
+    modelName: string | null,
+  ) => void;
 }
 
 function FeatureField({
@@ -61,6 +67,8 @@ function FeatureField({
 export function PredictionForm({
   features,
   drivers,
+  models,
+  activeModelName,
   initialDriverId,
   isSubmitting,
   onSubmit,
@@ -69,6 +77,7 @@ export function PredictionForm({
   const [driverId, setDriverId] = useState<string>(
     initialDriverId != null ? String(initialDriverId) : "",
   );
+  const [modelName, setModelName] = useState<string>("");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const { categorical, numeric } = useMemo(() => {
@@ -94,12 +103,12 @@ export function PredictionForm({
     );
     setErrors(fieldErrors);
     if (Object.keys(fieldErrors).length > 0) return;
-    onSubmit(payload, driverId ? Number(driverId) : null);
+    onSubmit(payload, driverId ? Number(driverId) : null, modelName || null);
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      <div>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Select
           label="Driver (optional)"
           hint="Attach this assessment to a driver to store it in their history."
@@ -110,6 +119,23 @@ export function PredictionForm({
           {drivers.map((d) => (
             <option key={d.id} value={d.id}>
               {d.full_name} ({d.license_number})
+            </option>
+          ))}
+        </Select>
+
+        <Select
+          label="Model"
+          hint="Defaults to the active model; pick a different one to score just this prediction."
+          value={modelName}
+          onChange={(e) => setModelName(e.target.value)}
+        >
+          <option value="">
+            Active model{activeModelName ? ` (${activeModelName})` : ""}
+          </option>
+          {models.map((m) => (
+            <option key={m.name} value={m.name}>
+              {m.name}
+              {m.metrics_test ? ` — F1 ${(m.metrics_test.f1_macro * 100).toFixed(0)}%` : ""}
             </option>
           ))}
         </Select>
