@@ -31,7 +31,7 @@ const VARIANTS: Record<Variant, string> = {
     "bg-red-600 text-white hover:bg-red-700 focus-visible:outline-red-600 disabled:bg-red-300",
   // Solid white on a brand-coloured background (hero/banner sections on the marketing page).
   inverse:
-    "bg-white text-[#0F6CBD] hover:bg-blue-50 focus-visible:outline-white",
+    "bg-white text-[#0F6CBD] hover:bg-blue-50 focus-visible:outline-white transition-transform hover:scale-105 rounded-full",
 };
 
 const SIZES: Record<Size, string> = {
