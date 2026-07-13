@@ -44,12 +44,12 @@ export function LandingPage() {
                 hero gives it the section's full height as its stick range;
                 the container's bottom padding above is what gives the stuck
                 position room to hold before the section boundary releases it. */}
-        <div className="sticky top-[calc(100vh-6rem)] z-20 -mt-7 sm:ml-10 flex h-14 w-14 items-center justify-center rounded-full bg-[#0F6CBD] shadow-lg shadow-slate-900/20 sm:h-16 sm:w-16">
+        <div className="sticky top-[calc(100vh-6rem)] z-50 -mt-7 sm:ml-10 flex h-14 w-14 left-1 items-center justify-center rounded-full bg-[#0F6CBD] shadow-lg shadow-slate-900/20 sm:h-16 sm:w-16 opacity-60 hover:opacity-100">
           <img
-            src="/images/swigly-arrow.svg"
+            src="/images/MBERE ML logo.png"
             alt=""
             aria-hidden="true"
-            className="h-6 w-6 object-contain"
+            className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
           />
         </div>
 
@@ -67,7 +67,9 @@ export function LandingPage() {
               </p>
               <div className="mt-8 flex justify-center">
                 <Link to={ctaHref}>
-                  <Button size="md">{ctaLabel}</Button>
+                  <Button variant="primaryMarketing" size="md">
+                    {ctaLabel}
+                  </Button>
                 </Link>
               </div>
 
@@ -84,7 +86,7 @@ export function LandingPage() {
         </section>
 
         {/* Road risk intelligence banner */}
-        <section className="relative z-10 rounded-[2.5rem] bg-[#0F6CBD] py-16 sm:py-20">
+        <section className="relative z-40 mx-4 rounded-[2.5rem] bg-[#0F6CBD] py-16 sm:mx-8 sm:py-20">
           <div className="container-page grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <h2 className="text-3xl font-bold text-white sm:text-4xl">
@@ -104,7 +106,7 @@ export function LandingPage() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <img
-                src="/images/product-preview -tablet.png"
+                src="/images/product-preview-tablet.png"
                 alt="MBERE ML on tablet"
                 className="w-full max-w-xs object-contain"
                 onError={hideOnError}
@@ -119,7 +121,7 @@ export function LandingPage() {
         {/* Added: pt-32 to push the "How it works" text down so it doesn't get covered by the blue card overlap */}
         <section
           id="how-it-works"
-          className="relative z-0 bg-slate-950 -mt-16 pt-32 pb-32 sm:pb-48"
+          className="relative z-30 bg-black -mt-16 pt-32 pb-32 sm:pb-48 rounded-b-[2rem] shadow-md"
         >
           <div className="container-page">
             <h2 className="text-center text-3xl text-white sm:text-4xl">
@@ -134,13 +136,13 @@ export function LandingPage() {
                 src="/images/swigly-arrow.svg"
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute left-[22%] top-[5rem] hidden h-28 w-auto opacity-90 sm:block"
+                className="pointer-events-none absolute left-[22%] top-[-0.5rem] hidden h-36 w-auto opacity-90 sm:block"
               />
               <img
                 src="/images/swigly-arrow.svg"
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute left-[65%] top-[18rem] hidden h-28 w-auto opacity-90 sm:block"
+                className="pointer-events-none absolute left-[62%] top-[12rem] hidden h-36 w-auto opacity-90 sm:block"
               />
 
               {STEPS.map((step, index) => {
@@ -162,7 +164,9 @@ export function LandingPage() {
                     </p>
 
                     {/* Updated: Styled white card with rounded corners matching your image */}
-                    <div className="mt-4 aspect-[3/4] w-full max-w-[240px] bg-white rounded-3xl shadow-xl" />
+                    <div className="mt-4 aspect-[3/4] w-full max-w-[240px] bg-white/25 rounded-3xl shadow-xl">
+                      <img src="/images/product-preview-tablet.png" />
+                    </div>
 
                     <p className="mt-5 max-w-[240px] text-sm leading-relaxed text-slate-400">
                       {step.body}
@@ -175,7 +179,7 @@ export function LandingPage() {
         </section>
 
         {/* Why Mbere ML */}
-        <section className="bg-white py-20 sm:py-28">
+        <section className="relative -z-0 bg-white -mt-16 pt-32 pb-32 sm:pb-24 rounded-b-[2rem] shadow-md">
           <div className="container-page">
             <h2 className="text-center text-3xl text-slate-900 sm:text-4xl">
               <span className="font-light">Why</span>{" "}
@@ -183,7 +187,7 @@ export function LandingPage() {
             </h2>
 
             <div className="relative mx-auto mt-16 h-64 w-full max-w-xl sm:h-80 lg:h-96">
-              <div className="absolute bottom-0 right-[6%] h-[45%] w-[28%] bg-sky-200" />
+              <div className="absolute bottom-0 right-[6%] h-[45%] w-[28%] bg-sky-300" />
               <div className="absolute left-0 top-0 h-[85%] w-[34%] bg-[#0F6CBD] p-4 sm:p-6">
                 <span className="text-3xl font-extralight text-sky-300 sm:text-2xl lg:text-6xl">
                   Made
@@ -204,7 +208,7 @@ export function LandingPage() {
         </section>
       </main>
 
-      <footer id="contact" className="border-t border-slate-200 bg-white">
+      <footer id="contact" className="z-0 -mt-6 bg-[#FFFFEB]">
         <div className="container-page grid gap-12 py-16 sm:grid-cols-3">
           {FOOTER_COLUMNS.map((column) => (
             <div key={column.title}>
@@ -260,12 +264,17 @@ export function LandingPage() {
                 />
               </a>
             </div>
+            <div className="flex flex-col gap-2 text-sm text-slate-500 hover:text-slate-900 pt-3">
+              <h6>+250 796 595 584</h6>
+              <h6>Kigali, Rwanda</h6>
+            </div>
           </div>
         </div>
 
         <div className="border-t border-slate-100">
-          <div className="container-page py-10">
-            <div className="flex items-center gap-3">
+          <div className="container-page pb-2">
+            {/* Bottom footer logo */}
+            {/* <div className="flex items-center gap-3">
               <img
                 src="/images/MBERE ML logo.png"
                 alt="Mbere ML logo"
@@ -275,9 +284,9 @@ export function LandingPage() {
               <span className="text-3xl font-bold tracking-tight text-[#0F6CBD] sm:text-4xl">
                 MBERE ML
               </span>
-            </div>
+            </div> */}
             <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
-              <span>© Mbere ML {new Date().getFullYear()}</span>
+              <span>© Mbere Machine Learning {new Date().getFullYear()}</span>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-slate-600">
                   Privacy

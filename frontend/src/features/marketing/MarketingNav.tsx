@@ -11,7 +11,7 @@ const LINKS = [
 export function MarketingNav() {
   return (
     <header className="sticky top-5 mx-auto w-full max-w-5xl z-50 px-6">
-      <div className="flex h-16 items-center justify-between rounded-full bg-white/90 px-6 py-2 shadow-md">
+      <div className="flex h-16 items-center justify-between rounded-full bg-white px-6 py-2 shadow-md">
         {/* Logo Section */}
         <Link to="/" aria-label="MBERE ML home" className="flex items-center">
           <Logo size="sm" showTagline={false} />
