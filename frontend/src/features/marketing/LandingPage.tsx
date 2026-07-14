@@ -44,7 +44,7 @@ export function LandingPage() {
                 hero gives it the section's full height as its stick range;
                 the container's bottom padding above is what gives the stuck
                 position room to hold before the section boundary releases it. */}
-        <div className="sticky top-[calc(100vh-6rem)] z-50 -mt-7 sm:ml-10 flex h-14 w-14 left-1 items-center justify-center rounded-full bg-[#0F6CBD] shadow-lg shadow-slate-900/20 sm:h-16 sm:w-16 opacity-60 hover:opacity-100">
+        <div className="sticky top-[calc(100vh-8rem)] z-50 -mt-7 sm:ml-10 flex h-14 w-14 left-4 items-center justify-center rounded-full bg-[#0F6CBD] shadow-lg shadow-slate-900/20 sm:h-16 sm:w-16 opacity-60 hover:opacity-100">
           <img
             src="/images/MBERE ML logo.png"
             alt=""
@@ -96,7 +96,7 @@ export function LandingPage() {
                 Seamless inference on your driver's profiles high accuracy,
                 transparent and explain-ability.
               </p>
-              <div className="mt-8">
+              <div className="flex md:flex-col mt-8 justify-center">
                 <Link to={ctaHref}>
                   <Button variant="inverse" size="md">
                     {ctaLabel}
