@@ -6,6 +6,7 @@ import { RiskDistributionChart } from "@/features/dashboard/components/RiskDistr
 import { FeatureImportanceChart } from "@/features/dashboard/components/FeatureImportanceChart";
 import { PredictionsTrendChart } from "./components/PredictionsTrendChart";
 import { RiskScoreHistogram } from "./components/RiskScoreHistogram";
+import { AssessmentsTable } from "./components/AssessmentsTable";
 
 export function AnalyticsPage() {
   const { data, isLoading, isError, error, refetch } = useDashboard();
@@ -62,6 +63,16 @@ export function AnalyticsPage() {
             />
             <CardBody>
               <FeatureImportanceChart data={data.featureImportance} />
+            </CardBody>
+          </Card>
+
+          <Card>
+            <CardHeader
+              title="All assessments"
+              description="Every recorded prediction across your fleet. Filter by driver or date, then expand a row to see how each feature drove that result."
+            />
+            <CardBody>
+              <AssessmentsTable rows={data.allPredictions} />
             </CardBody>
           </Card>
         </div>
