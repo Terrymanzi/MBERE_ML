@@ -1,0 +1,49 @@
+{
+  "model": "xgboost_resampled",
+  "n_samples_explained": 500,
+  "n_encoded_features": 46,
+  "high_risk_case_index": 10,
+  "high_risk_positive_proba": 0.4570890963077545,
+  "top_features": [
+    {
+      "feature": "ordinal__driver_experience",
+      "mean_abs_shap": 0.5301764607429504
+    },
+    {
+      "feature": "ordinal__driver_age_band",
+      "mean_abs_shap": 0.45963606238365173
+    },
+    {
+      "feature": "ordinal__time_of_day",
+      "mean_abs_shap": 0.3449057638645172
+    },
+    {
+      "feature": "ordinal__vehicle_service_year",
+      "mean_abs_shap": 0.27984628081321716
+    },
+    {
+      "feature": "onehot__vehicle_defect_No defect",
+      "mean_abs_shap": 0.2502603232860565
+    },
+    {
+      "feature": "onehot__weather_Normal",
+      "mean_abs_shap": 0.1821603775024414
+    },
+    {
+      "feature": "onehot__vehicle_type_Automobile",
+      "mean_abs_shap": 0.1804472804069519
+    },
+    {
+      "feature": "onehot__vehicle_type_Lorry",
+      "mean_abs_shap": 0.15677015483379364
+    },
+    {
+      "feature": "onehot__vehicle_defect_Unknown",
+      "mean_abs_shap": 0.135140523314476
+    },
+    {
+      "feature": "onehot__vehicle_type_Public_transport",
+      "mean_abs_shap": 0.12985703349113464
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+feature,mean_abs_shap
+ordinal__driver_experience,0.53017646
+ordinal__driver_age_band,0.45963606
+ordinal__time_of_day,0.34490576
+ordinal__vehicle_service_year,0.27984628
+onehot__vehicle_defect_No defect,0.25026032
+onehot__weather_Normal,0.18216038
+onehot__vehicle_type_Automobile,0.18044728
+onehot__vehicle_type_Lorry,0.15677015
+onehot__vehicle_defect_Unknown,0.13514052
+onehot__vehicle_type_Public_transport,0.12985703
+onehot__light_condition_Daylight,0.123464346
+onehot__light_condition_Darkness - lights lit,0.11887029
+onehot__weather_Raining,0.109712556
+onehot__driver_vehicle_relation_Employee,0.10619232
+onehot__driver_vehicle_relation_Owner,0.102260955
+onehot__vehicle_owner_Owner,0.07534753
+onehot__vehicle_type_Unknown,0.07047388
+onehot__vehicle_type_Other,0.06423965
+onehot__vehicle_type_Pickup,0.06265768
+onehot__road_surface_Asphalt roads,0.052094977
+onehot__vehicle_owner_Governmental,0.049631923
+onehot__road_surface_Earth roads,0.0407071
+onehot__light_condition_Darkness - no lighting,0.02423451
+onehot__road_surface_Gravel roads,0.023863798
+onehot__vehicle_type_Taxi,0.022047307
+onehot__weather_Unknown,0.020435872
+onehot__driver_vehicle_relation_Unknown,0.020210968
+onehot__vehicle_owner_Unknown,0.019613145
+onehot__vehicle_type_Motorcycle,0.01781994
+onehot__vehicle_owner_Organization,0.014943216
+onehot__driver_vehicle_relation_Other,0.010344248
+onehot__road_surface_Unknown,0.008998162
+onehot__road_surface_Asphalt roads with some distress,0.008422571
+onehot__weather_Windy,0.00697092
+onehot__road_surface_Other,0.0066376566
+onehot__weather_Other,0.006621965
+onehot__vehicle_defect_7,0.0037496719
+onehot__weather_Snow,0.0027380062
+onehot__weather_Cloudy,0.0025426878
+onehot__vehicle_defect_5,0.0017505056
+onehot__vehicle_type_Bajaj,0.0012154536
+onehot__light_condition_Darkness - lights unlit,0.0010934719
+onehot__weather_Raining and Windy,0.0009795722
+onehot__vehicle_type_Bicycle,0.0004980987
+onehot__vehicle_owner_Other,0.00034111246
+onehot__weather_Fog or mist,0.0

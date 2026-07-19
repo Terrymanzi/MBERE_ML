@@ -1,8 +1,8 @@
 {
   "model": "baseline",
   "model_version": "0.1.0",
-  "created_utc": "2026-07-09T18:58:46.457676+00:00",
-  "git_commit": "0ac2be6a4b4cf70e5a3f50ae0382deecb9e24d70",
+  "created_utc": "2026-07-18T23:32:25.882410+00:00",
+  "git_commit": "693a234d66fd21d2112dec2dedfdc45f8bc2d22e",
   "random_state": 42,
   "dataset": {
     "name": "addis",

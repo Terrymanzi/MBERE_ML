@@ -1,8 +1,8 @@
 {
   "model": "xgboost",
   "model_version": "0.1.0",
-  "created_utc": "2026-07-12T18:37:53.854886+00:00",
-  "git_commit": "0ac2be6a4b4cf70e5a3f50ae0382deecb9e24d70",
+  "created_utc": "2026-07-18T23:34:24.496154+00:00",
+  "git_commit": "693a234d66fd21d2112dec2dedfdc45f8bc2d22e",
   "random_state": 42,
   "dataset": {
     "name": "addis",
@@ -81,48 +81,48 @@
   },
   "metrics_cv": {
     "n_samples": 9852,
-    "accuracy": 0.8314047909053999,
-    "f1_macro": 0.31483024133603293,
-    "recall_macro": 0.3335059211127179,
-    "precision_macro": 0.3325744088718197,
-    "roc_auc_ovr_macro": 0.5538776670502231,
+    "accuracy": 0.833028826634186,
+    "f1_macro": 0.3153366568102259,
+    "recall_macro": 0.334146100362908,
+    "precision_macro": 0.3376917592400929,
+    "roc_auc_ovr_macro": 0.5511028119529796,
     "per_class": {
       "Slight Injury": {
-        "precision": 0.8458907658824749,
-        "recall": 0.9797143200096027,
-        "f1": 0.9078976640711902,
+        "precision": 0.8464086110536121,
+        "recall": 0.9816348577601729,
+        "f1": 0.9090201745123103,
         "support": 8331,
-        "roc_auc_ovr": 0.5311785524799014
+        "roc_auc_ovr": 0.5295506015846172
       },
       "Serious Injury": {
-        "precision": 0.1518324607329843,
+        "precision": 0.16666666666666666,
         "recall": 0.02080344332855093,
-        "f1": 0.03659305993690852,
+        "f1": 0.036989795918367346,
         "support": 1394,
-        "roc_auc_ovr": 0.5274894465453912
+        "roc_auc_ovr": 0.5249439970579584
       },
       "Fatal Injury": {
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
         "support": 127,
-        "roc_auc_ovr": 0.602965002125377
+        "roc_auc_ovr": 0.5988138372163634
       }
     },
     "confusion_matrix": [
       [
-        8162,
-        160,
-        9
+        8178,
+        142,
+        11
       ],
       [
-        1362,
+        1360,
         29,
-        3
+        5
       ],
       [
-        125,
-        2,
+        124,
+        3,
         0
       ]
     ],

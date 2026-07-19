@@ -3,47 +3,47 @@
   "n_samples_explained": 500,
   "n_encoded_features": 46,
   "high_risk_case_index": 463,
-  "high_risk_positive_proba": 0.2750806557898573,
+  "high_risk_positive_proba": 0.3218809478790478,
   "top_features": [
     {
       "feature": "ordinal__time_of_day",
-      "mean_abs_shap": 0.03255279777003457
+      "mean_abs_shap": 0.03322651550508861
     },
     {
       "feature": "ordinal__driver_experience",
-      "mean_abs_shap": 0.02866447937479279
+      "mean_abs_shap": 0.029489822621341397
     },
     {
       "feature": "ordinal__driver_age_band",
-      "mean_abs_shap": 0.02546787041443888
+      "mean_abs_shap": 0.025752543382302765
     },
     {
       "feature": "onehot__weather_Normal",
-      "mean_abs_shap": 0.022286567045512313
+      "mean_abs_shap": 0.023618761846047425
     },
     {
       "feature": "onehot__vehicle_type_Automobile",
-      "mean_abs_shap": 0.020659893411081435
+      "mean_abs_shap": 0.021295804812669034
     },
     {
       "feature": "onehot__vehicle_defect_No defect",
-      "mean_abs_shap": 0.017896706291786846
+      "mean_abs_shap": 0.018304935237722367
     },
     {
       "feature": "onehot__light_condition_Darkness - lights lit",
-      "mean_abs_shap": 0.015811109675348017
+      "mean_abs_shap": 0.015357889009369591
     },
     {
       "feature": "ordinal__vehicle_service_year",
-      "mean_abs_shap": 0.015465185144063599
-    },
-    {
-      "feature": "onehot__vehicle_type_Lorry",
-      "mean_abs_shap": 0.013479128678429835
+      "mean_abs_shap": 0.015185274113179815
     },
     {
       "feature": "onehot__light_condition_Daylight",
-      "mean_abs_shap": 0.013396362918516225
+      "mean_abs_shap": 0.013841291178326505
+    },
+    {
+      "feature": "onehot__vehicle_type_Lorry",
+      "mean_abs_shap": 0.012895575122747032
     }
   ]
 }
