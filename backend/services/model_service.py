@@ -7,6 +7,17 @@ is a no-op and the encoder transforms the raw feature row, so the backend feeds
 RAW engineered features (exactly the contract's ``input_features``) and the
 pipeline encodes internally.
 
+Exception: XGBoost models. `XGBClassifier.__setstate__` hands its C++ core an
+opaque bytearray during unpickling, and that framing is not guaranteed portable
+across platforms -- trained on Colab/Linux, served here on Windows, joblib.load()
+throws `XGBoostError: input stream corrupted` *inside* pickle's own unpickling,
+before any object is returned. For any model with a `{name}_booster.ubj` +
+`{name}_encoder.joblib` side-car pair sitting next to `{name}.pkl`,
+`_load_xgboost_safe()` reconstructs the inference pipeline from those portable
+parts instead of unpickling the `.pkl` directly. Every other model (RandomForest,
+the rule-based baseline, etc.) is untouched and still goes through the plain
+`load_pickle(model_path)` path.
+
 Startup contract guarantee: the feature set the loaded model expects must match
 the feature contract; otherwise loading fails fast (ContractMismatchError).
 """
@@ -18,8 +29,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+import joblib
 import numpy as np
 import pandas as pd
+from sklearn.pipeline import Pipeline as SkPipeline
+from xgboost import XGBClassifier
 
 from ..app.config import PROJECT_ROOT, Settings, get_settings
 from ..utils_artifacts import load_pickle  # local thin joblib wrapper (see below)
@@ -87,6 +101,54 @@ def _unwrap(model) -> tuple[Any, Any]:
     return None, model
 
 
+def _load_xgboost_safe(run_dir: Path, name: str):
+    """Reconstruct an XGBoost inference pipeline from side-car artifacts instead of the
+    pickled Pipeline, when `{name}_booster.ubj` is present.
+
+    XGBClassifier.__setstate__ hands its C++ core an opaque bytearray during unpickling,
+    which is not guaranteed portable across platforms (trained on Colab/Linux, served here
+    on Windows) -- joblib.load() throws `XGBoostError: input stream corrupted` *inside*
+    pickle's own unpickling, before any object is returned, so there's nothing to repair
+    after the fact. Instead the pipeline is rebuilt from parts each saved in a portable
+    format: the encoder via plain joblib (numpy/sklearn only, no native blob), and the
+    booster via XGBoost's own save_model/load_model (the documented portable format).
+
+    classes_/n_classes_ are read-only properties on XGBClassifier (derived from the
+    booster's own restored config, not stored as plain state) -- nothing to set here.
+    `_aligned_proba()` already falls back to `np.arange(len(raw))` if `classes_` is
+    unavailable, which is correct for this project since the target is always
+    integer-encoded 0..n_classes-1 before fitting, and `predict_proba`'s output width
+    comes from the booster's own restored `num_class` config, not from any sklearn-wrapper
+    attribute.
+
+    The sampler step is intentionally omitted: imblearn Pipelines skip sampler steps during
+    .predict()/.transform() (resampling is training-only), so it's a no-op at inference --
+    matching this module's own docstring -- and isn't needed for correct predictions.
+
+    Returns None (caller falls back to the plain pickle) if no side-car export exists for
+    this model name.
+    """
+    booster_path = run_dir / f"{name}_booster.ubj"
+    if not booster_path.exists():
+        return None
+
+    encoder_path = run_dir / f"{name}_encoder.joblib"
+    if not encoder_path.exists():
+        raise ArtifactNotFoundError(
+            f"found {booster_path.name} but not {encoder_path.name} -- re-run the Colab "
+            f"export cell to also dump the encoder: joblib.dump(pipe.named_steps['encoder'], "
+            f"artifacts_dir / '{name}_encoder.joblib')"
+        )
+
+    encoder = joblib.load(encoder_path)
+
+    classifier = XGBClassifier()
+    classifier.load_model(booster_path)
+
+    logger.info("model %s: reconstructed from side-car encoder + booster (pickle bypassed)", name)
+    return SkPipeline([("encoder", encoder), ("classifier", classifier)])
+
+
 def _expected_features(model) -> list[str] | None:
     """Feature columns the model was fit on, if discoverable."""
     encoder, classifier = _unwrap(model)
@@ -144,7 +206,7 @@ class ModelService:
             features=contract_raw["input_features"],
             git_commit=contract_raw.get("git_commit"),
         )
-        model = load_pickle(model_path)
+        model = _load_xgboost_safe(run_dir, name) or load_pickle(model_path)
         meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
 
         self._validate(model, contract, meta)
