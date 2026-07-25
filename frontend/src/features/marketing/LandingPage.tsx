@@ -2,6 +2,7 @@ import type { SyntheticEvent } from "react";
 import { Link } from "react-router-dom";
 import { MarketingNav } from "./MarketingNav";
 import { Button } from "@/components/ui/Button";
+import { Footer } from "@/components/layout/Footer";
 import { useAuth } from "@/features/auth/AuthContext";
 
 const STEPS = [
@@ -17,11 +18,6 @@ const STEPS = [
     title: "Fleet Analytics",
     body: "Risk assessments are stored per driver, so history is auditable.",
   },
-];
-
-const FOOTER_COLUMNS = [
-  { title: "Product", links: ["Features", "Use cases", "Disclaimer"] },
-  { title: "Research", links: ["Abstract", "Datasets"] },
 ];
 
 function hideOnError(e: SyntheticEvent<HTMLImageElement>) {
@@ -208,97 +204,7 @@ export function LandingPage() {
         </section>
       </main>
 
-      <footer id="contact" className="z-0 -mt-6 bg-[#FFFFEB]">
-        <div className="container-page grid gap-12 py-16 sm:grid-cols-3">
-          {FOOTER_COLUMNS.map((column) => (
-            <div key={column.title}>
-              <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
-                {column.title}
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-500">
-                {column.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="hover:text-slate-900">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
-              Contacts
-            </h3>
-            <div className="mt-4 flex items-center gap-4">
-              <a
-                href="https://github.com/Terrymanzi/MBERE_ML"
-                aria-label="GitHub"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="/images/GitHub-icon.png"
-                  alt=""
-                  className="h-6 w-6"
-                  onError={hideOnError}
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/manzi-terry"
-                aria-label="LinkedIn"
-              >
-                <img
-                  src="/images/LinkedIn-icon.png"
-                  alt=""
-                  className="h-6 w-6"
-                  onError={hideOnError}
-                />
-              </a>
-              <a href="mailto:terrymanzi@outlook.com" aria-label="Email">
-                <img
-                  src="/images/Email-icon.png"
-                  alt="mailto:terrymanzi@outlook.com"
-                  className="h-6 w-6"
-                  onError={hideOnError}
-                />
-              </a>
-            </div>
-            <div className="flex flex-col gap-2 text-sm text-slate-500 hover:text-slate-900 pt-3">
-              <h6>+250 796 595 584</h6>
-              <h6>Kigali, Rwanda</h6>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-slate-100">
-          <div className="container-page pb-2">
-            {/* Bottom footer logo */}
-            {/* <div className="flex items-center gap-3">
-              <img
-                src="/images/MBERE ML logo.png"
-                alt="Mbere ML logo"
-                className="h-14 w-14 object-contain"
-                onError={hideOnError}
-              />
-              <span className="text-3xl font-bold tracking-tight text-[#0F6CBD] sm:text-4xl">
-                MBERE ML
-              </span>
-            </div> */}
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
-              <span>© Mbere Machine Learning {new Date().getFullYear()}</span>
-              <div className="flex gap-6">
-                <a href="#" className="hover:text-slate-600">
-                  Privacy
-                </a>
-                <a href="#" className="hover:text-slate-600">
-                  Data Controls
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer variant="full" />
     </div>
   );
 }

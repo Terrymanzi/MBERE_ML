@@ -12,6 +12,10 @@ import { ModelsPage } from "@/features/models/ModelsPage";
 import { SettingsPage } from "@/features/settings/SettingsPage";
 import { ProfilePage } from "@/features/settings/ProfilePage";
 import { NotFoundPage } from "@/features/marketing/NotFoundPage";
+import { LegalIndexPage } from "@/features/legal/pages/LegalIndexPage";
+import { TermsPage } from "@/features/legal/pages/TermsPage";
+import { PrivacyPage } from "@/features/legal/pages/PrivacyPage";
+import { DisclaimerPage } from "@/features/legal/pages/DisclaimerPage";
 
 export function App() {
   return (
@@ -19,6 +23,10 @@ export function App() {
       {/* Public */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/legal" element={<LegalIndexPage />} />
+      <Route path="/legal/terms" element={<TermsPage />} />
+      <Route path="/legal/privacy" element={<PrivacyPage />} />
+      <Route path="/legal/disclaimer" element={<DisclaimerPage />} />
 
       {/* Authenticated app */}
       <Route element={<ProtectedRoute />}>

@@ -2,6 +2,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { LegalNav } from "@/features/legal/components/LegalNav";
 import { useAuth } from "@/features/auth/AuthContext";
 import { formatDateTime } from "@/lib/format";
 
@@ -21,14 +22,18 @@ export function ProfilePage() {
 
   return (
     <div>
-      <PageHeader title="Profile" description="Your account details." />
+      <PageHeader title="Profile" description="Your full account details." />
 
       <Card className="max-w-2xl">
         <CardHeader
           title={user?.full_name || "Fleet operator"}
           description={user?.email}
           action={
-            user?.is_active ? <Badge tone="green">Active</Badge> : <Badge tone="amber">Inactive</Badge>
+            user?.is_active ? (
+              <Badge tone="green">Active</Badge>
+            ) : (
+              <Badge tone="amber">Inactive</Badge>
+            )
           }
         />
         <CardBody>
@@ -47,6 +52,16 @@ export function ProfilePage() {
               Log out
             </Button>
           </div>
+        </CardBody>
+      </Card>
+
+      <Card className="mt-6 max-w-2xl">
+        <CardHeader
+          title="Legal"
+          description="Terms, privacy, and disclaimer documentation for MBERE ML."
+        />
+        <CardBody>
+          <LegalNav variant="stacked" />
         </CardBody>
       </Card>
     </div>

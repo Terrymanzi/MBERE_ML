@@ -7,6 +7,9 @@ import { Logo } from "@/components/layout/Logo";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { toErrorMessage } from "@/components/feedback/states";
+import { LegalConsentCheckbox } from "@/features/legal/components/LegalConsentCheckbox";
+import { LegalLink } from "@/features/legal/components/LegalLink";
+import { LEGAL_VERSION } from "@/features/legal/content/meta";
 
 type Mode = "login" | "register";
 
@@ -25,6 +28,8 @@ export function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [consentError, setConsentError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
@@ -35,10 +40,26 @@ export function LoginPage() {
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     setError(null);
+
+    if (mode === "register" && !acceptedTerms) {
+      setConsentError(
+        "You must agree to the Terms of Use and Privacy Policy to create an account.",
+      );
+      return;
+    }
+    setConsentError(null);
+
     setSubmitting(true);
     try {
       if (mode === "register") {
-        await registerRequest({ email, password, full_name: fullName || null });
+        await registerRequest({
+          email,
+          password,
+          full_name: fullName || null,
+          acceptedTerms: true,
+          acceptedAt: new Date().toISOString(),
+          legalVersion: LEGAL_VERSION,
+        });
       }
       await login(email, password);
       navigate(from, { replace: true });
@@ -118,6 +139,17 @@ export function LoginPage() {
               hint={mode === "register" ? "At least 8 characters." : undefined}
             />
 
+            {mode === "register" && (
+              <LegalConsentCheckbox
+                checked={acceptedTerms}
+                onChange={(checked) => {
+                  setAcceptedTerms(checked);
+                  if (checked) setConsentError(null);
+                }}
+                error={consentError ?? undefined}
+              />
+            )}
+
             {error && (
               <div
                 role="alert"
@@ -136,6 +168,15 @@ export function LoginPage() {
               {mode === "login" ? "Log in" : "Create account"}
             </Button>
           </form>
+
+          <div className="mt-6 flex gap-4 text-sm text-slate-500">
+            <LegalLink to="/legal/terms" newTab>
+              Terms of Use
+            </LegalLink>
+            <LegalLink to="/legal/privacy" newTab>
+              Privacy Policy
+            </LegalLink>
+          </div>
 
           <p className="mt-6 text-sm font-thin text-slate-500">
             {mode === "login" ? (

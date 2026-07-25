@@ -18,6 +18,11 @@ export interface UserCreate {
   email: string;
   password: string;
   full_name?: string | null;
+  // Not yet persisted by the backend (UserCreate has no matching fields there) —
+  // sent ahead of time so consent capture works as soon as the backend adds them.
+  acceptedTerms?: boolean;
+  acceptedAt?: string; // ISO datetime
+  legalVersion?: string;
 }
 
 export interface Token {
