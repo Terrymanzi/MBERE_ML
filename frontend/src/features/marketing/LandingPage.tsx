@@ -77,7 +77,7 @@ export function LandingPage() {
                 <img
                   src="/images/product-preview-laptop.png"
                   alt="MBERE ML dashboard preview"
-                  className="mx-auto w-full max-w-18 scro"
+                  className="mx-auto w-full max-w-18"
                   onError={hideOnError}
                 />
               </div>
