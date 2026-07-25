@@ -79,6 +79,16 @@ export const UserIcon = (p: IconProps) => (
   </Base>
 );
 
+export const LegalIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M12 3v18" />
+    <path d="M5 7h14" />
+    <path d="M5 7 2 13a3 3 0 0 0 6 0L5 7Z" />
+    <path d="M19 7l-3 6a3 3 0 0 0 6 0l-3-6Z" />
+    <path d="M8 21h8" />
+  </Base>
+);
+
 export const LogoutIcon = (p: IconProps) => (
   <Base {...p}>
     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />

@@ -47,7 +47,7 @@ function Item({
       onClick={onNavigate}
       className={({ isActive }) =>
         cn(
-          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-mono transition-colors",
+          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-mono font-semibold transition-colors",
           isActive
             ? "bg-[#0F6CBD] text-white"
             : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",

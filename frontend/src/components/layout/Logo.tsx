@@ -46,7 +46,7 @@ export function Logo({
         </span>
         {showTagline && (
           <span className="mt-0.5 block text-[10px] font-thin uppercase tracking-wide text-slate-400">
-            Predicting Road Risk Before It Happens
+            V1.0.0
           </span>
         )}
       </div>
