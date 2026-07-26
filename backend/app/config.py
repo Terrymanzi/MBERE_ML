@@ -6,6 +6,7 @@ it. No training configuration lives here.
 """
 from __future__ import annotations
 
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -15,11 +16,23 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
+def _env_file() -> str:
+    """Pick .env.<APP_ENV> (falling back to .env) so dev/prod secrets never mix.
+
+    Real deployments (Render) inject env vars directly and don't rely on this
+    file existing at all -- pydantic-settings' actual-env-var precedence over
+    the file means this only matters for local runs.
+    """
+    app_env = os.environ.get("APP_ENV", "development")
+    candidate = PROJECT_ROOT / f".env.{app_env}"
+    return str(candidate) if candidate.is_file() else str(PROJECT_ROOT / ".env")
+
+
 class Settings(BaseSettings):
     # protected_namespaces=() so ``model_*`` fields don't collide with pydantic's
     # reserved ``model_`` namespace.
     model_config = SettingsConfigDict(
-        env_file=".env", env_file_encoding="utf-8", extra="ignore", protected_namespaces=()
+        env_file=_env_file(), env_file_encoding="utf-8", extra="ignore", protected_namespaces=()
     )
 
     app_name: str = "mbere-ml backend"
@@ -43,7 +56,13 @@ class Settings(BaseSettings):
     # `{model_name}.pkl` + feature_contract.json is auto-selected.
     artifacts_root: str = "ml/artifacts/runs"
     model_run_dir: str | None = None
-    model_name: str = "random_forest"
+    # xgboost_tuned is the canonical/production model: it is the only catalog
+    # entry that beats the rule-based baseline on all three held-out-test
+    # headline metrics (macro-F1, macro-recall, ROC-AUC) -- see the decision
+    # gate in ml/evaluation/gate.py and the README's "Model Selection" section.
+    # Plain `random_forest` underperforms the baseline and must not be the
+    # default; POST /models/{name}/activate enforces this at runtime too.
+    model_name: str = "xgboost_tuned"
 
     # --- selectable model catalog (multi-model picker) ---
     # Directory scanned for named top-level models (`{name}.pkl` + a shared

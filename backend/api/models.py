@@ -25,12 +25,29 @@ from ..services.model_registry import model_registry
 from ..services.model_service import ArtifactNotFoundError, ContractMismatchError
 from ..services.registry import activate_model_version
 
+from ml.evaluation.gate import evaluate_gate
+
 logger = logging.getLogger("backend.api.models")
 router = APIRouter(prefix="/models", tags=["models"])
+
+BASELINE_NAME = "baseline"
 
 
 def _read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def _gate_status(catalog_dir: Path, name: str) -> tuple[bool | None, list[str]]:
+    """None (no reasons) when there's nothing to compare against (missing metrics,
+    or `name` IS the baseline -- the baseline is the reference, not a candidate)."""
+    if name == BASELINE_NAME:
+        return None, []
+    candidate = _read_json(catalog_dir / "reports" / name / "metrics.json")
+    baseline = _read_json(catalog_dir / "reports" / BASELINE_NAME / "metrics.json")
+    if not candidate or not baseline:
+        return None, []
+    result = evaluate_gate(candidate, baseline)
+    return result.passed, result.reasons
 
 
 @router.get("", response_model=list[ModelVersionRead])
@@ -56,6 +73,7 @@ def model_catalog(db: Session = Depends(get_db)) -> ModelCatalogResponse:
             .order_by(ModelVersion.created_at.desc())
         )
         dataset = meta.get("dataset") or {}
+        gate_passed, gate_reasons = _gate_status(catalog_dir, name)
         entries.append(
             ModelCatalogEntry(
                 name=name,
@@ -69,6 +87,8 @@ def model_catalog(db: Session = Depends(get_db)) -> ModelCatalogResponse:
                 metrics_test=ModelPerformance(**test_metrics_raw) if test_metrics_raw else None,
                 is_active=bool(db_row.is_active) if db_row else False,
                 model_version_id=db_row.id if db_row else None,
+                gate_passed=gate_passed,
+                gate_reasons=gate_reasons,
             )
         )
     return ModelCatalogResponse(catalog_dir=str(catalog_dir), models=entries)
@@ -88,11 +108,31 @@ def active_contract() -> FeatureContractResponse:
 @router.post("/{name}/activate", response_model=ModelVersionRead)
 def activate_model(
     name: str,
+    force: bool = False,
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> ModelVersion:
+    """Set `name` as the served default. Blocked (409) for a candidate that fails
+    the deployment decision gate -- it underperforms the rule-based baseline on a
+    held-out-test headline metric -- unless `force=true` is passed as a deliberate,
+    human-reviewed override (never done silently by the platform itself)."""
     if name not in model_registry.available_names():
         raise HTTPException(status.HTTP_404_NOT_FOUND, f"unknown model '{name}'")
+
+    if not force:
+        gate_passed, gate_reasons = _gate_status(model_registry.catalog_dir(), name)
+        if gate_passed is False:
+            raise HTTPException(
+                status.HTTP_409_CONFLICT,
+                {
+                    "message": (
+                        f"model '{name}' fails the deployment decision gate: it "
+                        "underperforms the rule-based baseline on held-out test "
+                        "metrics. Retry with ?force=true to override deliberately."
+                    ),
+                    "reasons": gate_reasons,
+                },
+            )
     try:
         svc = model_registry.get(name)
     except ArtifactNotFoundError:

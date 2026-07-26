@@ -5,6 +5,8 @@ __pycache__/
 .venv/
 venv/
 .env
+/.env.development
+/.env.production
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -15,7 +17,11 @@ venv/
 # Data and artifacts
 # data/processed/ # pushing processed data to github
 # data/external/  # pushing synthetic data to github
-# ml/artifacts/   # pushing models to github
+# ml/artifacts/   # pushing the canonical, top-level model catalog to github
+# ml/artifacts/runs/ holds ad-hoc local training runs (can be tens/hundreds of MB
+# each); only the pinned catalog artifacts directly under ml/artifacts/ are the
+# reproducible, documented production/candidate models, so runs/ is excluded.
+ml/artifacts/runs/
 docs/IMPLEMENTATION_SUMMARY.md
 backend/.venv/
 frontend/node_modules/  
@@ -24,6 +30,9 @@ frontend/dist/
 # Local SQLite databases
 *.db
 *.sqlite3
+
+# Local DB backups (contain real user data -- never commit)
+/backups/
 
 # OS and editor files
 .DS_Store

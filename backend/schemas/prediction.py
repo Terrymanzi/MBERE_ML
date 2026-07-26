@@ -58,6 +58,15 @@ class ModelCatalogEntry(BaseModel):
     metrics_test: ModelPerformance | None = None
     is_active: bool
     model_version_id: int | None = None
+    gate_passed: bool | None = Field(
+        default=None,
+        description=(
+            "Whether this model beats the rule-based baseline on all headline "
+            "held-out test metrics (macro-F1, macro-recall, ROC-AUC). None if "
+            "metrics are unavailable for the comparison. See POST /{name}/activate."
+        ),
+    )
+    gate_reasons: list[str] = Field(default_factory=list)
 
 
 class ModelCatalogResponse(BaseModel):
