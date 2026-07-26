@@ -16,7 +16,7 @@ export function StatCard({
   accent?: "brand" | "red" | "amber" | "green";
 }) {
   const accentClasses: Record<string, string> = {
-    brand: "bg-brand-50 text-brand-600",
+    brand: "bg-transparent-blue-50 text-brand-600",
     red: "bg-red-50 text-red-600",
     amber: "bg-amber-50 text-amber-600",
     green: "bg-green-50 text-green-600",
@@ -24,11 +24,11 @@ export function StatCard({
   return (
     <Card className="p-5">
       <div className="flex items-start justify-between">
-        <p className="text-sm font-mono text-slate-500">{label}</p>
+        <p className="text-sm font-medium text-slate-500">{label}</p>
         {icon && (
           <span
             className={cn(
-              "flex h-9 w-9 items-center justify-center rounded-lg",
+              "flex h-6 w-6 items-center justify-center rounded-lg",
               accent ? accentClasses[accent] : "bg-slate-100 text-slate-500",
             )}
           >

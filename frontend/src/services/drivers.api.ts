@@ -9,6 +9,8 @@ import type {
 export interface ListDriversParams {
   limit?: number;
   offset?: number;
+  /** Case-insensitive search over full_name / license_number. */
+  q?: string;
 }
 
 export function listDrivers(
@@ -18,6 +20,7 @@ export function listDrivers(
   const search = new URLSearchParams();
   if (params.limit != null) search.set("limit", String(params.limit));
   if (params.offset != null) search.set("offset", String(params.offset));
+  if (params.q) search.set("q", params.q);
   const qs = search.toString();
   return apiRequest<DriverRead[]>(`/drivers${qs ? `?${qs}` : ""}`, { signal });
 }

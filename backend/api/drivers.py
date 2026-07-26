@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from fastapi.responses import Response
-from sqlalchemy import select
+from sqlalchemy import or_, select
 from sqlalchemy.orm import Session, selectinload
 
 from ..auth.deps import get_current_user
@@ -43,10 +43,17 @@ def list_drivers(
     user: User = Depends(get_current_user),
     limit: int = Query(50, ge=1, le=500),
     offset: int = Query(0, ge=0),
+    q: str | None = Query(None, description="Case-insensitive search over full_name / license_number"),
 ) -> list[Driver]:
+    stmt = select(Driver)
+    if q and q.strip():
+        pattern = f"%{q.strip()}%"
+        stmt = stmt.where(
+            or_(Driver.full_name.ilike(pattern), Driver.license_number.ilike(pattern))
+        )
     return list(
         db.scalars(
-            select(Driver).order_by(Driver.created_at.desc()).limit(limit).offset(offset)
+            stmt.order_by(Driver.created_at.desc()).limit(limit).offset(offset)
         ).all()
     )
 

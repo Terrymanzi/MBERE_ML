@@ -3,16 +3,19 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { RiskBadge } from "@/components/ui/RiskBadge";
-import { ChevronLeftIcon, PredictIcon } from "@/components/icons";
+import { ChevronDownIcon, ChevronLeftIcon, PredictIcon } from "@/components/icons";
 import {
   EmptyState,
   ErrorState,
   LoadingState,
 } from "@/components/feedback/states";
+import { cn } from "@/lib/cn";
 import { formatDate, formatDateTime, formatPercent } from "@/lib/format";
 import type { RiskAssessmentRead } from "@/services";
+import { ShapContributions } from "@/features/prediction/components/ShapContributions";
 import { useDeleteDriver, useDriverRiskHistory, useDrivers } from "./useDrivers";
 import { EditDriverModal } from "./components/EditDriverModal";
+import { RiskScoreTrendChart } from "./components/RiskScoreTrendChart";
 
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
@@ -27,41 +30,67 @@ function InfoRow({ label, value }: { label: string; value: string }) {
 
 function AssessmentRow({ assessment }: { assessment: RiskAssessmentRead }) {
   const p = assessment.prediction;
+  const [open, setOpen] = useState(false);
+  const topFeatures = p?.explanation?.top_features ?? [];
+  const method = p?.explanation?.method ?? "none";
+
   return (
-    <div className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
-      <div className="flex items-center gap-4">
-        {p ? (
-          <RiskBadge band={p.risk_band} />
-        ) : (
-          <span className="text-sm text-slate-400">—</span>
-        )}
-        <div>
-          <p className="text-sm font-mono text-slate-900">
-            {p ? p.predicted_class : assessment.status}
-          </p>
-          <p className="text-xs text-slate-500">
-            {formatDateTime(assessment.created_at)}
-          </p>
+    <div className="py-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-4">
+          {p ? (
+            <RiskBadge band={p.risk_band} />
+          ) : (
+            <span className="text-sm text-slate-400">—</span>
+          )}
+          <div>
+            <p className="text-sm font-mono text-slate-900">
+              {p ? p.predicted_class : assessment.status}
+            </p>
+            <p className="text-xs text-slate-500">
+              {formatDateTime(assessment.created_at)}
+            </p>
+          </div>
         </div>
+
+        {p && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-slate-500">
+              Risk score{" "}
+              <span className="font-thin text-slate-900">
+                {formatPercent(p.risk_score)}
+              </span>
+            </span>
+            {topFeatures.slice(0, 3).map((f) => (
+              <span
+                key={f.feature}
+                className="bg-slate-200 px-2 py-0.5 text-xs text-slate-600"
+                title={`contribution ${f.contribution.toFixed(4)}`}
+              >
+                {f.feature}
+              </span>
+            ))}
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              className="inline-flex items-center gap-1 text-sm font-medium text-brand-700 hover:underline"
+              aria-expanded={open}
+            >
+              Details
+              <ChevronDownIcon
+                className={cn("h-3.5 w-3.5 transition-transform", open && "rotate-180")}
+              />
+            </button>
+          </div>
+        )}
       </div>
 
-      {p && (
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="text-sm text-slate-500">
-            Risk score{" "}
-            <span className="font-thin text-slate-900">
-              {formatPercent(p.risk_score)}
-            </span>
-          </span>
-          {p.explanation?.top_features?.slice(0, 3).map((f) => (
-            <span
-              key={f.feature}
-              className="bg-slate-200 px-2 py-0.5 text-xs text-slate-600"
-              title={`contribution ${f.contribution.toFixed(4)}`}
-            >
-              {f.feature}
-            </span>
-          ))}
+      {open && p && (
+        <div className="mt-3 bg-slate-50/60 p-4">
+          <p className="mb-2 text-xs font-medium uppercase tracking-wide text-slate-400">
+            How each feature affected this prediction ({method})
+          </p>
+          <ShapContributions features={topFeatures} method={method} />
         </div>
       )}
     </div>
@@ -202,11 +231,16 @@ export function DriverDetailsPage() {
                     }
                   />
                 ) : (
-                  <div className="divide-y divide-slate-100">
-                    {historyQuery.data.map((a) => (
-                      <AssessmentRow key={a.id} assessment={a} />
-                    ))}
-                  </div>
+                  <>
+                    <div className="mb-4 border-b border-slate-100 pb-4">
+                      <RiskScoreTrendChart assessments={historyQuery.data} />
+                    </div>
+                    <div className="divide-y divide-slate-100">
+                      {historyQuery.data.map((a) => (
+                        <AssessmentRow key={a.id} assessment={a} />
+                      ))}
+                    </div>
+                  </>
                 )}
               </CardBody>
             </Card>

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card } from "@/components/ui/Card";
@@ -17,23 +17,21 @@ import { CreateDriverModal } from "./components/CreateDriverModal";
 import { EditDriverModal } from "./components/EditDriverModal";
 
 export function DriversPage() {
-  const { data, isLoading, isError, error, refetch } = useDrivers();
-  const deleteDriver = useDeleteDriver();
-  const navigate = useNavigate();
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [createOpen, setCreateOpen] = useState(false);
   const [editTarget, setEditTarget] = useState<DriverRead | null>(null);
+  const navigate = useNavigate();
+  const deleteDriver = useDeleteDriver();
 
-  const filtered = useMemo(() => {
-    if (!data) return [];
-    const q = query.trim().toLowerCase();
-    if (!q) return data;
-    return data.filter(
-      (d) =>
-        d.full_name.toLowerCase().includes(q) ||
-        d.license_number.toLowerCase().includes(q),
-    );
-  }, [data, query]);
+  // Debounce the search box so we don't fire a request per keystroke.
+  useEffect(() => {
+    const id = setTimeout(() => setDebouncedQuery(query.trim()), 300);
+    return () => clearTimeout(id);
+  }, [query]);
+
+  const { data, isLoading, isError, error, refetch } = useDrivers(debouncedQuery);
+  const filtered = data ?? [];
 
   function handleDelete(e: React.MouseEvent, driver: DriverRead) {
     e.stopPropagation();

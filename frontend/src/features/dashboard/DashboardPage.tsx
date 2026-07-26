@@ -78,14 +78,14 @@ export function DashboardPage() {
               value={dashboard.data.predictionsToday}
               hint={`${dashboard.data.totalAssessments} all-time`}
               icon={<PredictIcon className="h-5 w-5" />}
-              accent="green"
+              accent="brand"
             />
             <StatCard
               label="High-risk drivers"
               value={dashboard.data.riskCounts.High}
               hint={`${dashboard.data.riskCounts.Medium} medium · ${dashboard.data.riskCounts.Low} low`}
               icon={<HighRiskIcon />}
-              accent="red"
+              accent="brand"
             />
             <StatCard
               label="Active model"

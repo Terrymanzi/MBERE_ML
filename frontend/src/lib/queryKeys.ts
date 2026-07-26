@@ -5,7 +5,7 @@ export const queryKeys = {
   models: ["models"] as const,
   modelCatalog: ["models", "catalog"] as const,
   contract: ["contract"] as const,
-  drivers: (params?: { limit?: number; offset?: number }) =>
+  drivers: (params?: { limit?: number; offset?: number; q?: string }) =>
     ["drivers", params ?? {}] as const,
   driverRisk: (driverId: number) => ["risk", driverId] as const,
   dashboard: ["dashboard"] as const,

@@ -1,6 +1,10 @@
 import { useMemo, useState } from "react";
 import type { FormEvent } from "react";
-import type { ContractFeature, DriverRead, ModelCatalogEntry } from "@/services";
+import type {
+  ContractFeature,
+  DriverRead,
+  ModelCatalogEntry,
+} from "@/services";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
@@ -73,7 +77,9 @@ export function PredictionForm({
   isSubmitting,
   onSubmit,
 }: PredictionFormProps) {
-  const [values, setValues] = useState<FormValues>(() => initialValues(features));
+  const [values, setValues] = useState<FormValues>(() =>
+    initialValues(features),
+  );
   const [driverId, setDriverId] = useState<string>(
     initialDriverId != null ? String(initialDriverId) : "",
   );
@@ -115,7 +121,7 @@ export function PredictionForm({
           value={driverId}
           onChange={(e) => setDriverId(e.target.value)}
         >
-          <option value="">No driver — one-off prediction</option>
+          <option value="">No driver selected one-off prediction</option>
           {drivers.map((d) => (
             <option key={d.id} value={d.id}>
               {d.full_name} ({d.license_number})
@@ -135,7 +141,9 @@ export function PredictionForm({
           {models.map((m) => (
             <option key={m.name} value={m.name}>
               {m.name}
-              {m.metrics_test ? ` — F1 ${(m.metrics_test.f1_macro * 100).toFixed(0)}%` : ""}
+              {m.metrics_test
+                ? ` — F1 ${(m.metrics_test.f1_macro * 100).toFixed(0)}%`
+                : ""}
             </option>
           ))}
         </Select>

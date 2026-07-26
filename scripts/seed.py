@@ -33,7 +33,7 @@ from sqlalchemy.exc import OperationalError, ProgrammingError  # noqa: E402
 
 from backend.app.config import get_settings  # noqa: E402
 from backend.auth.security import hash_password  # noqa: E402
-from backend.database.models import Driver, User  # noqa: E402
+from backend.database.models import Driver, User, UserRole  # noqa: E402
 from backend.database.session import SessionLocal, engine  # noqa: E402
 from backend.services.model_registry import model_registry  # noqa: E402
 from backend.services.registry import activate_model_version, get_active_model_version  # noqa: E402
@@ -68,7 +68,7 @@ def seed_admin(db) -> User:
         hashed_password=hash_password(password),
         full_name="Fleet Admin",
         is_active=True,
-        is_superuser=True,
+        role=UserRole.ADMIN,
     )
     db.add(user)
     db.commit()

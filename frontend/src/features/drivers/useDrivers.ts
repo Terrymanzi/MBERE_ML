@@ -12,10 +12,11 @@ import { queryKeys } from "@/lib/queryKeys";
 
 const DRIVERS_PAGE = { limit: 200, offset: 0 } as const;
 
-export function useDrivers() {
+export function useDrivers(q?: string) {
+  const params = { ...DRIVERS_PAGE, q: q || undefined };
   return useQuery({
-    queryKey: queryKeys.drivers(DRIVERS_PAGE),
-    queryFn: ({ signal }) => listDrivers(DRIVERS_PAGE, signal),
+    queryKey: queryKeys.drivers(params),
+    queryFn: ({ signal }) => listDrivers(params, signal),
   });
 }
 
