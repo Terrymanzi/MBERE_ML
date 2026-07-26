@@ -1,5 +1,4 @@
 import type { SyntheticEvent } from "react";
-import { Link } from "react-router-dom";
 import { LegalNav } from "@/features/legal/components/LegalNav";
 
 const FOOTER_COLUMNS = [
