@@ -49,7 +49,7 @@ export function Footer({ variant = "full" }: FooterProps) {
         ))}
         <div>
           <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
-            Legal
+            Legal terms
           </h3>
           <div className="mt-4">
             <LegalNav variant="stacked" className="text-slate-500" />
@@ -59,9 +59,9 @@ export function Footer({ variant = "full" }: FooterProps) {
 
       <div className="border-t border-slate-100">
         <div className="container-page pb-2">
-          <div className="flex flex-col gap-4 py-4 sm:flex-row sm:items-center sm:justify-between">
-            <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
-              Contacts
+          <div className="flex flex-col gap-4 py-4 sm:flex-row sm:items-center sm:justify-start">
+            <h3 className="text-sm font-bold tracking-wide text-slate-900">
+              Get in Touch:
             </h3>
             <div className="flex items-center gap-4">
               <a
@@ -98,16 +98,16 @@ export function Footer({ variant = "full" }: FooterProps) {
               </a>
             </div>
           </div>
-          <div className="flex flex-col gap-2 text-sm text-slate-500 pt-1">
+          {/* <div className="flex flex-col gap-2 text-sm text-slate-500 pt-1">
             <h6>+250 796 595 584</h6>
             <h6>Kigali, Rwanda</h6>
-          </div>
+          </div> */}
 
           <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
-            <span>© Mbere Machine Learning {new Date().getFullYear()}</span>
-            <Link to="/legal" className="hover:text-slate-600">
+            <span>© {new Date().getFullYear()} Mbere Machine Learning</span>
+            {/* <Link to="/legal" className="hover:text-slate-600">
               Legal
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

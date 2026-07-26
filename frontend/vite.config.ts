@@ -18,6 +18,11 @@ export default defineConfig({
   preview: {
     port: 3000,
   },
+  test: {
+    environment: "jsdom",
+    setupFiles: ["./src/test/setup.ts"],
+    css: false,
+  },
   build: {
     rollupOptions: {
       output: {

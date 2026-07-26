@@ -58,8 +58,8 @@ export function LandingPage() {
                 <span className="text-[#0F6CBD]">Mbere</span> it happens.
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-base text-slate-500 sm:text-lg">
-                Score risk, severity from a versioned ml model with transparent
-                SHAP feature explanations.
+                Predict risk, severity from a versioned ml model with
+                transparent SHAP feature explanations.
               </p>
               <div className="mt-8 flex justify-center">
                 <Link to={ctaHref}>
@@ -196,7 +196,7 @@ export function LandingPage() {
               </div>
               <div className="absolute left-[54%] top-[12%] flex h-[62%] w-[50%] items-center justify-end bg-[#0F6CBD] p-4 text-right sm:p-6">
                 <span className="text-4xl font-semibold text-white sm:text-2xl lg:text-6xl">
-                  You work
+                  You drive
                 </span>
               </div>
             </div>
