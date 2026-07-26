@@ -7,10 +7,11 @@ from sqlalchemy import or_, select
 from sqlalchemy.orm import Session, selectinload
 
 from ..auth.deps import get_current_user
-from ..database.models import Driver, RiskAssessment, User
+from ..database.models import Driver, RiskAssessment, User, UserRole
 from ..database.session import get_db
 from ..schemas.driver import DriverCreate, DriverRead, DriverUpdate
 from ..schemas.prediction import RiskAssessmentRead
+from ..services.ownership import get_owned_driver
 
 router = APIRouter(tags=["drivers"])
 
@@ -46,6 +47,8 @@ def list_drivers(
     q: str | None = Query(None, description="Case-insensitive search over full_name / license_number"),
 ) -> list[Driver]:
     stmt = select(Driver)
+    if user.role != UserRole.ADMIN:
+        stmt = stmt.where(Driver.created_by_user_id == user.id)
     if q and q.strip():
         pattern = f"%{q.strip()}%"
         stmt = stmt.where(
@@ -64,10 +67,7 @@ def get_driver(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> Driver:
-    driver = db.get(Driver, driver_id)
-    if driver is None:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "driver not found")
-    return driver
+    return get_owned_driver(db, driver_id, user)
 
 
 @router.put("/drivers/{driver_id}", response_model=DriverRead)
@@ -77,9 +77,7 @@ def update_driver(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> Driver:
-    driver = db.get(Driver, driver_id)
-    if driver is None:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "driver not found")
+    driver = get_owned_driver(db, driver_id, user)
     if payload.license_number is not None and payload.license_number != driver.license_number:
         conflict = db.scalar(select(Driver).where(Driver.license_number == payload.license_number))
         if conflict is not None:
@@ -97,9 +95,7 @@ def delete_driver(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> Response:
-    driver = db.get(Driver, driver_id)
-    if driver is None:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "driver not found")
+    driver = get_owned_driver(db, driver_id, user)
     db.delete(driver)
     db.commit()
     return Response(status_code=status.HTTP_204_NO_CONTENT)
@@ -111,9 +107,7 @@ def driver_risk_history(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> list[RiskAssessment]:
-    driver = db.get(Driver, driver_id)
-    if driver is None:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "driver not found")
+    get_owned_driver(db, driver_id, user)
     return list(
         db.scalars(
             select(RiskAssessment)

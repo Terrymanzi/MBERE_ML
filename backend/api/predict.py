@@ -7,7 +7,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from ..auth.deps import get_current_user
-from ..database.models import Driver, FeatureRecord, Prediction, RiskAssessment, User
+from ..database.models import FeatureRecord, Prediction, RiskAssessment, User
 from ..database.session import get_db
 from ..schemas.prediction import (
     Explanation,
@@ -17,6 +17,7 @@ from ..schemas.prediction import (
 )
 from ..services.model_registry import model_registry
 from ..services.model_service import ArtifactNotFoundError, FeatureValidationError
+from ..services.ownership import get_owned_driver
 from ..services.registry import ensure_model_version_row
 
 logger = logging.getLogger("backend.api.predict")
@@ -48,9 +49,9 @@ def predict(
     if svc is None or not svc.loaded:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "no model loaded")
 
-    # optional driver linkage
-    if payload.driver_id is not None and db.get(Driver, payload.driver_id) is None:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "driver not found")
+    # optional driver linkage -- 404s for a driver that exists but isn't yours
+    if payload.driver_id is not None:
+        get_owned_driver(db, payload.driver_id, user)
 
     # inference (bad features -> 422)
     try:
