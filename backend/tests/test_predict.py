@@ -64,6 +64,26 @@ def test_predict_unknown_driver_404(client, auth_headers, valid_features):
     assert r.status_code == 404
 
 
+def test_predict_against_other_users_driver_404(client, auth_headers, valid_features):
+    email, pw = f"other-{uuid.uuid4().hex[:8]}@test.com", "supersecret1"
+    client.post("/auth/register", json={"email": email, "password": pw})
+    other_tok = client.post("/auth/token", data={"username": email, "password": pw})
+    other_headers = {"Authorization": f"Bearer {other_tok.json()['access_token']}"}
+
+    driver = client.post(
+        "/drivers",
+        json={"license_number": f"RW-{uuid.uuid4().hex[:8]}", "full_name": "Not Yours"},
+        headers=other_headers,
+    ).json()
+
+    r = client.post(
+        "/predict",
+        json={"driver_id": driver["id"], "features": valid_features},
+        headers=auth_headers,
+    )
+    assert r.status_code == 404
+
+
 def test_predict_missing_feature_rejected(client, auth_headers):
     bad = {"vehicle_type": "Motorcycle", "driver_age": 19}  # missing driver_experience
     r = client.post("/predict", json={"features": bad}, headers=auth_headers)
