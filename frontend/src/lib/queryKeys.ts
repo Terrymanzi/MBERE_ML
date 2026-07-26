@@ -9,4 +9,7 @@ export const queryKeys = {
     ["drivers", params ?? {}] as const,
   driverRisk: (driverId: number) => ["risk", driverId] as const,
   dashboard: ["dashboard"] as const,
+  users: (params?: { limit?: number; offset?: number; q?: string }) =>
+    ["users", params ?? {}] as const,
+  auditLogs: ["audit-logs"] as const,
 };

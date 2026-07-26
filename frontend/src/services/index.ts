@@ -6,3 +6,5 @@ export * from "./drivers.api";
 export * from "./models.api";
 export * from "./predictions.api";
 export * from "./health.api";
+export * from "./users.api";
+export * from "./audit.api";

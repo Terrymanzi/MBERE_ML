@@ -11,6 +11,7 @@ import {
   UserIcon,
 } from "@/components/icons";
 import { cn } from "@/lib/cn";
+import { useAuth } from "@/features/auth/AuthContext";
 
 interface NavItem {
   to: string;
@@ -30,6 +31,10 @@ const TOOLS: NavItem[] = [
 const ACTIONS: NavItem[] = [
   { to: "/app/settings", label: "Settings", icon: SettingsIcon },
   { to: "/app/profile", label: "Profile", icon: UserIcon },
+];
+
+const ADMIN: NavItem[] = [
+  { to: "/app/admin/users", label: "Users", icon: DriversIcon },
 ];
 
 function Item({
@@ -61,6 +66,8 @@ function Item({
 }
 
 export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
+  const { user } = useAuth();
+
   return (
     <div className="flex h-full flex-col gap-6 border-r border-slate-200 bg-white px-4 py-6">
       <div className="px-2">
@@ -74,6 +81,17 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         {TOOLS.map((item) => (
           <Item key={item.to} item={item} onNavigate={onNavigate} />
         ))}
+
+        {user?.role === "ADMIN" && (
+          <>
+            <p className="px-3 pb-1 pt-5 text-xs font-thin uppercase tracking-wide text-slate-400">
+              Admin
+            </p>
+            {ADMIN.map((item) => (
+              <Item key={item.to} item={item} onNavigate={onNavigate} />
+            ))}
+          </>
+        )}
 
         <p className="px-3 pb-1 pt-5 text-xs font-thin uppercase tracking-wide text-slate-400">
           Account

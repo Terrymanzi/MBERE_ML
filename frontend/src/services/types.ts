@@ -41,6 +41,33 @@ export interface ChangePasswordRequest {
   new_password: string;
 }
 
+// ------------------------------------------------------------ admin/users -----
+export interface UserAdminCreate {
+  email: string;
+  password: string;
+  full_name?: string | null;
+  // Unlike self-registration, an admin may create a user with any role.
+  role: UserRole;
+}
+
+export interface UserAdminUpdate {
+  email?: string;
+  full_name?: string | null;
+}
+
+export interface AdminResetPasswordRequest {
+  new_password: string;
+}
+
+export interface AuditLogRead {
+  id: number;
+  user_id: number | null;
+  action: string;
+  resource: string;
+  resource_id: number | null;
+  created_at: string; // ISO datetime
+}
+
 // --------------------------------------------------------------- drivers ------
 export interface DriverRead {
   id: number;
@@ -126,6 +153,9 @@ export interface ModelCatalogEntry {
   metrics_test: ModelPerformance | null;
   is_active: boolean;
   model_version_id: number | null;
+  /** null when there's nothing to compare against (e.g. this entry IS the baseline). */
+  gate_passed: boolean | null;
+  gate_reasons: string[];
 }
 
 export interface ModelCatalogResponse {

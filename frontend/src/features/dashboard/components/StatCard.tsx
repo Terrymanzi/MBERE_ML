@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Card } from "@/components/ui/Card";
-import { cn } from "@/lib/cn";
+// import { cn } from "@/lib/cn";
 
 export function StatCard({
   label,
@@ -15,17 +15,19 @@ export function StatCard({
   icon?: ReactNode;
   accent?: "brand" | "red" | "amber" | "green";
 }) {
-  const accentClasses: Record<string, string> = {
-    brand: "bg-transparent-blue-50 text-brand-600",
-    red: "bg-red-50 text-red-600",
-    amber: "bg-amber-50 text-amber-600",
-    green: "bg-green-50 text-green-600",
-  };
+  // const accentClasses: Record<string, string> = {
+  //   brand: "bg-transparent-blue-50 text-brand-600",
+  //   red: "bg-red-50 text-red-600",
+  //   amber: "bg-amber-50 text-amber-600",
+  //   green: "bg-green-50 text-green-600",
+  // };
   return (
-    <Card className="p-5">
+    <Card className="flex flex-col items-center justify-center p-5">
       <div className="flex items-start justify-between">
-        <p className="text-sm font-medium text-slate-500">{label}</p>
-        {icon && (
+        <p className="text-sm font-medium tracking-widest text-slate-500">
+          {label}
+        </p>
+        {/* {icon && (
           <span
             className={cn(
               "flex h-6 w-6 items-center justify-center rounded-lg",
@@ -34,12 +36,12 @@ export function StatCard({
           >
             {icon}
           </span>
-        )}
+        )} */}
       </div>
-      <p className="mt-3 text-3xl font-mono tracking-tight text-slate-900">
+      <p className="mt-3 text-3xl font-normal tracking-tight text-slate-900">
         {value}
       </p>
-      {hint && <p className="mt-1 text-sm text-slate-400">{hint}</p>}
+      {/* {hint && <p className="mt-1 text-sm text-slate-400">{hint}</p>} */}
     </Card>
   );
 }
