@@ -161,3 +161,16 @@ class Prediction(Base):
 
     risk_assessment: Mapped["RiskAssessment"] = relationship(back_populates="prediction")
     model_version: Mapped["ModelVersion"] = relationship(back_populates="predictions")
+
+
+class AuditLog(Base):
+    """Accountability trail for admin actions (user CRUD, model activation, ...)."""
+
+    __tablename__ = "audit_logs"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[Optional[int]] = mapped_column(ForeignKey("users.id"))
+    action: Mapped[str] = mapped_column(String(64), nullable=False)      # e.g. create, delete, role_change
+    resource: Mapped[str] = mapped_column(String(64), nullable=False)    # e.g. user, model_version
+    resource_id: Mapped[Optional[int]] = mapped_column()
+    created_at: Mapped[dt.datetime] = mapped_column(DateTime(timezone=True), default=_utcnow)

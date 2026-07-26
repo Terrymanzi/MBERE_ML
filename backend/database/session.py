@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from collections.abc import Iterator
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.orm import Session, sessionmaker
 
 from ..app.config import PROJECT_ROOT, get_settings
@@ -30,6 +30,18 @@ _url = _resolve_url(_settings.database_url)
 _connect_args = {"check_same_thread": False} if _url.startswith("sqlite") else {}
 
 engine = create_engine(_url, future=True, pool_pre_ping=True, connect_args=_connect_args)
+
+if _url.startswith("sqlite"):
+    # SQLite ignores FK constraints unless explicitly told to enforce them per
+    # connection -- without this, referential-integrity bugs (e.g. deleting a
+    # user who still owns drivers) would pass in dev/test and only surface
+    # against the real Postgres database in prod.
+    @event.listens_for(engine, "connect")
+    def _enable_sqlite_foreign_keys(dbapi_connection, _connection_record) -> None:
+        cursor = dbapi_connection.cursor()
+        cursor.execute("PRAGMA foreign_keys=ON")
+        cursor.close()
+
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, future=True)
 
 

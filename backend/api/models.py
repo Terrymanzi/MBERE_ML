@@ -21,6 +21,7 @@ from ..schemas.prediction import (
     ModelPerformance,
     ModelVersionRead,
 )
+from ..services.audit import log_action
 from ..services.model_registry import model_registry
 from ..services.model_service import ArtifactNotFoundError, ContractMismatchError
 from ..services.registry import activate_model_version
@@ -147,4 +148,6 @@ def activate_model(
             status.HTTP_503_SERVICE_UNAVAILABLE, f"model '{name}' failed to load; see server logs"
         )
     model_registry.set_default(name)
-    return activate_model_version(db, svc)
+    row = activate_model_version(db, svc)
+    log_action(db, user, "activate", "model_version", row.id)
+    return row
