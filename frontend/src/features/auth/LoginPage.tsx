@@ -2,10 +2,15 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
-import { ApiError, register as registerRequest } from "@/services";
+import {
+  ApiError,
+  register as registerRequest,
+  type UserRole,
+} from "@/services";
 import { Logo } from "@/components/layout/Logo";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 import { toErrorMessage } from "@/components/feedback/states";
 import { LegalConsentCheckbox } from "@/features/legal/components/LegalConsentCheckbox";
 import { LegalLink } from "@/features/legal/components/LegalLink";
@@ -28,6 +33,7 @@ export function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
+  const [role, setRole] = useState<UserRole>("FLEET_MANAGER");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [consentError, setConsentError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -56,6 +62,7 @@ export function LoginPage() {
           email,
           password,
           full_name: fullName || null,
+          role,
           acceptedTerms: true,
           acceptedAt: new Date().toISOString(),
           legalVersion: LEGAL_VERSION,
@@ -98,7 +105,7 @@ export function LoginPage() {
           <p className="mt-3 text-slate-500 font-thin">
             {mode === "login"
               ? "Access the fleet dashboard, drivers, and predictions."
-              : "Register a fleet operator account to get started."}
+              : "Register your account to get started."}
           </p>
 
           <form
@@ -107,14 +114,29 @@ export function LoginPage() {
             noValidate
           >
             {mode === "register" && (
-              <Input
-                label="Full name"
-                type="text"
-                autoComplete="name"
-                placeholder="John Doe"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-              />
+              <>
+                <Input
+                  label="Full name"
+                  type="text"
+                  autoComplete="name"
+                  placeholder="John Doe"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                />
+                <Select
+                  className="font-mono"
+                  label="I am registering as"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value as UserRole)}
+                >
+                  <option className="font-mono" value="FLEET_MANAGER">
+                    Fleet Manager
+                  </option>
+                  <option className="font-mono" value="INSURER">
+                    Insurer
+                  </option>
+                </Select>
+              </>
             )}
             <Input
               label="Email"

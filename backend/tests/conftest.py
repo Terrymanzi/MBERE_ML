@@ -173,5 +173,27 @@ def auth_headers(client) -> dict[str, str]:
 
 
 @pytest.fixture
+def admin_auth_headers(client) -> dict[str, str]:
+    """A role=ADMIN user. Inserted directly via the DB session because
+    /auth/register can never create an admin (by design)."""
+    from backend.auth.security import hash_password
+    from backend.database.models import User, UserRole
+    from backend.database.session import SessionLocal
+
+    email = f"admin-{uuid.uuid4().hex[:8]}@test.com"
+    password = "supersecret1"
+    db = SessionLocal()
+    try:
+        db.add(User(email=email, hashed_password=hash_password(password), role=UserRole.ADMIN))
+        db.commit()
+    finally:
+        db.close()
+
+    tok = client.post("/auth/token", data={"username": email, "password": password})
+    assert tok.status_code == 200, tok.text
+    return {"Authorization": f"Bearer {tok.json()['access_token']}"}
+
+
+@pytest.fixture
 def valid_features() -> dict:
     return {"vehicle_type": "Motorcycle", "driver_age": 19, "driver_experience": 1}

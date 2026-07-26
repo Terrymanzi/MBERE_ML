@@ -9,8 +9,8 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from ..auth.deps import get_current_user
-from ..database.models import ModelVersion, User
+from ..auth.deps import require_role
+from ..database.models import ModelVersion, User, UserRole
 from ..database.session import get_db
 from ..schemas.prediction import (
     ContractFeature,
@@ -110,7 +110,7 @@ def activate_model(
     name: str,
     force: bool = False,
     db: Session = Depends(get_db),
-    user: User = Depends(get_current_user),
+    user: User = Depends(require_role(UserRole.ADMIN)),
 ) -> ModelVersion:
     """Set `name` as the served default. Blocked (409) for a candidate that fails
     the deployment decision gate -- it underperforms the rule-based baseline on a

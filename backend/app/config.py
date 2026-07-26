@@ -44,6 +44,7 @@ class Settings(BaseSettings):
     secret_key: str = "dev-insecure-secret-change-me"
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 60
+    refresh_token_expire_minutes: int = 60 * 24 * 7
 
     # --- database (prod: PostgreSQL; dev/test default: SQLite) ---
     database_url: str = "sqlite:///./mbere_backend.db"

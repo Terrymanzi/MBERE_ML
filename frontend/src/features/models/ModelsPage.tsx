@@ -9,6 +9,7 @@ import {
   toErrorMessage,
 } from "@/components/feedback/states";
 import type { ModelCatalogEntry } from "@/services";
+import { useAuth } from "@/features/auth/AuthContext";
 import { useActivateModel, useModelCatalog } from "./useModels";
 import { MetricsGrid } from "./components/MetricsGrid";
 
@@ -16,10 +17,12 @@ function ModelCard({
   entry,
   onActivate,
   isActivating,
+  canActivate,
 }: {
   entry: ModelCatalogEntry;
   onActivate: (name: string) => void;
   isActivating: boolean;
+  canActivate: boolean;
 }) {
   const { metrics_test } = entry;
 
@@ -76,7 +79,7 @@ function ModelCard({
             <Button variant="secondary" size="sm" disabled>
               Active
             </Button>
-          ) : (
+          ) : canActivate ? (
             <Button
               variant="primary"
               size="sm"
@@ -85,6 +88,8 @@ function ModelCard({
             >
               Set active
             </Button>
+          ) : (
+            <span className="text-xs text-slate-400">Admin only</span>
           )}
         </div>
       </CardBody>
@@ -95,6 +100,8 @@ function ModelCard({
 export function ModelsPage() {
   const { data, isLoading, isError, error, refetch } = useModelCatalog();
   const activateModel = useActivateModel();
+  const { user } = useAuth();
+  const canActivate = user?.role === "ADMIN";
 
   function handleActivate(name: string) {
     if (
@@ -140,6 +147,7 @@ export function ModelsPage() {
               entry={entry}
               onActivate={handleActivate}
               isActivating={activateModel.isPending && activateModel.variables === entry.name}
+              canActivate={canActivate}
             />
           ))}
         </div>

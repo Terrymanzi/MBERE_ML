@@ -20,8 +20,8 @@ def test_catalog_lists_all_models_with_test_metrics(client):
     assert rf["metrics_cv"]  # still has CV metrics from meta.json
 
 
-def test_catalog_reflects_db_activation_status(client, auth_headers):
-    r = client.post("/models/baseline/activate", headers=auth_headers)
+def test_catalog_reflects_db_activation_status(client, admin_auth_headers):
+    r = client.post("/models/baseline/activate", headers=admin_auth_headers)
     assert r.status_code == 200, r.text
     assert r.json()["is_active"] is True
 

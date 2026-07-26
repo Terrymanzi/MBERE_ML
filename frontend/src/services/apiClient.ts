@@ -7,8 +7,15 @@
  *  - parse JSON responses and normalise FastAPI error bodies into ApiError;
  *  - support form-encoded posts (the OAuth2 /auth/token endpoint).
  */
-import type { ApiErrorBody } from "./types";
-import { getToken, notifyUnauthorized } from "./tokenStore";
+import type { ApiErrorBody, Token } from "./types";
+import {
+  clearToken,
+  getRefreshToken,
+  getToken,
+  notifyUnauthorized,
+  setRefreshToken,
+  setToken,
+} from "./tokenStore";
 
 const BASE_URL = (
   import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000"
@@ -52,13 +59,43 @@ interface RequestOptions {
   /** Whether to attach the bearer token (default true). */
   auth?: boolean;
   signal?: AbortSignal;
+  /** Internal: set on the one retry attempt after a silent refresh, to cap recursion. */
+  _isRetry?: boolean;
+}
+
+// Dedupes concurrent 401s into a single /auth/refresh call instead of one per request.
+let refreshPromise: Promise<string | null> | null = null;
+
+/** Not routed through apiRequest — that would recurse. A plain fetch instead. */
+async function tryRefresh(): Promise<string | null> {
+  const rt = getRefreshToken();
+  if (!rt) return null;
+  if (!refreshPromise) {
+    refreshPromise = fetch(`${BASE_URL}/auth/refresh`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ refresh_token: rt }),
+    })
+      .then(async (res) => {
+        if (!res.ok) return null;
+        const tok = (await res.json()) as Token;
+        setToken(tok.access_token);
+        setRefreshToken(tok.refresh_token);
+        return tok.access_token;
+      })
+      .catch(() => null)
+      .finally(() => {
+        refreshPromise = null;
+      });
+  }
+  return refreshPromise;
 }
 
 export async function apiRequest<T>(
   path: string,
   options: RequestOptions = {},
 ): Promise<T> {
-  const { method = "GET", json, form, auth = true, signal } = options;
+  const { method = "GET", json, form, auth = true, signal, _isRetry = false } = options;
 
   const headers: Record<string, string> = {};
   let body: BodyInit | undefined;
@@ -90,6 +127,13 @@ export async function apiRequest<T>(
   }
 
   if (response.status === 401 && auth) {
+    if (!_isRetry) {
+      const newToken = await tryRefresh();
+      if (newToken) {
+        return apiRequest<T>(path, { ...options, _isRetry: true });
+      }
+      clearToken();
+    }
     notifyUnauthorized();
   }
 

@@ -6,6 +6,7 @@
  * auth context can share it without a circular import.
  */
 const STORAGE_KEY = "mbere.jwt";
+const REFRESH_STORAGE_KEY = "mbere.refresh";
 
 /** Dispatched when an authed request gets a 401 — the auth layer logs out. */
 export const UNAUTHORIZED_EVENT = "mbere:unauthorized";
@@ -26,9 +27,26 @@ export function setToken(token: string): void {
   }
 }
 
+export function getRefreshToken(): string | null {
+  try {
+    return localStorage.getItem(REFRESH_STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function setRefreshToken(token: string): void {
+  try {
+    localStorage.setItem(REFRESH_STORAGE_KEY, token);
+  } catch {
+    /* storage unavailable (private mode) — session is in-memory only */
+  }
+}
+
 export function clearToken(): void {
   try {
     localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(REFRESH_STORAGE_KEY);
   } catch {
     /* ignore */
   }

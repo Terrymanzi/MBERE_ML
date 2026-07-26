@@ -6,10 +6,13 @@
  */
 
 // ---------------------------------------------------------------- auth --------
+export type UserRole = "ADMIN" | "INSURER" | "FLEET_MANAGER";
+
 export interface UserRead {
   id: number;
   email: string;
   full_name: string | null;
+  role: UserRole;
   is_active: boolean;
   created_at: string; // ISO datetime
 }
@@ -18,6 +21,8 @@ export interface UserCreate {
   email: string;
   password: string;
   full_name?: string | null;
+  // ADMIN is rejected server-side — self-registration is INSURER/FLEET_MANAGER only.
+  role?: UserRole;
   // Not yet persisted by the backend (UserCreate has no matching fields there) —
   // sent ahead of time so consent capture works as soon as the backend adds them.
   acceptedTerms?: boolean;
@@ -27,7 +32,13 @@ export interface UserCreate {
 
 export interface Token {
   access_token: string;
+  refresh_token: string;
   token_type: string;
+}
+
+export interface ChangePasswordRequest {
+  current_password: string;
+  new_password: string;
 }
 
 // --------------------------------------------------------------- drivers ------

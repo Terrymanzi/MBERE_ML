@@ -1,8 +1,10 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   clearToken,
+  getRefreshToken,
   getToken,
   notifyUnauthorized,
+  setRefreshToken,
   setToken,
   UNAUTHORIZED_EVENT,
 } from "./tokenStore";
@@ -25,6 +27,14 @@ describe("tokenStore", () => {
     setToken("abc.def.ghi");
     clearToken();
     expect(getToken()).toBeNull();
+  });
+
+  it("round-trips a refresh token, cleared alongside the access token", () => {
+    setToken("abc.def.ghi");
+    setRefreshToken("refresh.abc.def");
+    expect(getRefreshToken()).toBe("refresh.abc.def");
+    clearToken();
+    expect(getRefreshToken()).toBeNull();
   });
 
   it("does not throw when localStorage access fails", () => {

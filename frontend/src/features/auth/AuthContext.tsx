@@ -11,11 +11,13 @@ import { useQueryClient } from "@tanstack/react-query";
 import {
   getCurrentUser,
   login as loginRequest,
+  logout as logoutRequest,
   type UserRead,
 } from "@/services";
 import {
   clearToken,
   getToken,
+  setRefreshToken,
   setToken,
   UNAUTHORIZED_EVENT,
 } from "@/services/tokenStore";
@@ -41,6 +43,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   const logout = useCallback(() => {
+    // Best-effort: tokens are stateless today, so this doesn't revoke anything
+    // server-side yet — clearing local storage below is what actually logs out.
+    logoutRequest().catch(() => {});
     clearToken();
     setHasToken(false);
     setUser(null);
@@ -88,6 +93,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     async (email: string, password: string) => {
       const token = await loginRequest(email, password);
       setToken(token.access_token);
+      setRefreshToken(token.refresh_token);
       const me = await getCurrentUser();
       setUser(me);
       setHasToken(true);

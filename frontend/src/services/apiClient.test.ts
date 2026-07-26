@@ -1,6 +1,12 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { apiRequest, ApiError } from "./apiClient";
-import { UNAUTHORIZED_EVENT, clearToken, setToken } from "./tokenStore";
+import {
+  UNAUTHORIZED_EVENT,
+  clearToken,
+  getToken,
+  setRefreshToken,
+  setToken,
+} from "./tokenStore";
 
 describe("apiRequest", () => {
   beforeEach(() => {
@@ -91,6 +97,53 @@ describe("apiRequest", () => {
 
     await expect(apiRequest("/drivers")).rejects.toBeInstanceOf(ApiError);
     expect(handler).toHaveBeenCalledTimes(1);
+
+    window.removeEventListener(UNAUTHORIZED_EVENT, handler);
+  });
+
+  it("silently refreshes and retries once on a 401 when a refresh token exists", async () => {
+    setToken("expired-token");
+    setRefreshToken("valid-refresh-token");
+    const fetchMock = vi.fn(async (url: string) => {
+      if (url.endsWith("/auth/refresh")) {
+        return new Response(
+          JSON.stringify({ access_token: "new-token", refresh_token: "new-refresh", token_type: "bearer" }),
+          { status: 200, headers: { "content-type": "application/json" } },
+        );
+      }
+      if (url.endsWith("/drivers")) {
+        const isRetry = fetchMock.mock.calls.filter((c) => (c[0] as string).endsWith("/drivers")).length > 1;
+        return new Response(JSON.stringify(isRetry ? [{ id: 1 }] : { detail: "expired" }), {
+          status: isRetry ? 200 : 401,
+        });
+      }
+      throw new Error(`unexpected url ${url}`);
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const result = await apiRequest("/drivers");
+    expect(result).toEqual([{ id: 1 }]);
+    expect(getToken()).toBe("new-token");
+  });
+
+  it("logs out without retrying if the refresh itself fails", async () => {
+    setToken("expired-token");
+    setRefreshToken("stale-refresh-token");
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string) => {
+        if (url.endsWith("/auth/refresh")) {
+          return new Response(JSON.stringify({ detail: "invalid refresh" }), { status: 401 });
+        }
+        return new Response(JSON.stringify({ detail: "expired" }), { status: 401 });
+      }),
+    );
+    const handler = vi.fn();
+    window.addEventListener(UNAUTHORIZED_EVENT, handler);
+
+    await expect(apiRequest("/drivers")).rejects.toBeInstanceOf(ApiError);
+    expect(handler).toHaveBeenCalledTimes(1);
+    expect(getToken()).toBeNull();
 
     window.removeEventListener(UNAUTHORIZED_EVENT, handler);
   });
