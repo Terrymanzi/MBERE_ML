@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 export interface LegalLinkProps {
   to: string;
   children: ReactNode;
-  /** Opens in a new tab — use when linking out of an in-progress flow (signup, login) so form state isn't lost. */
+  /** Opens in a new tab, use when linking out of an in-progress flow (signup, login) so form state isn't lost. */
   newTab?: boolean;
   className?: string;
 }

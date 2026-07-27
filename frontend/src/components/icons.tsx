@@ -127,3 +127,9 @@ export const MenuIcon = (p: IconProps) => (
     <path d="M4 6h16M4 12h16M4 18h16" />
   </Base>
 );
+
+export const XIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M18 6 6 18M6 6l12 12" />
+  </Base>
+);

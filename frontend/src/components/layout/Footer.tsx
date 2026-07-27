@@ -1,4 +1,5 @@
 import type { SyntheticEvent } from "react";
+import { Link } from "react-router-dom";
 import { LegalNav } from "@/features/legal/components/LegalNav";
 
 const FOOTER_COLUMNS = [
@@ -104,9 +105,12 @@ export function Footer({ variant = "full" }: FooterProps) {
 
           <div className="mt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
             <span>© {new Date().getFullYear()} Mbere Machine Learning</span>
-            {/* <Link to="/legal" className="hover:text-slate-600">
-              Legal
-            </Link> */}
+            <Link
+              to="https://nrx1yhr8.status.cron-job.org/"
+              className="hover:text-slate-600"
+            >
+              System Status
+            </Link>
           </div>
         </div>
       </div>

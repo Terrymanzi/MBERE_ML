@@ -65,11 +65,22 @@ function Item({
   );
 }
 
-export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
+export function Sidebar({
+  onNavigate,
+  bordered = true,
+}: {
+  onNavigate?: () => void;
+  bordered?: boolean;
+}) {
   const { user } = useAuth();
 
   return (
-    <div className="flex h-full flex-col gap-6 border-r border-slate-200 bg-white px-4 py-6">
+    <div
+      className={cn(
+        "flex h-full flex-col gap-6 bg-white px-4 py-6",
+        bordered && "border-r border-slate-200",
+      )}
+    >
       <div className="px-2">
         <Logo />
       </div>
